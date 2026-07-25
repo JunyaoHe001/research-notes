@@ -23,7 +23,7 @@ Mobility is relational: cities and regions are shaped by the origins, destinatio
 
 A central question is how new mobility regimes redistribute opportunity unevenly. Remote workers, digitally mobile professionals, and different demographic groups may respond differently to the same spatial conditions. Reconstructing layered mobility networks allows these heterogeneous responses to be studied directly.
 
-Representative work: [[working-papers/dutch-migration-networks|Different Strokes for Different Folks]]; [[working-papers/digital-nomad-mobility|Global Digital-Nomad Mobility]].
+Representative work: [[working-papers/dutch-migration-networks|Different Strokes for Different Folks]]; [[working-papers/digital-nomad-mobility|Global Digital-Nomad Mobility]]; [[publications/mobi-twin-d3-4-regional-inequality|MOBI-TWIN D3.4]].
 
 ## Digital planning, platform governance, and networked power
 
@@ -33,7 +33,7 @@ Digital platforms have become important arenas for planning participation, contr
 
 This work develops network-based approaches to power that connect the structure of interactions with discourse, framing, and institutional authority. It also examines how informal participants, third parties, journalists, experts, and public authorities translate online visibility into influence over planning processes.
 
-Representative work: *Measuring Social Network Influence on Power Relations in Collaborative Planning*; *Informal Participation in Digital Planning*; [[working-papers/edge-based-network-power|Edge-based Network Power]].
+Representative work: [[publications/measuring-social-network-influence|Measuring Social Network Influence on Power Relations in Collaborative Planning]]; [[publications/informal-participation-digital-planning|Informal Participation in Digital Planning]]; [[publications/social-media-framing-collaborative-planning|Social Media Influence on Collaborative Planning]]; [[working-papers/edge-based-network-power|Edge-based Network Power]].
 
 ## AI, innovation, and computational economic geography
 
@@ -53,7 +53,7 @@ Across these empirical fields, I treat cities, regions, mobility systems, and di
 
 Current methods include multilayer and temporal networks, directed centrality, community structure, entropy-based reach, spatial interaction models, spatial difference-in-differences, Bartik designs, agent-based modelling, spatial microsimulation, and large-scale text-derived networks.
 
-See [[methods/index|Methods and analytical approaches]] and [[methods/complex-networks|Complex networks as a shared framework]].
+Representative work: [[publications/3d-walking-network-social-cohesion|3D Walking Network and Social Cohesion]]; [[publications/mobi-twin-d3-1-model|MOBI-TWIN D3.1 Methodological Report]]. See also [[methods/index|Methods and analytical approaches]] and [[methods/complex-networks|Complex networks as a shared framework]].
 
 ---
 
