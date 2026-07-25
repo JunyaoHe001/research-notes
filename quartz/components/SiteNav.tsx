@@ -1,92 +1,86 @@
+import { FullSlug, resolveRelative } from "../util/path"
 import { QuartzComponent } from "./types"
 
 const SiteNav: QuartzComponent = ({ fileData }) => {
-  const current = fileData.slug ?? "index"
-  const links = [
-    { label: "Home", href: "/research-notes/", slug: "index" },
-    { label: "Research", href: "/research-notes/research", slug: "research" },
-    { label: "Publications", href: "/research-notes/publications", slug: "publications" },
-    {
-      label: "Working Papers",
-      href: "/research-notes/working-papers/",
-      slug: "working-papers",
-    },
+  const current = (fileData.slug ?? "index") as FullSlug
+  const links: { label: string; slug: FullSlug }[] = [
+    { label: "Home", slug: "index" as FullSlug },
+    { label: "Research", slug: "research" as FullSlug },
+    { label: "Publications", slug: "publications" as FullSlug },
+    { label: "Working papers", slug: "working-papers" as FullSlug },
   ]
 
-  const isActive = (slug: string) =>
-    slug === "index" ? current === "index" : current === slug || current.startsWith(`${slug}/`)
+  const isActive = (slug: FullSlug) =>
+    slug === ("index" as FullSlug)
+      ? current === ("index" as FullSlug)
+      : current === slug || current.startsWith(`${slug}/`)
 
   return (
-    <nav class="academic-site-nav" aria-label="Primary navigation">
-      <a class="academic-site-name internal" href="/research-notes/">
-        Junyao He
-      </a>
-      <div class="academic-site-links">
+    <div class="academic-site-identity">
+      <h2 class="academic-site-name">
+        <a class="internal" href={resolveRelative(current, "index" as FullSlug)}>
+          Junyao He
+        </a>
+      </h2>
+      <nav class="academic-section-nav" aria-label="Primary navigation">
         {links.map((link) => (
           <a
-            class={`internal academic-site-link${isActive(link.slug) ? " active" : ""}`}
-            href={link.href}
+            class={`internal academic-section-link${isActive(link.slug) ? " active" : ""}`}
+            href={resolveRelative(current, link.slug)}
             aria-current={isActive(link.slug) ? "page" : undefined}
           >
             {link.label}
           </a>
         ))}
-      </div>
-    </nav>
+      </nav>
+    </div>
   )
 }
 
 SiteNav.css = `
-.academic-site-nav {
+.academic-site-identity {
   width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 0.75rem 0 0.9rem;
-  border-bottom: 1px solid var(--lightgray);
+  margin: 0 0 1rem;
 }
 
 .academic-site-name {
-  margin-right: auto;
+  margin: 0 0 0.55rem;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.academic-site-name > a {
   color: var(--dark);
-  font-size: 1.15rem;
   font-weight: 700;
+  text-decoration: none;
+}
+
+.academic-section-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.35rem;
+}
+
+.academic-section-link {
+  padding: 0.05rem 0;
+  border-bottom: 1px solid transparent;
+  color: var(--darkgray);
+  font-size: 0.95rem;
+  line-height: 1.4;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.academic-site-links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-.academic-site-link {
-  color: var(--darkgray);
-  font-size: 0.95rem;
-  text-decoration: none;
-}
-
-.academic-site-link:hover,
-.academic-site-link.active {
+.academic-section-link:hover,
+.academic-section-link.active {
+  border-bottom-color: var(--secondary);
   color: var(--secondary);
 }
 
-.academic-site-link.active {
+.academic-section-link.active {
   font-weight: 600;
-}
-
-@media (max-width: 800px) {
-  .academic-site-nav {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.65rem;
-  }
-
-  .academic-site-links {
-    gap: 0.85rem;
-  }
 }
 `
 
