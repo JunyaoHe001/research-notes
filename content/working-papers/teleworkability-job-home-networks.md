@@ -6,6 +6,7 @@ authors:
   - Venhorst, V.
   - Ballas, D.
 year: 2026
+publication-type: Working paper
 status: Under Review
 research-line: Hybrid work, job–home networks, and regional restructuring
 description: Causal evidence on how remote-work exposure reshaped Dutch municipal job–home networks after COVID-19.
