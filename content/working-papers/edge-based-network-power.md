@@ -6,6 +6,7 @@ authors:
   - Hooimeijer, P.
   - Monstadt, J.
 year: 2026
+publication-type: Working paper
 status: Under Review
 research-line: Digital planning, platform governance, and networked power
 description: An edge-based network approach to how power is distributed and reproduced in online planning controversies.
