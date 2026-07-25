@@ -39,6 +39,7 @@ configuration:
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
+
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -49,6 +50,7 @@ plugins:
         - git
         - filesystem
     order: 10
+
   - source: "@quartz-community/syntax-highlighting"
     enabled: true
     options:
@@ -57,59 +59,77 @@ plugins:
         dark: github-dark
       keepBackground: false
     order: 20
+
   - source: "@quartz-community/obsidian-flavored-markdown"
     enabled: true
     options:
       enableInHtmlEmbed: false
       enableCheckbox: true
     order: 30
+
   - source: "@quartz-community/github-flavored-markdown"
     enabled: true
     order: 40
+
   - source: "@quartz-community/table-of-contents"
     enabled: true
     order: 50
     layout:
       position: right
       priority: 30
+
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
       markdownLinkResolution: shortest
     order: 60
+
   - source: "@quartz-community/description"
     enabled: true
     order: 70
+
   - source: "@quartz-community/latex"
     enabled: true
     options:
       renderEngine: katex
     order: 80
+
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+
   - source: "@quartz-community/remove-draft"
     enabled: true
+
   - source: "@quartz-community/alias-redirects"
     enabled: true
+
   - source: "@quartz-community/content-index"
     enabled: true
     options:
       enableSiteMap: true
       enableRSS: true
+
   - source: "@quartz-community/favicon"
     enabled: true
+
   - source: "@quartz-community/og-image"
     enabled: true
+
   - source: "@quartz-community/cname"
     enabled: true
+
   - source: "@quartz-community/canvas-page"
     enabled: true
+
   - source: "@quartz-community/content-page"
     enabled: true
+
   - source: "@quartz-community/folder-page"
     enabled: true
+
   - source: "@quartz-community/tag-page"
     enabled: true
+
   - source: "@quartz-community/search"
     enabled: true
     layout:
@@ -118,35 +138,41 @@ plugins:
       group: toolbar
       groupOptions:
         grow: true
+
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
       position: beforeBody
       priority: 10
+
   - source: "@quartz-community/darkmode"
     enabled: true
     layout:
       position: left
       priority: 30
       group: toolbar
+
   - source: "@quartz-community/reader-mode"
     enabled: true
     layout:
       position: left
       priority: 35
       group: toolbar
+
   - source: "@quartz-community/breadcrumbs"
     enabled: true
     layout:
       position: beforeBody
       priority: 5
       condition: not-index
+
   - source: "@quartz-community/footer"
     enabled: true
     options:
       links:
         Academic Website: https://junyaohe001.github.io/
         GitHub: https://github.com/JunyaoHe001/research-notes
+
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
@@ -155,10 +181,12 @@ plugins:
       position: left
       priority: 25
       display: mobile-only
+
   - source: "@quartz-community/bases-page"
     enabled: true
     options: {}
     order: 50
+
   - source: "@quartz-community/note-properties"
     enabled: true
     options:
@@ -166,10 +194,20 @@ plugins:
       includedProperties:
         - authors
         - year
+        - publication-type
         - status
-        - research-line
+        - journal
+        - publisher
+        - book
+        - series
+        - volume
+        - issue
+        - pages
+        - article-number
+        - doi
+        - link
         - pdf
-        - description
+        - research-line
         - tags
         - aliases
       excludedProperties: []
@@ -181,10 +219,12 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
+
   - source: "@quartz-community/unlisted-pages"
     enabled: true
     options: {}
     order: 45
+
 layout:
   groups:
     toolbar:

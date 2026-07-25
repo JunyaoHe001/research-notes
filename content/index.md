@@ -16,12 +16,12 @@ Two connected programmes anchor my current work:
 
 A continuing research line examines **digital planning, platform governance, and networked power**, extending my doctoral work on social-media participation and inequalities in collaborative planning. A newer direction studies **AI, innovation, and regional networks** through large-scale news text and graph-based methods.
 
-See the [[research|Research page]] for fuller descriptions, [[publications|Publications]] for published work, and [[working-papers/index|Working Papers]] for current manuscripts.
+See the [[research|Research page]] for fuller descriptions, [[publications/index|Publications]] for published work, and [[working-papers/index|Working Papers]] for current manuscripts.
 
 ## Recent
 
-- PhD thesis (2026): *Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China*.
-- Journal article (2026): *Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation*.
+- PhD thesis (2026): [[publications/network-power-social-media-thesis|Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China]].
+- Journal article (2026): [[publications/social-media-framing-collaborative-planning|Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation]].
 - Current project: hybrid work and the restructuring of Spanish and Dutch job–home networks.
 - Current project: global digital-nomad mobility networks and their urban drivers.
 

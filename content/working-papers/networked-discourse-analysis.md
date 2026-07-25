@@ -6,6 +6,7 @@ authors:
   - Hooimeijer, P.
   - Monstadt, J.
 year: 2026
+publication-type: Working paper
 status: Under Review
 research-line: Digital methods, networked discourse, and computational social science
 description: A framework integrating network analysis and discourse analysis to study networked power and discursive influence in digital data.

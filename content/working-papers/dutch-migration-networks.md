@@ -4,6 +4,7 @@ authors:
   - He, J.
   - Ballas, D.
 year: 2026
+publication-type: Working paper
 status: Finalizing
 research-line: Migration, teleworkability, and regional inequality
 description: Heterogeneous relocation responses to teleworkability across demographic groups in the Netherlands.

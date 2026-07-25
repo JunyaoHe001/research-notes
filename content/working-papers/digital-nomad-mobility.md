@@ -6,6 +6,7 @@ authors:
   - Zhang, S.
   - Mao, Y.
 year: 2026
+publication-type: Working paper
 status: Finalizing
 research-line: Mobility networks and uneven urban opportunity
 description: A global city-network analysis of digital-nomad mobility and the factors shaping city attractiveness and cross-city flows.
