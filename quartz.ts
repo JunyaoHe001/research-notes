@@ -1,14 +1,15 @@
 import { loadQuartzConfig, loadQuartzLayout } from "./quartz/plugins/loader/config-loader"
+import SiteNav from "./quartz/components/SiteNav"
 
-const config = await loadQuartzConfig({
-  pageTitle: "Junyao's Research Notes",
-  pageTitleSuffix: " | Junyao He",
-  enableSPA: true,
-  enablePopovers: true,
-  analytics: null,
-  locale: "en-US",
-  baseUrl: "junyaohe001.github.io/research-notes",
-})
-
+const config = await loadQuartzConfig()
 export default config
-export const layout = await loadQuartzLayout()
+
+const pageTypes = ["content", "folder", "tag", "canvas", "bases"]
+const byPageType = Object.fromEntries(pageTypes.map((pageType) => [pageType, { header: [SiteNav] }]))
+
+export const layout = await loadQuartzLayout({
+  defaults: {
+    header: [SiteNav],
+  },
+  byPageType,
+})
