@@ -12,8 +12,8 @@ authors:
 year: 2026
 publication-type: Working paper
 status: Under Consideration
-research-line: AI, innovation, and computational economic geography
-description: A co-authored manuscript examining day–night heterogeneity in links between street green-space features and crime incidents using a visual Large Language Model.
+research-line: AI, urban analytics, and the built environment
+description: The article uses visual Large Language Model-enhanced street-view analysis to examine how street green-space features relate differently to crime incidents during daytime and nighttime.
 tags:
   - working-paper
   - visual-large-language-model
@@ -24,7 +24,7 @@ tags:
 
 ## Abstract
 
-This co-authored manuscript examines day–night heterogeneity in the links between street green-space features and crime incidents using a visual Large Language Model. A fuller abstract is not currently displayed on this public page.
+The article uses visual Large Language Model-enhanced street-view analysis to examine day–night heterogeneity in the relationships between street green-space features and crime incidents. It combines fine-grained visual interpretation of streetscape environments with temporally differentiated crime patterns to assess whether the same green-space characteristics are associated with different urban-safety outcomes during daytime and nighttime.
 
 ## Related pages
 
