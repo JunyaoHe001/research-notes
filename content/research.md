@@ -13,7 +13,10 @@ Remote and hybrid work change the spatial relationship between employment and re
 
 Current work uses Spanish mobility data to compare multiple levels of hybrid-work intensity and Dutch longitudinal data to estimate causal and spatial spillover effects after the COVID-19 shock. Related research examines how remote-work exposure interacts with housing markets, relocation, and regional inequality.
 
-Representative work: [[working-papers/teleworkability-job-home-networks|Teleworkability and the Evolution of Job–Home Networks]]; [[projects/hybrid-work-networks|Hybrid Work and Job–Home Networks]].
+**Representative work**
+
+- [Teleworkability and the Evolution of Job–Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
+- [Hybrid Work and Job–Home Networks](./projects/hybrid-work-networks)
 
 ## Mobility, migration, and uneven spatial opportunity
 
@@ -23,7 +26,11 @@ Mobility is relational: cities and regions are shaped by the origins, destinatio
 
 A central question is how new mobility regimes redistribute opportunity unevenly. Remote workers, digitally mobile professionals, and different demographic groups may respond differently to the same spatial conditions. Reconstructing layered mobility networks allows these heterogeneous responses to be studied directly.
 
-Representative work: [[working-papers/dutch-migration-networks|Different Strokes for Different Folks]]; [[working-papers/digital-nomad-mobility|Global Digital-Nomad Mobility]]; [[publications/mobi-twin-d3-4-regional-inequality|MOBI-TWIN D3.4]].
+**Representative work**
+
+- [Different Strokes for Different Folks: Heterogeneity, Teleworkability, and the Restructuring of Dutch Internal Migration Networks](./working-papers/dutch-migration-networks)
+- [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
+- [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
 
 ## Digital planning, platform governance, and networked power
 
@@ -33,7 +40,12 @@ Digital platforms have become important arenas for planning participation, contr
 
 This work develops network-based approaches to power that connect the structure of interactions with discourse, framing, and institutional authority. It also examines how informal participants, third parties, journalists, experts, and public authorities translate online visibility into influence over planning processes.
 
-Representative work: [[publications/measuring-social-network-influence|Measuring Social Network Influence on Power Relations in Collaborative Planning]]; [[publications/informal-participation-digital-planning|Informal Participation in Digital Planning]]; [[publications/social-media-framing-collaborative-planning|Social Media Influence on Collaborative Planning]]; [[working-papers/edge-based-network-power|Edge-based Network Power]].
+**Representative work**
+
+- [Measuring Social Network Influence on Power Relations in Collaborative Planning: A Case Study of Beijing City, China](./publications/measuring-social-network-influence)
+- [Informal Participation in Digital Planning: How Can Third Parties Use Social Media to Shift Power Relations in Planning?](./publications/informal-participation-digital-planning)
+- [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning)
+- [Social Media Influence on Citizen Power in Online Planning Controversies: An Edge-based Social Network Analysis of Network Power](./working-papers/edge-based-network-power)
 
 ## AI, innovation, and computational economic geography
 
@@ -43,7 +55,9 @@ AI and digital transformation are reshaping regional economies, but their geogra
 
 This line links GeoAI, graph-based modelling, natural-language processing, and interpretable machine learning with debates in economic geography concerning regional capabilities, technological transitions, and uneven development.
 
-Representative work: [[working-papers/ai-regional-networks|AI-Related Regional Cooperation, Competition, and Innovation]].
+**Representative work**
+
+- [Measuring AI-Related Cooperation, Competition, and Innovation across Global Subnational Regions Using News Text](./working-papers/ai-regional-networks)
 
 ## Complex networks and complex systems methods
 
@@ -53,7 +67,12 @@ Across these empirical fields, I treat cities, regions, mobility systems, and di
 
 Current methods include multilayer and temporal networks, directed centrality, community structure, entropy-based reach, spatial interaction models, spatial difference-in-differences, Bartik designs, agent-based modelling, spatial microsimulation, and large-scale text-derived networks.
 
-Representative work: [[publications/3d-walking-network-social-cohesion|3D Walking Network and Social Cohesion]]; [[publications/mobi-twin-d3-1-model|MOBI-TWIN D3.1 Methodological Report]]. See also [[methods/index|Methods and analytical approaches]] and [[methods/complex-networks|Complex networks as a shared framework]].
+**Representative work**
+
+- [3D Walking Network Shapes Social Cohesion of the Elderly in Aging Communities: Evidence from Nanjing, China](./publications/3d-walking-network-social-cohesion)
+- [MOBI-TWIN D3.1: Methodological Report Describing the MOBI-TWIN Model](./publications/mobi-twin-d3-1-model)
+
+See also [Methods and analytical approaches](./methods/) and [Complex networks as a shared framework](./methods/complex-networks).
 
 ---
 
