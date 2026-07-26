@@ -5,6 +5,7 @@ description: Peer-reviewed journal articles, book chapters, thesis, and research
 
 Peer-reviewed journal articles, book chapters, thesis, and research deliverables. Click any title for authors, publication details, DOI or full-text link, and an abstract or summary.
 
+<!-- AUTO-GENERATED:PUBLICATIONS:START -->
 | Year | Title | Journal / Publisher |
 | --- | --- | --- |
 | 2026 | [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./mobi-twin-d3-4-regional-inequality) | MOBI-TWIN |
@@ -19,5 +20,6 @@ Peer-reviewed journal articles, book chapters, thesis, and research deliverables
 | 2024 | [Using Social Media Data to Understand Citizen Perceptions of Urban Planning in a City Simulation Game](./social-media-city-simulation-game) | Simulation & Gaming |
 | 2022 | [“Design” Towards Digital Transformation of Cities](./design-digital-transformation-cities) | World Architecture |
 | 2021 | [Design Empowerment for Urban Micro-renewal Driven by New Technology](./design-empowerment-micro-renewal) | New Architecture |
+<!-- AUTO-GENERATED:PUBLICATIONS:END -->
 
 Current manuscripts are listed separately under [Working Papers](../working-papers/).
