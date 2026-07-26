@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - v5
+  pull_request:
+    branches:
+      - v5
   workflow_dispatch:
 
 permissions:
@@ -12,8 +15,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -31,6 +34,7 @@ jobs:
           cache: npm
 
       - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
@@ -40,11 +44,13 @@ jobs:
         run: npx quartz build
 
       - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
           path: public
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     environment:
       name: github-pages
