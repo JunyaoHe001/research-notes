@@ -1,6 +1,7 @@
 ---
 title: "Twin Transition, Spatial Mobility, and Regional Futures: An Agent Based Approach to Assess Inequality and Sustainability"
 year: 2026
+date: 2026-04-06
 activity-type: Conference
 role: Presenter
 event: 10th International Conference on Applied Theory, Macro and Empirical Finance
