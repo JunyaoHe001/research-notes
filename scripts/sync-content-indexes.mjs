@@ -100,6 +100,10 @@ function escapeTableCell(value) {
     .trim()
 }
 
+function contentLink(collection, slug) {
+  return `../${collection}/${slug}`
+}
+
 function extractExistingOrder(indexSource) {
   const order = new Map()
   const linkPattern = /\]\(([^)]+)\)/g
@@ -205,7 +209,7 @@ function renderPublicationTable(items) {
 
   for (const item of items) {
     lines.push(
-      `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](./${item.slug}) | ${escapeTableCell(publicationVenue(item.data))} |`,
+      `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](${contentLink("publications", item.slug)}) | ${escapeTableCell(publicationVenue(item.data))} |`,
     )
   }
 
@@ -222,7 +226,7 @@ function renderWorkingPaperSection(title, items) {
 
   for (const item of items) {
     lines.push(
-      `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](./${item.slug}) | ${escapeTableCell(item.data.status)} |`,
+      `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](${contentLink("working-papers", item.slug)}) | ${escapeTableCell(item.data.status)} |`,
     )
   }
 
@@ -233,15 +237,14 @@ function renderWorkingPaperSection(title, items) {
   return lines.join("\n")
 }
 
-function renderLinkedList(items) {
+function renderLinkedList(items, collection) {
   if (items.length === 0) return "- No entries currently listed."
 
   return items
     .map((item) => {
       const description = String(item.data.description ?? "").trim()
-      return description
-        ? `- [${item.title}](./${item.slug}) — ${description}`
-        : `- [${item.title}](./${item.slug})`
+      const link = contentLink(collection, item.slug)
+      return description ? `- [${item.title}](${link}) — ${description}` : `- [${item.title}](${link})`
     })
     .join("\n")
 }
@@ -284,7 +287,7 @@ async function main() {
     async (existingOrder) => {
       const items = await loadCollection("projects")
       items.sort(compareItems(existingOrder))
-      return `## Current notes\n\n${renderLinkedList(items)}`
+      return `## Current notes\n\n${renderLinkedList(items, "projects")}`
     },
   )
   if (projectsChanged) changedFiles.push("content/projects/index.md")
@@ -295,7 +298,7 @@ async function main() {
     async (existingOrder) => {
       const items = await loadCollection("methods")
       items.sort(compareItems(existingOrder))
-      return `## Available method notes\n\n${renderLinkedList(items)}`
+      return `## Available method notes\n\n${renderLinkedList(items, "methods")}`
     },
   )
   if (methodsChanged) changedFiles.push("content/methods/index.md")
