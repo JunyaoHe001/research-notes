@@ -17,6 +17,14 @@ const MARKERS = {
     start: "<!-- AUTO-GENERATED:WORKING-PAPERS:START -->",
     end: "<!-- AUTO-GENERATED:WORKING-PAPERS:END -->",
   },
+  activities: {
+    start: "<!-- AUTO-GENERATED:ACTIVITIES:START -->",
+    end: "<!-- AUTO-GENERATED:ACTIVITIES:END -->",
+  },
+  teaching: {
+    start: "<!-- AUTO-GENERATED:TEACHING:START -->",
+    end: "<!-- AUTO-GENERATED:TEACHING:END -->",
+  },
   projects: {
     start: "<!-- AUTO-GENERATED:PROJECTS:START -->",
     end: "<!-- AUTO-GENERATED:PROJECTS:END -->",
@@ -93,6 +101,24 @@ function normalizeYear(value) {
   return Number.isFinite(number) ? number : 0
 }
 
+function dateSortValue(data) {
+  const rawDate = String(data.date ?? "").trim()
+  if (rawDate) {
+    const parsed = Date.parse(rawDate)
+    if (Number.isFinite(parsed)) return parsed
+  }
+
+  const year = normalizeYear(data.year)
+  return year > 0 ? Date.UTC(year, 0, 1) : 0
+}
+
+function displayDate(data) {
+  const rawDate = String(data.date ?? "").trim()
+  if (rawDate) return rawDate
+  const year = normalizeYear(data.year)
+  return year > 0 ? String(year) : ""
+}
+
 function escapeTableCell(value) {
   return String(value ?? "")
     .replace(/\r?\n/g, " ")
@@ -121,34 +147,45 @@ function extractExistingOrder(indexSource) {
   return order
 }
 
+function compareOverrides(a, b, existingOrder) {
+  const aDisplayOrder = Number(a.data["display-order"])
+  const bDisplayOrder = Number(b.data["display-order"])
+  const aHasDisplayOrder = Number.isFinite(aDisplayOrder)
+  const bHasDisplayOrder = Number.isFinite(bDisplayOrder)
+
+  if (aHasDisplayOrder || bHasDisplayOrder) {
+    if (!aHasDisplayOrder) return 1
+    if (!bHasDisplayOrder) return -1
+    if (aDisplayOrder !== bDisplayOrder) return aDisplayOrder - bDisplayOrder
+  }
+
+  const aExisting = existingOrder.get(a.slug)
+  const bExisting = existingOrder.get(b.slug)
+  const aHasExisting = aExisting !== undefined
+  const bHasExisting = bExisting !== undefined
+
+  if (aHasExisting || bHasExisting) {
+    if (!aHasExisting) return 1
+    if (!bHasExisting) return -1
+    if (aExisting !== bExisting) return aExisting - bExisting
+  }
+
+  return a.title.localeCompare(b.title, "en", { sensitivity: "base" })
+}
+
 function compareItems(existingOrder) {
   return (a, b) => {
     const yearDifference = normalizeYear(b.data.year) - normalizeYear(a.data.year)
     if (yearDifference !== 0) return yearDifference
+    return compareOverrides(a, b, existingOrder)
+  }
+}
 
-    const aDisplayOrder = Number(a.data["display-order"])
-    const bDisplayOrder = Number(b.data["display-order"])
-    const aHasDisplayOrder = Number.isFinite(aDisplayOrder)
-    const bHasDisplayOrder = Number.isFinite(bDisplayOrder)
-
-    if (aHasDisplayOrder || bHasDisplayOrder) {
-      if (!aHasDisplayOrder) return 1
-      if (!bHasDisplayOrder) return -1
-      if (aDisplayOrder !== bDisplayOrder) return aDisplayOrder - bDisplayOrder
-    }
-
-    const aExisting = existingOrder.get(a.slug)
-    const bExisting = existingOrder.get(b.slug)
-    const aHasExisting = aExisting !== undefined
-    const bHasExisting = bExisting !== undefined
-
-    if (aHasExisting || bHasExisting) {
-      if (!aHasExisting) return 1
-      if (!bHasExisting) return -1
-      if (aExisting !== bExisting) return aExisting - bExisting
-    }
-
-    return a.title.localeCompare(b.title, "en", { sensitivity: "base" })
+function compareDatedItems(existingOrder) {
+  return (a, b) => {
+    const dateDifference = dateSortValue(b.data) - dateSortValue(a.data)
+    if (dateDifference !== 0) return dateDifference
+    return compareOverrides(a, b, existingOrder)
   }
 }
 
@@ -204,6 +241,25 @@ function isLeadAuthored(data) {
   return firstAuthor === "he,j." || firstAuthor === "he,j"
 }
 
+function isBlogActivity(data) {
+  return String(data["activity-type"] ?? "")
+    .toLowerCase()
+    .includes("blog")
+}
+
+function isSupervision(data) {
+  return String(data["teaching-type"] ?? "")
+    .toLowerCase()
+    .includes("supervision")
+}
+
+function joinContext(...values) {
+  return values
+    .map((value) => String(value ?? "").trim())
+    .filter(Boolean)
+    .join(", ")
+}
+
 function renderPublicationTable(items) {
   const lines = ["| Year | Title | Journal / Publisher |", "| --- | --- | --- |"]
 
@@ -231,7 +287,94 @@ function renderWorkingPaperSection(title, items) {
   }
 
   if (items.length === 0) {
-    lines.push("| — | No entries currently listed. | — |")
+    lines.push("| None | No entries currently listed. | None |")
+  }
+
+  return lines.join("\n")
+}
+
+function renderBlogSection(items) {
+  const lines = [
+    "## Blog Posts",
+    "",
+    "| Date | Title | Platform or Topic |",
+    "| --- | --- | --- |",
+  ]
+
+  for (const item of items) {
+    const context = item.data.event ?? item.data.description ?? ""
+    lines.push(
+      `| ${escapeTableCell(displayDate(item.data))} | [${escapeTableCell(item.title)}](${contentLink("activities", item.slug)}) | ${escapeTableCell(context)} |`,
+    )
+  }
+
+  if (items.length === 0) {
+    lines.push("| None | No entries currently listed. | None |")
+  }
+
+  return lines.join("\n")
+}
+
+function renderAcademicActivitiesSection(items) {
+  const lines = [
+    "## Conferences and Presentations",
+    "",
+    "| Date | Title | Role | Event or Venue |",
+    "| --- | --- | --- | --- |",
+  ]
+
+  for (const item of items) {
+    const eventOrVenue = joinContext(item.data.event, item.data.location)
+    lines.push(
+      `| ${escapeTableCell(displayDate(item.data))} | [${escapeTableCell(item.title)}](${contentLink("activities", item.slug)}) | ${escapeTableCell(item.data.role)} | ${escapeTableCell(eventOrVenue)} |`,
+    )
+  }
+
+  if (items.length === 0) {
+    lines.push("| None | No entries currently listed. | None | None |")
+  }
+
+  return lines.join("\n")
+}
+
+function renderCoursesSection(items) {
+  const lines = [
+    "## Courses and Lectures",
+    "",
+    "| Year | Title | Role | Course and Institution |",
+    "| --- | --- | --- | --- |",
+  ]
+
+  for (const item of items) {
+    const context = joinContext(item.data.course, item.data.institution)
+    lines.push(
+      `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](${contentLink("teaching", item.slug)}) | ${escapeTableCell(item.data.role)} | ${escapeTableCell(context)} |`,
+    )
+  }
+
+  if (items.length === 0) {
+    lines.push("| None | No entries currently listed. | None | None |")
+  }
+
+  return lines.join("\n")
+}
+
+function renderSupervisionSection(items) {
+  const lines = [
+    "## Thesis Supervision",
+    "",
+    "| Year | Thesis | Student | Level |",
+    "| --- | --- | --- | --- |",
+  ]
+
+  for (const item of items) {
+    lines.push(
+      `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](${contentLink("teaching", item.slug)}) | ${escapeTableCell(item.data.student)} | ${escapeTableCell(item.data.level)} |`,
+    )
+  }
+
+  if (items.length === 0) {
+    lines.push("| None | No entries currently listed. | None | None |")
   }
 
   return lines.join("\n")
@@ -244,9 +387,45 @@ function renderLinkedList(items, collection) {
     .map((item) => {
       const description = String(item.data.description ?? "").trim()
       const link = contentLink(collection, item.slug)
-      return description ? `- [${item.title}](${link}) — ${description}` : `- [${item.title}](${link})`
+      return description ? `- [${item.title}](${link}): ${description}` : `- [${item.title}](${link})`
     })
     .join("\n")
+}
+
+async function listMarkdownFiles(directory) {
+  const entries = await fs.readdir(directory, { withFileTypes: true })
+  const files = []
+
+  for (const entry of entries) {
+    const absolutePath = path.join(directory, entry.name)
+    if (entry.isDirectory()) {
+      files.push(...(await listMarkdownFiles(absolutePath)))
+    } else if (entry.isFile() && entry.name.endsWith(".md")) {
+      files.push(absolutePath)
+    }
+  }
+
+  return files
+}
+
+async function validateNoEmDash() {
+  const files = await listMarkdownFiles(CONTENT_ROOT)
+  const violations = []
+
+  for (const filePath of files) {
+    const source = await fs.readFile(filePath, "utf8")
+    if (source.includes("—")) {
+      violations.push(path.relative(ROOT, filePath))
+    }
+  }
+
+  if (violations.length > 0) {
+    throw new Error(
+      `Sentence level em dashes are not permitted in public content:\n${violations
+        .map((filePath) => `- ${filePath}`)
+        .join("\n")}`,
+    )
+  }
 }
 
 async function main() {
@@ -281,6 +460,42 @@ async function main() {
   )
   if (workingPapersChanged) changedFiles.push("content/working-papers/index.md")
 
+  const activitiesChanged = await updateManagedIndex(
+    "activities/index.md",
+    MARKERS.activities,
+    async (existingOrder) => {
+      const items = await loadCollection("activities")
+      const blogPosts = items.filter((item) => isBlogActivity(item.data))
+      const academicActivities = items.filter((item) => !isBlogActivity(item.data))
+      blogPosts.sort(compareDatedItems(existingOrder))
+      academicActivities.sort(compareDatedItems(existingOrder))
+
+      return [
+        renderBlogSection(blogPosts),
+        renderAcademicActivitiesSection(academicActivities),
+      ].join("\n\n")
+    },
+  )
+  if (activitiesChanged) changedFiles.push("content/activities/index.md")
+
+  const teachingChanged = await updateManagedIndex(
+    "teaching/index.md",
+    MARKERS.teaching,
+    async (existingOrder) => {
+      const items = await loadCollection("teaching")
+      const courses = items.filter((item) => !isSupervision(item.data))
+      const supervision = items.filter((item) => isSupervision(item.data))
+      courses.sort(compareItems(existingOrder))
+      supervision.sort(compareItems(existingOrder))
+
+      return [
+        renderCoursesSection(courses),
+        renderSupervisionSection(supervision),
+      ].join("\n\n")
+    },
+  )
+  if (teachingChanged) changedFiles.push("content/teaching/index.md")
+
   const projectsChanged = await updateManagedIndex(
     "projects/index.md",
     MARKERS.projects,
@@ -302,6 +517,8 @@ async function main() {
     },
   )
   if (methodsChanged) changedFiles.push("content/methods/index.md")
+
+  await validateNoEmDash()
 
   if (changedFiles.length > 0) {
     console.log(`Updated ${changedFiles.length} generated index file(s):`)

@@ -14,6 +14,8 @@ const SiteNav: QuartzComponent = ({ fileData }) => {
       href: `${SITE_ROOT}/working-papers/`,
       slug: "working-papers",
     },
+    { label: "Activities", href: `${SITE_ROOT}/activities/`, slug: "activities" },
+    { label: "Teaching", href: `${SITE_ROOT}/teaching/`, slug: "teaching" },
   ]
 
   const isActive = (slug: string) =>
@@ -45,7 +47,7 @@ SiteNav.css = `
   flex: 1 1 auto;
   align-items: center;
   min-width: 0;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .academic-top-name,
@@ -70,14 +72,14 @@ SiteNav.css = `
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  column-gap: 1.35rem;
+  column-gap: 1rem;
   row-gap: 0.4rem;
 }
 
 .academic-top-link {
   border-bottom: 1px solid transparent !important;
   color: var(--darkgray) !important;
-  font-size: 0.96rem;
+  font-size: 0.92rem;
   font-weight: 500;
   line-height: 1.5;
   white-space: nowrap;
