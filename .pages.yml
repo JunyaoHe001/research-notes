@@ -96,9 +96,7 @@ content:
         exclude:
           - index.md
         subfolders: false
-        filename:
-          template: "{primary}.md"
-          field: create
+        filename: "{primary}.md"
         operations:
           create: true
           rename: false
@@ -219,9 +217,7 @@ content:
         exclude:
           - index.md
         subfolders: false
-        filename:
-          template: "{primary}.md"
-          field: create
+        filename: "{primary}.md"
         operations:
           create: true
           rename: false
@@ -251,6 +247,7 @@ content:
             label: Title
             type: string
             required: true
+            description: The file name is generated automatically from this title.
 
           - name: authors
             label: Authors
@@ -317,9 +314,7 @@ content:
         exclude:
           - index.md
         subfolders: false
-        filename:
-          template: "{primary}.md"
-          field: create
+        filename: "{primary}.md"
         operations:
           create: true
           rename: false
@@ -367,9 +362,7 @@ content:
         exclude:
           - index.md
         subfolders: false
-        filename:
-          template: "{primary}.md"
-          field: create
+        filename: "{primary}.md"
         operations:
           create: true
           rename: false
