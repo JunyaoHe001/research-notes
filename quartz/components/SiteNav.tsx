@@ -16,71 +16,111 @@ const SiteNav: QuartzComponent = ({ fileData }) => {
       : current === slug || current.startsWith(`${slug}/`)
 
   return (
-    <div class="academic-site-identity">
-      <h2 class="academic-site-name">
-        <a class="internal" href={resolveRelative(current, "index" as FullSlug)}>
-          Junyao He
-        </a>
-      </h2>
-      <nav class="academic-section-nav" aria-label="Primary navigation">
+    <nav class="academic-top-nav" aria-label="Primary navigation">
+      <a class="academic-top-name internal" href={resolveRelative(current, "index" as FullSlug)}>
+        Junyao He
+      </a>
+      <div class="academic-top-links">
         {links.map((link) => (
           <a
-            class={`internal academic-section-link${isActive(link.slug) ? " active" : ""}`}
+            class={`internal academic-top-link${isActive(link.slug) ? " active" : ""}`}
             href={resolveRelative(current, link.slug)}
             aria-current={isActive(link.slug) ? "page" : undefined}
           >
             {link.label}
           </a>
         ))}
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }
 
 SiteNav.css = `
-.academic-site-identity {
-  width: 100%;
-  margin: 0 0 1rem;
-}
-
-.academic-site-name {
-  margin: 0 0 0.55rem;
-  font-size: 1.35rem;
-  line-height: 1.2;
-}
-
-.academic-site-name > a {
-  color: var(--dark);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.academic-section-nav {
+.academic-top-nav {
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
-  flex-wrap: wrap;
-  column-gap: 1rem;
-  row-gap: 0.35rem;
+  min-width: 0;
+  gap: 2rem;
 }
 
-.academic-section-link {
-  padding: 0.05rem 0;
-  border-bottom: 1px solid transparent;
-  color: var(--darkgray);
-  font-size: 0.95rem;
-  line-height: 1.4;
+.academic-top-name,
+.academic-top-link {
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
   text-decoration: none;
+}
+
+.academic-top-name {
+  flex: 0 0 auto;
+  color: var(--dark) !important;
+  font-family: var(--headerFont);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
   white-space: nowrap;
 }
 
-.academic-section-link:hover,
-.academic-section-link.active {
-  border-bottom-color: var(--secondary);
-  color: var(--secondary);
+.academic-top-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 1.35rem;
+  row-gap: 0.4rem;
 }
 
-.academic-section-link.active {
-  font-weight: 600;
+.academic-top-link {
+  border-bottom: 1px solid transparent !important;
+  color: var(--darkgray) !important;
+  font-size: 0.96rem;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.academic-top-link:hover,
+.academic-top-link.active {
+  border-bottom-color: var(--secondary) !important;
+  color: var(--secondary) !important;
+}
+
+.academic-top-link.active {
+  font-weight: 650;
+}
+
+header:has(.academic-top-nav) {
+  width: 100%;
+  margin: 0;
+  padding: 1.4rem 0 0.85rem;
+  border-bottom: 1px solid var(--lightgray);
+  flex-wrap: wrap;
+  row-gap: 0.75rem;
+}
+
+header:has(.academic-top-nav) > .flex-component {
+  flex: 0 1 18rem;
+  margin-left: auto;
+}
+
+@media (max-width: 800px) {
+  .academic-top-nav {
+    width: 100%;
+    flex-basis: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .academic-top-links {
+    column-gap: 1rem;
+  }
+
+  header:has(.academic-top-nav) > .flex-component {
+    width: 100%;
+    flex: 1 1 100%;
+    margin-left: 0;
+  }
 }
 `
 
