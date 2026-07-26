@@ -9,7 +9,7 @@ year: 2026
 publication-type: Working paper
 status: In Preparation
 research-line: Digital planning, platform governance, and networked power
-description: A co-authored manuscript developing a discursive algorithmic opportunity structure framework for governing urban AI in Europe.
+description: This commentary introduces Discursive Algorithmic Opportunity Structure as a conceptual framework for examining how urban AI becomes normalized, contested, and institutionalized through policy narratives and governance discourse.
 tags:
   - working-paper
   - urban-ai
@@ -20,7 +20,7 @@ tags:
 
 ## Abstract
 
-This co-authored manuscript develops a discursive algorithmic opportunity structure framework for analysing the governance of urban AI in Europe. A fuller abstract is not currently displayed on this public page.
+This commentary introduces Discursive Algorithmic Opportunity Structure as a conceptual framework for examining how urban AI becomes normalized, contested, and institutionalized through policy narratives and governance discourse. It focuses on the discursive conditions through which algorithmic systems become thinkable, legitimate, and governable in European urban policy contexts.
 
 ## Related pages
 
