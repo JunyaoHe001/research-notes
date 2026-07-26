@@ -9,7 +9,7 @@ tags:
 
 # Research Agenda
 
-My research examines how digitalisation, changing work arrangements, and emerging technologies restructure spatial relations. Complex networks and complex systems provide the common analytical core. Cities, regions, labour markets, migration systems, digital platforms, and governance processes are treated as relational systems whose structure, dynamics, and inequalities evolve over time.
+Junyao He's research examines how digitalisation, changing work arrangements, and emerging technologies restructure spatial relations. Complex networks and complex systems provide the common analytical core. Cities, regions, labour markets, migration systems, digital platforms, and governance processes are treated as relational systems whose structure, dynamics, and inequalities evolve over time.
 
 ## Urban and economic geography
 
@@ -25,7 +25,7 @@ This strand examines digital participation, social media, planning controversies
 
 ## Computational social science
 
-Across these empirical fields, I combine network analysis, spatial econometrics, causal inference, agent based modelling, spatial microsimulation, large scale text analysis, and interpretable machine learning.
+Across these empirical fields, Junyao He combines network analysis, spatial econometrics, causal inference, agent based modelling, spatial microsimulation, large scale text analysis, and interpretable machine learning.
 
 ## Connected notes
 

@@ -16,4 +16,4 @@ tags:
 
 ## Activity
 
-I presented research on simulating power dynamics in social media participation in digital planning. I also chaired a session on participatory planning and computational modelling. Together with colleagues, I co organized a workshop on the research agenda for digital planning and urban AI.
+Junyao He presented research on simulating power dynamics in social media participation in digital planning. He chaired a session on participatory planning and computational modelling and co organized a workshop on the research agenda for digital planning and urban AI.

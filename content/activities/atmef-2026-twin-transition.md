@@ -16,4 +16,4 @@ tags:
 
 ## Activity
 
-I presented an agent based approach for examining how the green and digital transitions may reshape spatial mobility, regional inequality, and sustainability across European regions. The presentation connected regional scenarios with heterogeneous mobility behaviour and complex system modelling.
+Junyao He presented an agent based approach for examining how the green and digital transitions may reshape spatial mobility, regional inequality, and sustainability across European regions. The presentation connected regional scenarios with heterogeneous mobility behaviour and complex system modelling.
