@@ -9,9 +9,11 @@ tags:
 
 This section contains evolving project notes rather than finished publication summaries. Each page records the research problem, data strategy, analytical design, and connections to the wider research agenda.
 
+<!-- AUTO-GENERATED:PROJECTS:START -->
 ## Current notes
 
-- [[projects/hybrid-work-networks|Hybrid work and job–home networks]]
-- [[projects/digital-nomad-mobility|Digital nomad mobility]]
+- [Hybrid Work and Job–Home Networks](./hybrid-work-networks) — Research notes on how hybrid work reshapes the spatial organisation of employment and residence.
+- [Digital Nomad Mobility](./digital-nomad-mobility) — Research notes on global digital-nomad mobility networks, destination attractiveness, and uneven urban opportunity.
+<!-- AUTO-GENERATED:PROJECTS:END -->
 
 Additional projects will be added as their data and analytical frameworks develop.
