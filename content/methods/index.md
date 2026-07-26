@@ -11,11 +11,17 @@ This section documents the methodological toolkit used across my research projec
 
 ## Core approaches
 
-- [[methods/complex-networks|Complex network analysis]]
+- Complex network analysis
 - Spatial econometrics and spatial causal inference
 - Agent-based modelling and complex-system simulation
 - Spatial microsimulation and iterative proportional fitting
 - Large-scale text analysis and GeoAI
 - Interpretable machine learning
+
+<!-- AUTO-GENERATED:METHODS:START -->
+## Available method notes
+
+- [Complex Networks as a Shared Framework](./complex-networks) — A common analytical language across mobility, geography, planning, and digital social research.
+<!-- AUTO-GENERATED:METHODS:END -->
 
 The emphasis is on combining relational, spatial, and causal reasoning rather than treating these methods as separate technical exercises.

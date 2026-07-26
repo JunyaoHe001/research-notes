@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -39,6 +39,30 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Synchronize generated content indexes
+        run: node scripts/sync-content-indexes.mjs
+
+      - name: Commit synchronized indexes
+        if: github.event_name == 'push' && github.ref == 'refs/heads/v5'
+        run: |
+          GENERATED_FILES=(
+            content/publications/index.md
+            content/working-papers/index.md
+            content/projects/index.md
+            content/methods/index.md
+          )
+
+          if git diff --quiet -- "${GENERATED_FILES[@]}"; then
+            echo "Generated indexes are already synchronized."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${GENERATED_FILES[@]}"
+          git commit -m "content: synchronize generated indexes"
+          git push origin HEAD:v5
 
       - name: Build Quartz
         run: npx quartz build
