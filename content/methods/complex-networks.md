@@ -9,7 +9,7 @@ tags:
 
 # Complex Networks as a Shared Framework
 
-Complex network analysis provides a common language for systems composed of interdependent actors, places, organisations, or flows. Across my research, the central concern is how relational structure shapes access, influence, mobility, and inequality.
+Complex network analysis provides a common language for systems composed of interdependent actors, places, organisations, or flows. Across Junyao He's research, the central concern is how relational structure shapes access, influence, mobility, and inequality.
 
 ## Network representations
 
