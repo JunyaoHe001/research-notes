@@ -3,6 +3,10 @@ title: Junyao He
 description: Economic geographer and computational social scientist working on complex networks, spatial mobility, regional inequality, and digital transformation.
 ---
 
+<figure class="home-portrait">
+  <img src="/research-notes/junyao-he.jpg" alt="Portrait of Junyao He" width="537" height="631" loading="eager" />
+</figure>
+
 I am Junyao He — an economic geographer and computational social scientist affiliated with the Department of Economic Geography at the University of Groningen. My research uses **complex networks and complex systems** to study how remote work, digitalisation, emerging technologies, and changing mobility reshape labour markets, urban systems, migration, and regional inequality.
 
 My work connects four empirical fields: urban planning and urban studies; urban and economic geography; mobility and migration; and computational social science. Methodologically, I combine network analysis, spatial econometrics, causal inference, agent-based modelling, spatial microsimulation, large-scale text analysis, and interpretable machine learning.
