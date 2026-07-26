@@ -16,4 +16,4 @@ tags:
 
 ## Activity
 
-I presented research at the AESOP Annual Congress in Paris and joined discussions on planning for just and sustainable urban regions. The conference provided a useful setting for connecting digital participation research with wider debates on urban transformation and planning practice.
+Junyao He presented research at the AESOP Annual Congress in Paris and joined discussions on planning for just and sustainable urban regions. The conference connected research on digital participation with wider debates on urban transformation and planning practice.
