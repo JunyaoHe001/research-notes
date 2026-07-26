@@ -132,12 +132,6 @@ plugins:
 
   - source: "@quartz-community/search"
     enabled: true
-    layout:
-      position: left
-      priority: 20
-      group: toolbar
-      groupOptions:
-        grow: true
 
   - source: "@quartz-community/article-title"
     enabled: true
@@ -147,17 +141,9 @@ plugins:
 
   - source: "@quartz-community/darkmode"
     enabled: true
-    layout:
-      position: left
-      priority: 30
-      group: toolbar
 
   - source: "@quartz-community/reader-mode"
     enabled: true
-    layout:
-      position: left
-      priority: 35
-      group: toolbar
 
   - source: "@quartz-community/breadcrumbs"
     enabled: true
@@ -172,15 +158,6 @@ plugins:
       links:
         Academic Website: https://junyaohe001.github.io/
         GitHub: https://github.com/JunyaoHe001/research-notes
-
-  - source: "@quartz-community/spacer"
-    enabled: true
-    options: {}
-    order: 25
-    layout:
-      position: left
-      priority: 25
-      display: mobile-only
 
   - source: "@quartz-community/bases-page"
     enabled: true
@@ -226,11 +203,6 @@ plugins:
     order: 45
 
 layout:
-  groups:
-    toolbar:
-      priority: 35
-      direction: row
-      gap: 0.5rem
   byPageType:
     "404":
       positions:
@@ -239,13 +211,9 @@ layout:
         right: []
     content: {}
     folder:
-      exclude:
-        - reader-mode
       positions:
         right: []
     tag:
-      exclude:
-        - reader-mode
       positions:
         right: []
     canvas: {}
