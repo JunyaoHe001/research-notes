@@ -43,6 +43,14 @@ jobs:
       - name: Build Quartz
         run: npx quartz build
 
+      - name: Upload preview artifact
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: quartz-preview
+          path: public
+          retention-days: 3
+
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
