@@ -4,7 +4,7 @@ description: Economic geographer and computational social scientist working on c
 ---
 
 <figure class="home-portrait">
-  <img src="/research-notes/junyao-he.jpg" alt="Portrait of Junyao He" width="537" height="631" loading="eager" />
+  <img src="./junyao-he.jpg" alt="Portrait of Junyao He" width="537" height="631" loading="eager" />
 </figure>
 
 I am Junyao He — an economic geographer and computational social scientist affiliated with the Department of Economic Geography at the University of Groningen. My research uses **complex networks and complex systems** to study how remote work, digitalisation, emerging technologies, and changing mobility reshape labour markets, urban systems, migration, and regional inequality.
