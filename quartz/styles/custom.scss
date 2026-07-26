@@ -232,3 +232,8 @@ article > table {
     min-width: 8rem;
   }
 }
+
+// Explicit index pages already provide curated tables or lists.
+body[data-slug$="/index"] .page-listing {
+  display: none;
+}
