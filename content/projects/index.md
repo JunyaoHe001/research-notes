@@ -12,7 +12,7 @@ This section contains evolving project notes. Each page records the research pro
 <!-- AUTO-GENERATED:PROJECTS:START -->
 ## Current notes
 
-- [Hybrid Work and Job–Home Networks](../projects/hybrid-work-networks): Research notes on how hybrid work reshapes the spatial organisation of employment and residence.
+- [Hybrid Work and Job Home Networks](../projects/hybrid-work-networks): Research notes on how hybrid work reshapes the spatial organisation of employment and residence.
 - [Digital Nomad Mobility](../projects/digital-nomad-mobility): Research notes on global digital nomad flows, city networks, and the drivers of mobility.
 <!-- AUTO-GENERATED:PROJECTS:END -->
 
