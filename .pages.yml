@@ -64,6 +64,26 @@ content:
           rename: false
           delete: false
 
+      - name: activities-index
+        label: Activities Overview
+        type: file
+        path: content/activities/index.md
+        format: code
+        operations:
+          create: false
+          rename: false
+          delete: false
+
+      - name: teaching-index
+        label: Teaching Overview
+        type: file
+        path: content/teaching/index.md
+        format: code
+        operations:
+          create: false
+          rename: false
+          delete: false
+
       - name: projects-index
         label: Projects Overview
         type: file
@@ -298,6 +318,209 @@ content:
 
           - name: body
             label: Public Summary and Related Pages
+            type: code
+            options:
+              format: markdown
+
+  - name: academic-profile
+    label: Activities and Teaching
+    type: group
+    items:
+      - name: activities
+        label: Activities
+        type: collection
+        path: content/activities
+        format: yaml-frontmatter
+        exclude:
+          - index.md
+        subfolders: false
+        filename: "{primary}.md"
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields:
+            - title
+            - year
+            - date
+            - activity-type
+            - role
+            - event
+          search:
+            - title
+            - activity-type
+            - role
+            - event
+            - location
+            - tags
+          sort:
+            - date
+            - year
+            - title
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+            description: The file name is generated automatically from this title.
+
+          - name: year
+            label: Year
+            type: number
+            required: true
+
+          - name: date
+            label: Date
+            type: date
+            default: ""
+            options:
+              format: yyyy-MM-dd
+
+          - name: activity-type
+            label: Activity Type
+            type: select
+            required: true
+            options:
+              values:
+                - Blog post
+                - Conference
+                - Invited talk
+                - Workshop
+                - Exhibition
+                - Academic service
+
+          - name: role
+            label: Role
+            type: string
+
+          - name: event
+            label: Event or Platform
+            type: string
+
+          - name: location
+            label: Location
+            type: string
+
+          - name: external-link
+            label: External Link
+            type: string
+
+          - name: description
+            label: Description
+            type: text
+
+          - name: tags
+            label: Tags
+            type: string
+            list: true
+
+          - name: body
+            label: Activity Page Content
+            type: code
+            options:
+              format: markdown
+
+      - name: teaching
+        label: Teaching and Supervision
+        type: collection
+        path: content/teaching
+        format: yaml-frontmatter
+        exclude:
+          - index.md
+        subfolders: false
+        filename: "{primary}.md"
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields:
+            - title
+            - year
+            - teaching-type
+            - role
+            - student
+            - institution
+          search:
+            - title
+            - teaching-type
+            - role
+            - institution
+            - course
+            - student
+            - level
+            - tags
+          sort:
+            - year
+            - teaching-type
+            - title
+          default:
+            sort: year
+            order: desc
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+            description: Use the lecture title or thesis title.
+
+          - name: year
+            label: Year
+            type: number
+            required: true
+
+          - name: teaching-type
+            label: Teaching Type
+            type: select
+            required: true
+            options:
+              values:
+                - Course
+                - Guest lecture
+                - Thesis supervision
+
+          - name: role
+            label: Role
+            type: string
+
+          - name: institution
+            label: Institution
+            type: string
+
+          - name: course
+            label: Course
+            type: string
+
+          - name: student
+            label: Student
+            type: string
+
+          - name: level
+            label: Degree Level
+            type: string
+
+          - name: co-supervisors
+            label: Co supervisors
+            type: string
+            list: true
+
+          - name: description
+            label: Description
+            type: text
+
+          - name: tags
+            label: Tags
+            type: string
+            list: true
+
+          - name: body
+            label: Teaching or Supervision Page Content
             type: code
             options:
               format: markdown
