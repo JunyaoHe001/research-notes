@@ -9,7 +9,7 @@ year: 2026
 publication-type: Working paper
 status: Under Review
 research-line: Digital planning, platform governance, and networked power
-description: A co-authored manuscript on how discursive AI opportunity structures shape the institutionalization of AI in Chinese urban planning.
+description: The article conceptualizes Discursive AI Opportunity Structure to examine how artificial intelligence is framed, justified, and institutionalized in China's national-level urban planning agendas.
 tags:
   - working-paper
   - artificial-intelligence
@@ -20,7 +20,7 @@ tags:
 
 ## Abstract
 
-This co-authored manuscript examines how discursive AI opportunity structures shape the institutionalization of artificial intelligence in urban planning in China. A fuller abstract is not currently displayed on this public page.
+The article conceptualizes Discursive AI Opportunity Structure to examine how artificial intelligence is framed, justified, and institutionalized in China's national-level urban planning agendas. It shows how policy discourse makes AI-related ideas and practices sensible, realistic, and legitimate, connecting urban AI governance with the institutional production of technological opportunity.
 
 ## Related pages
 
