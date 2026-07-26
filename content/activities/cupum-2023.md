@@ -16,4 +16,4 @@ tags:
 
 ## Activity
 
-I presented research on social media and power relations in urban planning. The presentation examined how interaction networks, information flows, and digital participation influence the capacity of actors to shape planning debate and decision making.
+Junyao He presented research on social media and power relations in urban planning. The presentation examined how interaction networks, information flows, and digital participation influence the capacity of actors to shape planning debate and decision making.
