@@ -49,6 +49,8 @@ jobs:
           GENERATED_FILES=(
             content/publications/index.md
             content/working-papers/index.md
+            content/activities/index.md
+            content/teaching/index.md
             content/projects/index.md
             content/methods/index.md
           )
