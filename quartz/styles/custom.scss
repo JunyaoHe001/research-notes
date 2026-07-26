@@ -1,3 +1,80 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Academic site layout: top navigation and a compact two-column desktop frame.
+.page[data-frame="default"] > #quartz-body {
+  > .left.sidebar {
+    display: none;
+  }
+
+  > .center {
+    grid-area: grid-main;
+    min-width: 0;
+  }
+
+  > footer {
+    grid-area: grid-footer;
+  }
+
+  .page-header {
+    margin-top: 0;
+  }
+
+  @media all and ($desktop) {
+    grid-template-columns: minmax(0, 1fr) 18rem;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "grid-main grid-sidebar-right"
+      "grid-footer grid-sidebar-right";
+    column-gap: 2rem;
+
+    > .right.sidebar {
+      grid-area: grid-sidebar-right;
+      padding: 2rem 1.25rem 2rem 0;
+    }
+  }
+
+  @media all and ($tablet) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "grid-main"
+      "grid-footer";
+
+    > .right.sidebar {
+      display: none;
+    }
+  }
+
+  @media all and ($mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "grid-main"
+      "grid-footer";
+
+    > .right.sidebar {
+      display: none;
+    }
+  }
+}
+
+// Keep academic index tables readable and prevent year/status columns from drifting.
+article > table {
+  width: 100%;
+
+  th,
+  td {
+    vertical-align: top;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 4.75rem;
+    white-space: nowrap;
+  }
+
+  th:last-child,
+  td:last-child {
+    min-width: 8rem;
+  }
+}
