@@ -10,10 +10,7 @@ This section records Junyao He's conference participation, academic presentation
 
 | Date | Title | Platform or Topic |
 | --- | --- | --- |
-| 2025-06-30 | [Presenting and Organizing at CUPUM 2025 in London](../activities/blog-cupum-2025) | Personal academic blog |
-| 2024-09-16 | [Informal Participation in Digital Planning](../activities/blog-informal-participation-2024) | Publication blog |
-| 2024-08-01 | [Citizen Perceptions of Planning in Cities: Skylines](../activities/blog-cities-skylines-2024) | Publication blog |
-| 2024-01-10 | [Measuring Network Power in Collaborative Planning](../activities/blog-network-power-2024) | Publication blog |
+| 2026-07-14 | [How Remote Work Changes Where People Work, Live, and Move](../activities/cambridge-housing-voice-remote-work) | Cambridge Housing Voice, Department of Land Economy, University of Cambridge |
 
 ## Conferences and Presentations
 
