@@ -1,7 +1,7 @@
 ---
 title: "Presenting and Organizing at CUPUM 2025"
 year: 2025
-date: 2025-06-30
+date: 2025-06-23
 activity-type: Conference
 role: Presenter, Session Chair, and Workshop Co organizer
 event: 19th International Conference on Computers in Urban Planning and Urban Management
