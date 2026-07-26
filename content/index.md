@@ -11,17 +11,17 @@ My work connects four empirical fields: urban planning and urban studies; urban 
 
 Two connected programmes anchor my current work:
 
-- **Hybrid work and spatial restructuring** — how remote and hybrid work alter job–home networks, residential relocation, labour-market reach, housing pressures, and uneven regional development. See [[research#hybrid-work-jobhome-networks-and-regional-restructuring|Research]] and the [[working-papers/teleworkability-job-home-networks|Netherlands job–home network paper]].
-- **Mobility networks and regional inequality** — how migration, relocation, and digitally enabled mobility connect cities and regions while redistributing opportunity. This includes [[projects/digital-nomad-mobility|digital-nomad mobility]] and heterogeneous Dutch migration networks.
+- **Hybrid work and spatial restructuring** — how remote and hybrid work alter job–home networks, residential relocation, labour-market reach, housing pressures, and uneven regional development. See [Research](/research-notes/research#hybrid-work-jobhome-networks-and-regional-restructuring) and the [Netherlands job–home network paper](/research-notes/working-papers/teleworkability-job-home-networks).
+- **Mobility networks and regional inequality** — how migration, relocation, and digitally enabled mobility connect cities and regions while redistributing opportunity. This includes [digital-nomad mobility](/research-notes/projects/digital-nomad-mobility) and heterogeneous Dutch migration networks.
 
 A continuing research line examines **digital planning, platform governance, and networked power**, extending my doctoral work on social-media participation and inequalities in collaborative planning. A newer direction studies **AI, innovation, and regional networks** through large-scale news text and graph-based methods.
 
-See the [[research|Research page]] for fuller descriptions, [[publications/index|Publications]] for published work, and [[working-papers/index|Working Papers]] for current manuscripts.
+See the [Research page](/research-notes/research) for fuller descriptions, [Publications](/research-notes/publications/) for published work, and [Working Papers](/research-notes/working-papers/) for current manuscripts.
 
 ## Recent
 
-- PhD thesis (2026): [[publications/network-power-social-media-thesis|Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China]].
-- Journal article (2026): [[publications/social-media-framing-collaborative-planning|Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation]].
+- PhD thesis (2026): [Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China](/research-notes/publications/network-power-social-media-thesis).
+- Journal article (2026): [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](/research-notes/publications/social-media-framing-collaborative-planning).
 - Current project: hybrid work and the restructuring of Spanish and Dutch job–home networks.
 - Current project: global digital-nomad mobility networks and their urban drivers.
 
@@ -29,4 +29,4 @@ See the [[research|Research page]] for fuller descriptions, [[publications/index
 
 Department of Economic Geography, University of Groningen  
 Email: [J.HE@RUG.NL](mailto:J.HE@RUG.NL)  
-[Academic website](https://junyaohe001.github.io/) · [Google Scholar](https://scholar.google.com/citations?user=ywo5IEcAAAAJ) · [ORCID](https://orcid.org/0000-0003-1674-2933) · [LinkedIn](https://www.linkedin.com/in/JunyaoHe)
+[Google Scholar](https://scholar.google.com/citations?user=ywo5IEcAAAAJ) · [ORCID](https://orcid.org/0000-0003-1674-2933) · [LinkedIn](https://www.linkedin.com/in/JunyaoHe)

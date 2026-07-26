@@ -156,8 +156,7 @@ plugins:
     enabled: true
     options:
       links:
-        Academic Website: https://junyaohe001.github.io/
-        GitHub: https://github.com/JunyaoHe001/research-notes
+        Research Notes Repository: https://github.com/JunyaoHe001/research-notes
 
   - source: "@quartz-community/bases-page"
     enabled: true

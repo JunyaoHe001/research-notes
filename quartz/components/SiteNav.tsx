@@ -1,30 +1,34 @@
-import { FullSlug, resolveRelative } from "../util/path"
+import { FullSlug } from "../util/path"
 import { QuartzComponent } from "./types"
+
+const SITE_ROOT = "/research-notes"
 
 const SiteNav: QuartzComponent = ({ fileData }) => {
   const current = (fileData.slug ?? "index") as FullSlug
-  const links: { label: string; slug: FullSlug }[] = [
-    { label: "Home", slug: "index" as FullSlug },
-    { label: "Research", slug: "research" as FullSlug },
-    { label: "Publications", slug: "publications" as FullSlug },
-    { label: "Working papers", slug: "working-papers" as FullSlug },
+  const links = [
+    { label: "Home", href: `${SITE_ROOT}/`, slug: "index" },
+    { label: "Research", href: `${SITE_ROOT}/research`, slug: "research" },
+    { label: "Publications", href: `${SITE_ROOT}/publications/`, slug: "publications" },
+    {
+      label: "Working papers",
+      href: `${SITE_ROOT}/working-papers/`,
+      slug: "working-papers",
+    },
   ]
 
-  const isActive = (slug: FullSlug) =>
-    slug === ("index" as FullSlug)
-      ? current === ("index" as FullSlug)
-      : current === slug || current.startsWith(`${slug}/`)
+  const isActive = (slug: string) =>
+    slug === "index" ? current === "index" : current === slug || current.startsWith(`${slug}/`)
 
   return (
     <nav class="academic-top-nav" aria-label="Primary navigation">
-      <a class="academic-top-name internal" href={resolveRelative(current, "index" as FullSlug)}>
-        Junyao He
+      <a class="academic-top-name internal" href={`${SITE_ROOT}/`}>
+        Junyao's Research Notes
       </a>
       <div class="academic-top-links">
         {links.map((link) => (
           <a
             class={`internal academic-top-link${isActive(link.slug) ? " active" : ""}`}
-            href={resolveRelative(current, link.slug)}
+            href={link.href}
             aria-current={isActive(link.slug) ? "page" : undefined}
           >
             {link.label}
