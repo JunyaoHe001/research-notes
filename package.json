@@ -19,7 +19,6 @@
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
-    "sync-content": "node scripts/sync-content-indexes.mjs",
     "prebuild": "npm run install-plugins"
   },
   "engines": {
@@ -111,7 +110,7 @@
     "source-map-support": "^0.5.21",
     "to-vfile": "^8.0.0",
     "unified": "^11.0.5",
-    "unist-util-visit": "^5.0.0",
+    "unist-util-visit": "^5.1.0",
     "vfile": "^6.0.3",
     "workerpool": "^10.0.1",
     "ws": "^8.19.0",
