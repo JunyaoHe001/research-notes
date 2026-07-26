@@ -7,22 +7,22 @@ description: Economic geographer and computational social scientist working on c
   <img src="./junyao-he.jpg" alt="Portrait of Junyao He" width="537" height="631" loading="eager" />
 </figure>
 
-I am Junyao He, an economic geographer and computational social scientist affiliated with the Department of Economic Geography at the University of Groningen. My research uses **complex networks and complex systems** to study how remote work, digitalisation, emerging technologies, and changing mobility reshape labour markets, urban systems, migration, and regional inequality.
+Junyao He is an economic geographer and computational social scientist affiliated with the Department of Economic Geography at the University of Groningen. His research uses **complex networks and complex systems** to study how remote work, digitalisation, emerging technologies, and changing mobility reshape labour markets, urban systems, migration, and regional inequality.
 
-My work connects four empirical fields: urban planning and urban studies; urban and economic geography; mobility and migration; and computational social science. Methodologically, I combine network analysis, spatial econometrics, causal inference, agent based modelling, spatial microsimulation, large scale text analysis, and interpretable machine learning.
+His work connects four empirical fields: urban planning and urban studies; urban and economic geography; mobility and migration; and computational social science. His methodological work combines network analysis, spatial econometrics, causal inference, agent based modelling, spatial microsimulation, large scale text analysis, and interpretable machine learning.
 
-I completed a PhD in Human Geography and Spatial Planning at Utrecht University. I hold an MSc in Urban Design and International Planning from the University of Manchester and a BSc in Human Geography and Urban and Rural Planning from Southwest University.
+Junyao He completed a PhD in Human Geography and Spatial Planning at Utrecht University. He holds an MSc in Urban Design and International Planning from the University of Manchester and a BSc in Human Geography and Urban and Rural Planning from Southwest University.
 
 ## Current research
 
-Two connected programmes anchor my current work:
+Junyao He's current research is organised around two connected programmes:
 
 - **Hybrid work and spatial restructuring:** Remote and hybrid work alter job home networks, residential relocation, labour market reach, housing pressures, and uneven regional development. See [Research](./research#hybrid-work-jobhome-networks-and-regional-restructuring) and the [Netherlands job home network paper](./working-papers/teleworkability-job-home-networks).
 - **Mobility networks and regional inequality:** Migration, relocation, and digitally enabled mobility connect cities and regions while redistributing opportunity. This includes [digital nomad mobility](./projects/digital-nomad-mobility) and heterogeneous Dutch migration networks.
 
-A continuing research line examines **digital planning, platform governance, and networked power**, extending my doctoral work on social media participation and inequalities in collaborative planning. A newer direction studies **AI, innovation, and regional networks** through large scale news text and graph based methods.
+A continuing research line examines **digital planning, platform governance, and networked power**, extending his doctoral work on social media participation and inequalities in collaborative planning. A newer direction studies **AI, innovation, and regional networks** through large scale news text and graph based methods.
 
-See the [Research page](./research) for fuller descriptions, [Publications](./publications/) for published work, [Working Papers](./working-papers/) for current manuscripts, [Activities](./activities/) for conferences and blog posts, and [Teaching](./teaching/) for courses and supervision.
+See the [Research page](./research) for fuller descriptions, [Publications](./publications/) for published work, [Working Papers](./working-papers/) for current manuscripts, [Activities](./activities/) for conferences and research blogs, and [Teaching](./teaching/) for courses and supervision.
 
 ## Recent
 
