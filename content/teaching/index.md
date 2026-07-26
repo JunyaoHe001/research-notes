@@ -3,7 +3,7 @@ title: Teaching & Supervision
 description: Course contributions, guest lectures, thesis supervision, and student research guidance.
 ---
 
-This section presents my teaching contributions and supervision experience. Course and lecture entries describe the subject, role, and institution. Supervision entries record the student, degree level, thesis title, and supervisory role.
+This section presents Junyao He's teaching contributions and supervision experience. Course and lecture entries describe the subject, role, and institution. Supervision entries record the student, degree level, thesis title, and supervisory role.
 
 <!-- AUTO-GENERATED:TEACHING:START -->
 ## Courses and Lectures
@@ -24,5 +24,3 @@ This section presents my teaching contributions and supervision experience. Cour
 | 2023 | [Head on Collision? A Discourse Analysis of Newspaper Articles and Tweets about the A27 Highway Widening Project near Amelisweerd, Utrecht](../teaching/supervision-toby-dissel) | Toby Dissel | Pre Master |
 | 2023 | [Using Social Media Data to Understand Citizen Perceptions of Urban Planning in a City Simulation Game](../teaching/supervision-yujian-qiu) | Yujian Qiu | Master |
 <!-- AUTO-GENERATED:TEACHING:END -->
-
-New entries are added through Pages CMS and the overview is refreshed automatically during deployment.
