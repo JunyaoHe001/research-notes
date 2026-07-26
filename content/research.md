@@ -3,13 +3,13 @@ title: Research
 description: Five interconnected research lines organised around complex networks, spatial mobility, digital transformation, and uneven regional development.
 ---
 
-Five interconnected research lines organise my work. Complex networks and complex systems provide the shared analytical foundation. The empirical questions span economic geography, urban studies, mobility and migration, planning governance, and computational social science.
+Five interconnected research lines organise Junyao He's work. Complex networks and complex systems provide the shared analytical foundation. The empirical questions span economic geography, urban studies, mobility and migration, planning governance, and computational social science.
 
 ## Hybrid work, job–home networks, and regional restructuring
 
 Major active research line.
 
-Remote and hybrid work change the spatial relationship between employment and residence. I examine job–home networks as the main unit of spatial organisation and trace changes in their reach, hierarchy, and distribution. This perspective asks whether flexible work expands labour market reach, redistributes employment and residential centrality, alters the geography of opportunity, and produces different outcomes across urban and rural contexts.
+Remote and hybrid work change the spatial relationship between employment and residence. Junyao He examines job–home networks as the main unit of spatial organisation and traces changes in their reach, hierarchy, and distribution. This perspective addresses whether flexible work expands labour market reach, redistributes employment and residential centrality, alters the geography of opportunity, and produces different outcomes across urban and rural contexts.
 
 Current work uses Spanish mobility data to compare multiple levels of hybrid work intensity and Dutch longitudinal data to estimate causal and spatial spillover effects after the COVID 19 shock. Related research examines how remote work exposure interacts with housing markets, relocation, and regional inequality.
 
@@ -22,7 +22,7 @@ Current work uses Spanish mobility data to compare multiple levels of hybrid wor
 
 Major active research line.
 
-Mobility is relational. Cities and regions are shaped by the origins, destinations, volumes, and composition of the flows connecting them. I use network approaches to study residential relocation, interregional migration, digital nomad mobility, and changing access to employment and urban opportunity.
+Mobility is relational. Cities and regions are shaped by the origins, destinations, volumes, and composition of the flows connecting them. Junyao He uses network approaches to study residential relocation, interregional migration, digital nomad mobility, and changing access to employment and urban opportunity.
 
 A central question concerns the uneven distribution of opportunity under new mobility regimes. Remote workers, digitally mobile professionals, and different demographic groups may respond differently to the same spatial conditions. Layered mobility networks make these heterogeneous responses visible.
 
@@ -36,7 +36,7 @@ A central question concerns the uneven distribution of opportunity under new mob
 
 Established research line.
 
-Digital platforms have become important arenas for planning participation, controversy, and legitimacy. My doctoral research examined how social media reshapes interaction networks, discursive influence, and power inequalities in collaborative planning in China.
+Digital platforms have become important arenas for planning participation, controversy, and legitimacy. Junyao He's doctoral research examined how social media reshapes interaction networks, discursive influence, and power inequalities in collaborative planning in China.
 
 This work develops network based approaches to power that connect interaction structure with discourse, framing, and institutional authority. It examines how citizens, third parties, journalists, experts, and public authorities translate online visibility into influence over planning processes. Current co authored work extends this agenda to the institutionalisation and governance of urban AI in China and Europe.
 
@@ -53,7 +53,7 @@ This work develops network based approaches to power that connect interaction st
 
 Emerging research line.
 
-AI and digital transformation are reshaping regional economies. Patents, firms, and administrative units capture only part of this geography. I am developing relational approaches that use large scale news text to identify cooperation, competition, innovation, and attention networks across subnational regions.
+AI and digital transformation are reshaping regional economies. Patents, firms, and administrative units capture only part of this geography. Junyao He is developing relational approaches that use large scale news text to identify cooperation, competition, innovation, and attention networks across subnational regions.
 
 This line connects GeoAI, graph based modelling, natural language processing, and interpretable machine learning with debates on regional capabilities, technological transitions, and uneven development. Related co authored work examines regional cognitive composition under the green and digital transitions and applies visual Large Language Models to urban environmental and crime data.
 
@@ -67,7 +67,7 @@ This line connects GeoAI, graph based modelling, natural language processing, an
 
 Cross cutting methodological line.
 
-Across these empirical fields, I treat cities, regions, mobility systems, and digital public spheres as complex relational systems. The methodological agenda combines network measurement with spatial dependence, causal inference, simulation, and interpretable prediction.
+Across these empirical fields, Junyao He treats cities, regions, mobility systems, and digital public spheres as complex relational systems. The methodological agenda combines network measurement with spatial dependence, causal inference, simulation, and interpretable prediction.
 
 Current methods include multilayer and temporal networks, directed centrality, community structure, entropy based reach, spatial interaction models, spatial difference in differences, Bartik designs, agent based modelling, spatial microsimulation, and large scale text derived networks.
 
@@ -78,8 +78,6 @@ Current methods include multilayer and temporal networks, directed centrality, c
 
 See also [Methods and analytical approaches](./methods/) and [Complex networks as a shared framework](./methods/complex-networks).
 
----
+## Collaboration
 
-## Working with me
-
-I welcome collaboration on complex networks, spatial mobility, remote work, migration, economic geography, digital planning, and computational urban research. For paper, data, or collaboration enquiries, email [J.HE@RUG.NL](mailto:J.HE@RUG.NL).
+Junyao He welcomes collaboration on complex networks, spatial mobility, remote work, migration, economic geography, digital planning, and computational urban research. Enquiries concerning papers, data, or research collaboration can be sent to [J.HE@RUG.NL](mailto:J.HE@RUG.NL).
