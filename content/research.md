@@ -38,7 +38,7 @@ Established research line.
 
 Digital platforms have become important arenas for planning participation, controversy, and legitimacy. My doctoral research examined how social media reshapes interaction networks, discursive influence, and power inequalities in collaborative planning in China.
 
-This work develops network-based approaches to power that connect the structure of interactions with discourse, framing, and institutional authority. It also examines how informal participants, third parties, journalists, experts, and public authorities translate online visibility into influence over planning processes.
+This work develops network-based approaches to power that connect the structure of interactions with discourse, framing, and institutional authority. It also examines how informal participants, third parties, journalists, experts, and public authorities translate online visibility into influence over planning processes. Current co-authored work extends this agenda to the institutionalization and governance of urban AI in China and Europe.
 
 **Representative work**
 
@@ -46,6 +46,8 @@ This work develops network-based approaches to power that connect the structure 
 - [Informal Participation in Digital Planning: How Can Third Parties Use Social Media to Shift Power Relations in Planning?](./publications/informal-participation-digital-planning)
 - [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning)
 - [Social Media Influence on Citizen Power in Online Planning Controversies: An Edge-based Social Network Analysis of Network Power](./working-papers/edge-based-network-power)
+- [Institutionalizing AI in Urban Planning: Discursive AI Opportunity Structures in China](./working-papers/institutionalizing-ai-urban-planning)
+- [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](./working-papers/discursive-algorithmic-opportunity-europe)
 
 ## AI, innovation, and computational economic geography
 
@@ -53,11 +55,13 @@ Emerging research line.
 
 AI and digital transformation are reshaping regional economies, but their geography cannot be measured adequately through patents, firms, or administrative units alone. I am developing relational approaches that use large-scale news text to identify cooperation, competition, innovation, and attention networks across subnational regions.
 
-This line links GeoAI, graph-based modelling, natural-language processing, and interpretable machine learning with debates in economic geography concerning regional capabilities, technological transitions, and uneven development.
+This line links GeoAI, graph-based modelling, natural-language processing, and interpretable machine learning with debates in economic geography concerning regional capabilities, technological transitions, and uneven development. Related co-authored work examines how regional cognitive composition shapes trajectories under the green and digital transitions and applies visual Large Language Models to urban environmental and crime data.
 
 **Representative work**
 
 - [Measuring AI-Related Cooperation, Competition, and Innovation across Global Subnational Regions Using News Text](./working-papers/ai-regional-networks)
+- [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./working-papers/cognitive-composition-regional-trajectories)
+- [Exploring day–night heterogeneity in links between street green space features and crime incidents via visual Large Language Model](./working-papers/street-green-space-crime-vllm)
 
 ## Complex networks and complex systems methods
 
