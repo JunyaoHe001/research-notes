@@ -21,7 +21,7 @@ Current manuscripts and research papers in development. Click any title for auth
 | Year | Title | Status |
 | --- | --- | --- |
 | 2026 | [Institutionalizing AI in Urban Planning: Discursive AI Opportunity Structures in China](./institutionalizing-ai-urban-planning) | Under Review |
-| 2026 | [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./cognitive-composition-regional-trajectories) | Revise and Resubmit |
+| 2026 | [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./cognitive-composition-regional-trajectories) | Revising for Resubmission |
 | 2026 | [Exploring day–night heterogeneity in links between street green space features and crime incidents via visual Large Language Model](./street-green-space-crime-vllm) | Under Consideration |
 | 2026 | [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](./discursive-algorithmic-opportunity-europe) | In Preparation |
 
