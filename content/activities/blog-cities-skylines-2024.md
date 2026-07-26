@@ -5,7 +5,7 @@ date: 2024-08-01
 activity-type: Blog post
 role: Author
 event: Publication blog
-description: A short introduction to research on planning perceptions and learning in Cities: Skylines online communities.
+description: "A short introduction to research on planning perceptions and learning in Cities: Skylines online communities."
 external-link: https://doi.org/10.1177/10468781241271080
 tags:
   - blog post
