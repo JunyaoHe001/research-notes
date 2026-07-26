@@ -3,15 +3,15 @@ title: Research
 description: Five interconnected research lines organised around complex networks, spatial mobility, digital transformation, and uneven regional development.
 ---
 
-Five interconnected research lines organise my work. Complex networks and complex systems provide the shared analytical foundation; the empirical questions span economic geography, urban studies, mobility and migration, planning governance, and computational social science.
+Five interconnected research lines organise my work. Complex networks and complex systems provide the shared analytical foundation. The empirical questions span economic geography, urban studies, mobility and migration, planning governance, and computational social science.
 
 ## Hybrid work, job–home networks, and regional restructuring
 
 Major active research line.
 
-Remote and hybrid work change the spatial relationship between employment and residence. I study these changes as transformations of job–home networks rather than as isolated changes in commuting frequency. This perspective makes it possible to ask whether flexible work expands labour-market reach, redistributes employment and residential centrality, alters the geography of opportunity, and produces different outcomes across urban and rural contexts.
+Remote and hybrid work change the spatial relationship between employment and residence. I examine job–home networks as the main unit of spatial organisation and trace changes in their reach, hierarchy, and distribution. This perspective asks whether flexible work expands labour market reach, redistributes employment and residential centrality, alters the geography of opportunity, and produces different outcomes across urban and rural contexts.
 
-Current work uses Spanish mobility data to compare multiple levels of hybrid-work intensity and Dutch longitudinal data to estimate causal and spatial spillover effects after the COVID-19 shock. Related research examines how remote-work exposure interacts with housing markets, relocation, and regional inequality.
+Current work uses Spanish mobility data to compare multiple levels of hybrid work intensity and Dutch longitudinal data to estimate causal and spatial spillover effects after the COVID 19 shock. Related research examines how remote work exposure interacts with housing markets, relocation, and regional inequality.
 
 **Representative work**
 
@@ -22,9 +22,9 @@ Current work uses Spanish mobility data to compare multiple levels of hybrid-wor
 
 Major active research line.
 
-Mobility is relational: cities and regions are shaped by the origins, destinations, volumes, and composition of the flows connecting them. I use network approaches to study residential relocation, interregional migration, digital-nomad mobility, and changing access to employment and urban opportunity.
+Mobility is relational. Cities and regions are shaped by the origins, destinations, volumes, and composition of the flows connecting them. I use network approaches to study residential relocation, interregional migration, digital nomad mobility, and changing access to employment and urban opportunity.
 
-A central question is how new mobility regimes redistribute opportunity unevenly. Remote workers, digitally mobile professionals, and different demographic groups may respond differently to the same spatial conditions. Reconstructing layered mobility networks allows these heterogeneous responses to be studied directly.
+A central question concerns the uneven distribution of opportunity under new mobility regimes. Remote workers, digitally mobile professionals, and different demographic groups may respond differently to the same spatial conditions. Layered mobility networks make these heterogeneous responses visible.
 
 **Representative work**
 
@@ -38,7 +38,7 @@ Established research line.
 
 Digital platforms have become important arenas for planning participation, controversy, and legitimacy. My doctoral research examined how social media reshapes interaction networks, discursive influence, and power inequalities in collaborative planning in China.
 
-This work develops network-based approaches to power that connect the structure of interactions with discourse, framing, and institutional authority. It also examines how informal participants, third parties, journalists, experts, and public authorities translate online visibility into influence over planning processes. Current co-authored work extends this agenda to the institutionalization and governance of urban AI in China and Europe.
+This work develops network based approaches to power that connect interaction structure with discourse, framing, and institutional authority. It examines how citizens, third parties, journalists, experts, and public authorities translate online visibility into influence over planning processes. Current co authored work extends this agenda to the institutionalisation and governance of urban AI in China and Europe.
 
 **Representative work**
 
@@ -53,9 +53,9 @@ This work develops network-based approaches to power that connect the structure 
 
 Emerging research line.
 
-AI and digital transformation are reshaping regional economies, but their geography cannot be measured adequately through patents, firms, or administrative units alone. I am developing relational approaches that use large-scale news text to identify cooperation, competition, innovation, and attention networks across subnational regions.
+AI and digital transformation are reshaping regional economies. Patents, firms, and administrative units capture only part of this geography. I am developing relational approaches that use large scale news text to identify cooperation, competition, innovation, and attention networks across subnational regions.
 
-This line links GeoAI, graph-based modelling, natural-language processing, and interpretable machine learning with debates in economic geography concerning regional capabilities, technological transitions, and uneven development. Related co-authored work examines how regional cognitive composition shapes trajectories under the green and digital transitions and applies visual Large Language Models to urban environmental and crime data.
+This line connects GeoAI, graph based modelling, natural language processing, and interpretable machine learning with debates on regional capabilities, technological transitions, and uneven development. Related co authored work examines regional cognitive composition under the green and digital transitions and applies visual Large Language Models to urban environmental and crime data.
 
 **Representative work**
 
@@ -65,11 +65,11 @@ This line links GeoAI, graph-based modelling, natural-language processing, and i
 
 ## Complex networks and complex systems methods
 
-Cross-cutting methodological line.
+Cross cutting methodological line.
 
 Across these empirical fields, I treat cities, regions, mobility systems, and digital public spheres as complex relational systems. The methodological agenda combines network measurement with spatial dependence, causal inference, simulation, and interpretable prediction.
 
-Current methods include multilayer and temporal networks, directed centrality, community structure, entropy-based reach, spatial interaction models, spatial difference-in-differences, Bartik designs, agent-based modelling, spatial microsimulation, and large-scale text-derived networks.
+Current methods include multilayer and temporal networks, directed centrality, community structure, entropy based reach, spatial interaction models, spatial difference in differences, Bartik designs, agent based modelling, spatial microsimulation, and large scale text derived networks.
 
 **Representative work**
 
