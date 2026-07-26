@@ -89,20 +89,6 @@ SiteNav.css = `
   font-weight: 650;
 }
 
-header:has(.academic-top-nav) {
-  width: 100%;
-  margin: 0;
-  padding: 1.4rem 0 0.85rem;
-  border-bottom: 1px solid var(--lightgray);
-  flex-wrap: wrap;
-  row-gap: 0.75rem;
-}
-
-header:has(.academic-top-nav) > .flex-component {
-  flex: 0 1 18rem;
-  margin-left: auto;
-}
-
 @media (max-width: 800px) {
   .academic-top-nav {
     width: 100%;
@@ -114,12 +100,6 @@ header:has(.academic-top-nav) > .flex-component {
 
   .academic-top-links {
     column-gap: 1rem;
-  }
-
-  header:has(.academic-top-nav) > .flex-component {
-    width: 100%;
-    flex: 1 1 100%;
-    margin-left: 0;
   }
 }
 `
