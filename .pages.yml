@@ -1,0 +1,410 @@
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "content: add {path}"
+      update: "content: update {path}"
+      delete: "content: remove {path}"
+      rename: "content: rename {oldPath} to {newPath}"
+
+content:
+  - name: site-pages
+    label: Site Pages
+    type: group
+    items:
+      - name: home
+        label: Home
+        type: file
+        path: content/index.md
+        format: code
+        operations:
+          create: false
+          rename: false
+          delete: false
+
+      - name: research
+        label: Research
+        type: file
+        path: content/research.md
+        format: code
+        operations:
+          create: false
+          rename: false
+          delete: false
+
+      - name: research-agenda
+        label: Research Agenda
+        type: file
+        path: content/research-agenda.md
+        format: code
+        operations:
+          create: false
+          rename: false
+          delete: false
+
+      - name: publications-index
+        label: Publications Overview
+        type: file
+        path: content/publications/index.md
+        format: code
+        operations:
+          create: false
+          rename: false
+          delete: false
+
+      - name: working-papers-index
+        label: Working Papers Overview
+        type: file
+        path: content/working-papers/index.md
+        format: code
+        operations:
+          create: false
+          rename: false
+          delete: false
+
+      - name: projects-index
+        label: Projects Overview
+        type: file
+        path: content/projects/index.md
+        format: code
+        operations:
+          create: false
+          rename: false
+          delete: false
+
+      - name: methods-index
+        label: Methods Overview
+        type: file
+        path: content/methods/index.md
+        format: code
+        operations:
+          create: false
+          rename: false
+          delete: false
+
+  - name: research-outputs
+    label: Research Outputs
+    type: group
+    items:
+      - name: publications
+        label: Publications
+        type: collection
+        path: content/publications
+        format: yaml-frontmatter
+        exclude:
+          - index.md
+        subfolders: false
+        filename:
+          template: "{primary}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields:
+            - title
+            - year
+            - publication-type
+            - journal
+            - publisher
+          search:
+            - title
+            - authors
+            - journal
+            - publisher
+            - research-line
+            - tags
+          sort:
+            - year
+            - title
+          default:
+            sort: year
+            order: desc
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+
+          - name: authors
+            label: Authors
+            type: string
+            list: true
+            required: true
+
+          - name: year
+            label: Year
+            type: number
+            required: true
+
+          - name: publication-type
+            label: Publication Type
+            type: select
+            required: true
+            options:
+              values:
+                - Journal article
+                - Book chapter
+                - Doctoral thesis
+                - Deliverable report
+
+          - name: journal
+            label: Journal
+            type: string
+
+          - name: publisher
+            label: Publisher
+            type: string
+
+          - name: book
+            label: Book
+            type: string
+
+          - name: series
+            label: Series
+            type: string
+
+          - name: volume
+            label: Volume
+            type: string
+
+          - name: issue
+            label: Issue
+            type: string
+
+          - name: pages
+            label: Pages
+            type: string
+
+          - name: article-number
+            label: Article Number
+            type: string
+
+          - name: doi
+            label: DOI
+            type: string
+
+          - name: link
+            label: External Link
+            type: string
+
+          - name: research-line
+            label: Research Line
+            type: string
+
+          - name: description
+            label: Description
+            type: text
+
+          - name: tags
+            label: Tags
+            type: string
+            list: true
+
+          - name: body
+            label: Abstract and Page Content
+            type: code
+            options:
+              format: markdown
+
+      - name: working-papers
+        label: Working Papers
+        type: collection
+        path: content/working-papers
+        format: yaml-frontmatter
+        exclude:
+          - index.md
+        subfolders: false
+        filename:
+          template: "{primary}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields:
+            - title
+            - year
+            - status
+            - research-line
+          search:
+            - title
+            - authors
+            - status
+            - research-line
+            - tags
+          sort:
+            - year
+            - status
+            - title
+          default:
+            sort: year
+            order: desc
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+
+          - name: authors
+            label: Authors
+            type: string
+            list: true
+            required: true
+
+          - name: year
+            label: Year
+            type: number
+            required: true
+
+          - name: publication-type
+            label: Publication Type
+            type: select
+            required: true
+            options:
+              values:
+                - Working paper
+
+          - name: status
+            label: Status
+            type: select
+            required: true
+            options:
+              values:
+                - In Preparation
+                - Finalizing
+                - Submitted
+                - Under Consideration
+                - Under Review
+                - Revise and Resubmit
+                - Revising for Resubmission
+                - Accepted
+
+          - name: research-line
+            label: Research Line
+            type: string
+
+          - name: description
+            label: Description
+            type: text
+
+          - name: tags
+            label: Tags
+            type: string
+            list: true
+
+          - name: body
+            label: Public Summary and Related Pages
+            type: code
+            options:
+              format: markdown
+
+  - name: research-notes
+    label: Research Notes
+    type: group
+    items:
+      - name: projects
+        label: Projects
+        type: collection
+        path: content/projects
+        format: yaml-frontmatter
+        exclude:
+          - index.md
+        subfolders: false
+        filename:
+          template: "{primary}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields:
+            - title
+            - description
+          search:
+            - title
+            - description
+            - tags
+          sort:
+            - title
+          default:
+            sort: title
+            order: asc
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+
+          - name: description
+            label: Description
+            type: text
+
+          - name: tags
+            label: Tags
+            type: string
+            list: true
+
+          - name: body
+            label: Page Content
+            type: code
+            options:
+              format: markdown
+
+      - name: methods
+        label: Methods
+        type: collection
+        path: content/methods
+        format: yaml-frontmatter
+        exclude:
+          - index.md
+        subfolders: false
+        filename:
+          template: "{primary}.md"
+          field: create
+        operations:
+          create: true
+          rename: false
+          delete: false
+        view:
+          primary: title
+          fields:
+            - title
+            - description
+          search:
+            - title
+            - description
+            - tags
+          sort:
+            - title
+          default:
+            sort: title
+            order: asc
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+
+          - name: description
+            label: Description
+            type: text
+
+          - name: tags
+            label: Tags
+            type: string
+            list: true
+
+          - name: body
+            label: Page Content
+            type: code
+            options:
+              format: markdown
