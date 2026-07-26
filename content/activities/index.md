@@ -1,9 +1,9 @@
 ---
 title: Activities
-description: Conference participation, academic presentations, workshops, and published blog posts.
+description: Conference participation, academic presentations, workshops, and research blogs.
 ---
 
-This section records conference participation, academic presentations, workshops, and blog posts. Each entry provides the date, role, venue or platform, and a concise account of the activity.
+This section records Junyao He's conference participation, academic presentations, workshops, and research blogs. Each entry provides the date, role, venue or platform, and a concise account of the activity.
 
 <!-- AUTO-GENERATED:ACTIVITIES:START -->
 ## Blog Posts
@@ -25,5 +25,3 @@ This section records conference participation, academic presentations, workshops
 | 2024-07-08 | [Presentation at AESOP 2024](../activities/aesop-2024) | Presenter | AESOP Annual Congress 2024, Paris, France |
 | 2023-07-15 | [Social Media and Power Relations at CUPUM 2023](../activities/cupum-2023) | Presenter | 18th International Conference on Computers in Urban Planning and Urban Management, Montreal, Canada |
 <!-- AUTO-GENERATED:ACTIVITIES:END -->
-
-New entries are added through Pages CMS and the overview is refreshed automatically during deployment.
