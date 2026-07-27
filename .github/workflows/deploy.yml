@@ -66,8 +66,8 @@ jobs:
           git commit -m "content: synchronize generated indexes"
           git push origin HEAD:v5
 
-      - name: Build Quartz
-        run: npx quartz build
+      - name: Build localized Quartz interfaces
+        run: node scripts/build-localized-interfaces.mjs
 
       - name: Upload preview artifact
         if: github.event_name == 'pull_request'
