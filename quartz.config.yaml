@@ -95,7 +95,7 @@ plugins:
     order: 80
 
   - source: "@quartz-community/quartz-fonts"
-    enabled: true
+    enabled: false
 
   - source: "@quartz-community/remove-draft"
     enabled: true
