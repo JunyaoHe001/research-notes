@@ -15,8 +15,8 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      header: Libre Baskerville
+      body: Source Serif 4
       code: IBM Plex Mono
     colors:
       lightMode:
