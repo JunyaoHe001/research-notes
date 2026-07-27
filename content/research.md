@@ -9,9 +9,7 @@ Five interconnected research lines organise Junyao He's work. Complex networks a
 
 Major active research line.
 
-Remote and hybrid work change the spatial relationship between employment and residence. Junyao He examines job–home networks as the main unit of spatial organisation and traces changes in their reach, hierarchy, and distribution. This perspective addresses whether flexible work expands labour market reach, redistributes employment and residential centrality, alters the geography of opportunity, and produces different outcomes across urban and rural contexts.
-
-Current work uses Spanish mobility data to compare multiple levels of hybrid work intensity and Dutch longitudinal data to estimate causal and spatial spillover effects after the COVID 19 shock. Related research examines how remote work exposure interacts with housing markets, relocation, and regional inequality.
+Remote and hybrid work change the spatial relationship between employment and residence. Junyao He examines job–home networks as the main unit of spatial organisation and traces changes in their reach, hierarchy, and distribution. This perspective addresses whether flexible work expands labour market reach, redistributes employment and residential centrality, alters the geography of opportunity, and produces different outcomes across urban and rural contexts. Current work uses Spanish mobility data to compare multiple levels of hybrid work intensity and Dutch longitudinal data to estimate causal and spatial spillover effects after the COVID 19 shock. Related research examines how remote work exposure interacts with housing markets, relocation, and regional inequality.
 
 **Representative work**
 
@@ -22,9 +20,7 @@ Current work uses Spanish mobility data to compare multiple levels of hybrid wor
 
 Major active research line.
 
-Mobility is relational. Cities and regions are shaped by the origins, destinations, volumes, and composition of the flows connecting them. Junyao He uses network approaches to study residential relocation, interregional migration, digital nomad mobility, and changing access to employment and urban opportunity.
-
-A central question concerns the uneven distribution of opportunity under new mobility regimes. Remote workers, digitally mobile professionals, and different demographic groups may respond differently to the same spatial conditions. Layered mobility networks make these heterogeneous responses visible.
+Mobility is relational. Cities and regions are shaped by the origins, destinations, volumes, and composition of the flows connecting them. Junyao He uses network approaches to study residential relocation, interregional migration, digital nomad mobility, and changing access to employment and urban opportunity. A central question concerns the uneven distribution of opportunity under new mobility regimes. Remote workers, digitally mobile professionals, and different demographic groups may respond differently to the same spatial conditions. Layered mobility networks make these heterogeneous responses visible.
 
 **Representative work**
 
@@ -36,9 +32,7 @@ A central question concerns the uneven distribution of opportunity under new mob
 
 Established research line.
 
-Digital platforms have become important arenas for planning participation, controversy, and legitimacy. Junyao He's doctoral research examined how social media reshapes interaction networks, discursive influence, and power inequalities in collaborative planning in China.
-
-This work develops network based approaches to power that connect interaction structure with discourse, framing, and institutional authority. It examines how citizens, third parties, journalists, experts, and public authorities translate online visibility into influence over planning processes. Current co authored work extends this agenda to the institutionalisation and governance of urban AI in China and Europe.
+Digital platforms have become important arenas for planning participation, controversy, and legitimacy. Junyao He's doctoral research examined how social media reshapes interaction networks, discursive influence, and power inequalities in collaborative planning in China. This work develops network based approaches to power that connect interaction structure with discourse, framing, and institutional authority. It examines how citizens, third parties, journalists, experts, and public authorities translate online visibility into influence over planning processes. Current co authored work extends this agenda to the institutionalisation and governance of urban AI in China and Europe.
 
 **Representative work**
 
@@ -53,15 +47,12 @@ This work develops network based approaches to power that connect interaction st
 
 Emerging research line.
 
-AI and digital transformation are reshaping regional economies. Patents, firms, and administrative units capture only part of this geography. Junyao He is developing relational approaches that use large scale news text to identify cooperation, competition, innovation, and attention networks across subnational regions.
-
-This line connects GeoAI, graph based modelling, natural language processing, and interpretable machine learning with debates on regional capabilities, technological transitions, and uneven development. Related co authored work examines regional cognitive composition under the green and digital transitions and applies visual Large Language Models to urban environmental and crime data.
+AI and digital transformation are reshaping regional economies. Patents, firms, and administrative units capture only part of this geography. Junyao He is developing relational approaches that use large scale news text to identify cooperation, competition, innovation, and attention networks across subnational regions. This line connects GeoAI, graph based modelling, natural language processing, and interpretable machine learning with debates on regional capabilities, technological transitions, and uneven development. Related co authored work examines regional cognitive composition under the green and digital transitions and applies visual Large Language Models to urban environmental and crime data.
 
 **Representative work**
 
 - [Measuring AI-Related Cooperation, Competition, and Innovation across Global Subnational Regions Using News Text](./working-papers/ai-regional-networks)
 - [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./working-papers/cognitive-composition-regional-trajectories)
-- [Exploring day–night heterogeneity in links between street green space features and crime incidents via visual Large Language Model](./working-papers/street-green-space-crime-vllm)
 
 ## Complex networks and complex systems methods
 
