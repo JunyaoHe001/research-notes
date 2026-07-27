@@ -62,6 +62,11 @@ async function main() {
       const localizedConfig = structuredClone(originalConfig)
       localizedConfig.configuration.locale = variant.locale
       localizedConfig.configuration.baseUrl = `${BASE_HOST}${variant.suffix}`
+      localizedConfig.configuration.theme.typography = {
+        header: "Source Serif 4",
+        body: "Inter",
+        code: "IBM Plex Mono",
+      }
 
       await fs.writeFile(CONFIG_PATH, YAML.stringify(localizedConfig), "utf8")
       console.log(`\nBuilding ${variant.code.toUpperCase()} interface in ${variant.output}`)
