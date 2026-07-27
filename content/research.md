@@ -41,7 +41,7 @@ Digital platforms have become important arenas for planning participation, contr
 - [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning)
 - [Social Media Influence on Citizen Power in Online Planning Controversies: An Edge-based Social Network Analysis of Network Power](./working-papers/edge-based-network-power)
 - [Institutionalizing AI in Urban Planning: Discursive AI Opportunity Structures in China](./working-papers/institutionalizing-ai-urban-planning)
-- [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](./working-papers/discursive-algorithmic-opportunity-europe)
+
 
 ## AI, innovation, and computational economic geography
 
@@ -53,14 +53,13 @@ AI and digital transformation are reshaping regional economies. Patents, firms, 
 
 - [Measuring AI-Related Cooperation, Competition, and Innovation across Global Subnational Regions Using News Text](./working-papers/ai-regional-networks)
 - [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./working-papers/cognitive-composition-regional-trajectories)
+- [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](./working-papers/discursive-algorithmic-opportunity-europe)
 
 ## Complex networks and complex systems methods
 
 Cross cutting methodological line.
 
-Across these empirical fields, Junyao He treats cities, regions, mobility systems, and digital public spheres as complex relational systems. The methodological agenda combines network measurement with spatial dependence, causal inference, simulation, and interpretable prediction.
-
-Current methods include multilayer and temporal networks, directed centrality, community structure, entropy based reach, spatial interaction models, spatial difference in differences, Bartik designs, agent based modelling, spatial microsimulation, and large scale text derived networks.
+Across these empirical fields, Junyao He treats cities, regions, mobility systems, and digital public spheres as complex relational systems. The methodological agenda combines network measurement with spatial dependence, causal inference, simulation, and interpretable prediction. Current methods include multilayer and temporal networks, directed centrality, community structure, entropy based reach, spatial interaction models, spatial difference in differences, Bartik designs, agent based modelling, spatial microsimulation, and large scale text derived networks.
 
 **Representative work**
 
@@ -71,4 +70,5 @@ See also [Methods and analytical approaches](./methods/) and [Complex networks a
 
 ## Collaboration
 
-Junyao He welcomes collaboration on complex networks, spatial mobility, remote work, migration, economic geography, digital planning, and computational urban research. Enquiries concerning papers, data, or research collaboration can be sent to [J.HE@RUG.NL](mailto:J.HE@RUG.NL).
+Junyao He welcomes collaboration on complex networks, spatial mobility, remote work, migration, economic geography, digital planning, and computational urban research. Enquiries concerning papers, data, or research collaboration can be sent to [J.HE@RUG.NL](mailto:J.HE@RUG.NL) or [junyaohe.utrecht@gmail.com
+](mailto:junyaohe.utrecht@gmail.com).
