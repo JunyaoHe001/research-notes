@@ -1,6 +1,7 @@
 ---
 title: Hybrid Work and Job Home Networks
 description: Research notes on how hybrid work reshapes the spatial organisation of employment and residence.
+show-in-overview: false
 tags:
   - hybrid work
   - job home networks

@@ -22,7 +22,7 @@ Junyao He's current research is organised around two connected programmes:
 
 A continuing research line examines **digital planning, platform governance, and networked power**, extending his doctoral work on social media participation and inequalities in collaborative planning. A newer direction studies **AI, innovation, and regional networks** through large scale news text and graph based methods.
 
-See the [Research page](./research) for fuller descriptions, [Publications](./publications/) for published work, [Working Papers](./working-papers/) for current manuscripts, [Activities](./activities/) for conferences and research blogs, and [Teaching](./teaching/) for courses and supervision.
+See the [Research page](./research) for fuller descriptions, [Projects](./projects/) for principal doctoral and postdoctoral projects, [Publications](./publications/) for published work, [Working Papers](./working-papers/) for current manuscripts, [Activities](./activities/) for blogs, talks, and conferences, and [Teaching](./teaching/) for courses and supervision.
 
 ## Recent
 
@@ -36,3 +36,5 @@ See the [Research page](./research) for fuller descriptions, [Publications](./pu
 Department of Economic Geography, University of Groningen  
 Email: [J.HE@RUG.NL](mailto:J.HE@RUG.NL)  
 [Google Scholar](https://scholar.google.com/citations?user=ywo5IEcAAAAJ) · [ORCID](https://orcid.org/0000-0003-1674-2933) · [LinkedIn](https://www.linkedin.com/in/JunyaoHe)
+
+Junyao is also a passionate landscape and astrophotographer. His photography documents natural and urban landscapes, night skies, and the Milky Way. Selected work is available on [Instagram](https://www.instagram.com/junyaohe_jeo/) and [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5a10d01c4eacab52b282f419).

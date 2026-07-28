@@ -8,6 +8,7 @@ const SiteNav: QuartzComponent = ({ fileData }) => {
   const links = [
     { label: "Home", href: `${SITE_ROOT}/`, slug: "index" },
     { label: "Research", href: `${SITE_ROOT}/research`, slug: "research" },
+    { label: "Projects", href: `${SITE_ROOT}/projects/`, slug: "projects" },
     { label: "Publications", href: `${SITE_ROOT}/publications/`, slug: "publications" },
     {
       label: "Working papers",
@@ -94,6 +95,15 @@ SiteNav.css = `
 
 .academic-top-link.active {
   font-weight: 650;
+}
+
+body[data-slug="publications"] .page-listing,
+body[data-slug="working-papers"] .page-listing,
+body[data-slug="activities"] .page-listing,
+body[data-slug="teaching"] .page-listing,
+body[data-slug="projects"] .page-listing,
+body[data-slug="methods"] .page-listing {
+  display: none;
 }
 
 @media (max-width: 800px) {

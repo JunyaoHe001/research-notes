@@ -37,18 +37,13 @@ const MARKERS = {
 
 function parseFrontmatter(source, filePath) {
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)
-  if (!match) {
-    throw new Error(`Missing YAML frontmatter in ${filePath}`)
-  }
+  if (!match) throw new Error(`Missing YAML frontmatter in ${filePath}`)
 
-  let data
   try {
-    data = YAML.parse(match[1]) ?? {}
+    return { data: YAML.parse(match[1]) ?? {}, body: source.slice(match[0].length) }
   } catch (error) {
     throw new Error(`Invalid YAML frontmatter in ${filePath}: ${error.message}`)
   }
-
-  return { data, body: source.slice(match[0].length) }
 }
 
 async function fileExists(filePath) {
@@ -73,12 +68,12 @@ async function loadCollection(relativeDirectory) {
     const absolutePath = path.join(directory, entry.name)
     const source = await fs.readFile(absolutePath, "utf8")
     const { data } = parseFrontmatter(source, absolutePath)
-    const slug = entry.name.slice(0, -3)
 
     if (data.draft === true || data.unlisted === true || data["show-in-overview"] === false) {
       continue
     }
 
+    const slug = entry.name.slice(0, -3)
     items.push({
       data,
       fileName: entry.name,
@@ -148,15 +143,15 @@ function extractExistingOrder(indexSource) {
 }
 
 function compareOverrides(a, b, existingOrder) {
-  const aDisplayOrder = Number(a.data["display-order"])
-  const bDisplayOrder = Number(b.data["display-order"])
-  const aHasDisplayOrder = Number.isFinite(aDisplayOrder)
-  const bHasDisplayOrder = Number.isFinite(bDisplayOrder)
+  const aOrder = Number(a.data["display-order"])
+  const bOrder = Number(b.data["display-order"])
+  const aHasOrder = Number.isFinite(aOrder)
+  const bHasOrder = Number.isFinite(bOrder)
 
-  if (aHasDisplayOrder || bHasDisplayOrder) {
-    if (!aHasDisplayOrder) return 1
-    if (!bHasDisplayOrder) return -1
-    if (aDisplayOrder !== bDisplayOrder) return aDisplayOrder - bDisplayOrder
+  if (aHasOrder || bHasOrder) {
+    if (!aHasOrder) return 1
+    if (!bHasOrder) return -1
+    if (aOrder !== bOrder) return aOrder - bOrder
   }
 
   const aExisting = existingOrder.get(a.slug)
@@ -218,14 +213,7 @@ async function updateManagedIndex(relativePath, markers, render) {
 }
 
 function publicationVenue(data) {
-  return (
-    data.journal ??
-    data.publisher ??
-    data.series ??
-    data.book ??
-    data["publication-type"] ??
-    ""
-  )
+  return data.journal ?? data.publisher ?? data.series ?? data.book ?? data["publication-type"] ?? ""
 }
 
 function isLeadAuthored(data) {
@@ -241,16 +229,20 @@ function isLeadAuthored(data) {
   return firstAuthor === "he,j." || firstAuthor === "he,j"
 }
 
-function isBlogActivity(data) {
-  return String(data["activity-type"] ?? "")
-    .toLowerCase()
-    .includes("blog")
+function activitySection(data) {
+  const explicit = String(data["activity-section"] ?? "").toLowerCase()
+  if (explicit.includes("blog")) return "blog"
+  if (explicit.includes("talk")) return "talk"
+  if (explicit.includes("conference") || explicit.includes("presentation")) return "conference"
+
+  const type = String(data["activity-type"] ?? "").toLowerCase()
+  if (type.includes("blog")) return "blog"
+  if (type.includes("talk") || type.includes("lecture") || type.includes("exhibition")) return "talk"
+  return "conference"
 }
 
 function isSupervision(data) {
-  return String(data["teaching-type"] ?? "")
-    .toLowerCase()
-    .includes("supervision")
+  return String(data["teaching-type"] ?? "").toLowerCase().includes("supervision")
 }
 
 function joinContext(...values) {
@@ -262,34 +254,22 @@ function joinContext(...values) {
 
 function renderPublicationTable(items) {
   const lines = ["| Year | Title | Journal / Publisher |", "| --- | --- | --- |"]
-
   for (const item of items) {
     lines.push(
       `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](${contentLink("publications", item.slug)}) | ${escapeTableCell(publicationVenue(item.data))} |`,
     )
   }
-
   return lines.join("\n")
 }
 
 function renderWorkingPaperSection(title, items) {
-  const lines = [
-    `## ${title}`,
-    "",
-    "| Year | Title | Status |",
-    "| --- | --- | --- |",
-  ]
-
+  const lines = [`## ${title}`, "", "| Year | Title | Status |", "| --- | --- | --- |"]
   for (const item of items) {
     lines.push(
       `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](${contentLink("working-papers", item.slug)}) | ${escapeTableCell(item.data.status)} |`,
     )
   }
-
-  if (items.length === 0) {
-    lines.push("| None | No entries currently listed. | None |")
-  }
-
+  if (items.length === 0) lines.push("| None | No entries currently listed. | None |")
   return lines.join("\n")
 }
 
@@ -300,40 +280,30 @@ function renderBlogSection(items) {
     "| Date | Title | Platform or Topic |",
     "| --- | --- | --- |",
   ]
-
   for (const item of items) {
     const context = item.data.event ?? item.data.description ?? ""
     lines.push(
       `| ${escapeTableCell(displayDate(item.data))} | [${escapeTableCell(item.title)}](${contentLink("activities", item.slug)}) | ${escapeTableCell(context)} |`,
     )
   }
-
-  if (items.length === 0) {
-    lines.push("| None | No entries currently listed. | None |")
-  }
-
+  if (items.length === 0) lines.push("| None | No entries currently listed. | None |")
   return lines.join("\n")
 }
 
-function renderAcademicActivitiesSection(items) {
+function renderActivityTable(title, items) {
   const lines = [
-    "## Conferences and Presentations",
+    `## ${title}`,
     "",
     "| Date | Title | Role | Event or Venue |",
     "| --- | --- | --- | --- |",
   ]
-
   for (const item of items) {
-    const eventOrVenue = joinContext(item.data.event, item.data.location)
+    const context = joinContext(item.data.event, item.data.location)
     lines.push(
-      `| ${escapeTableCell(displayDate(item.data))} | [${escapeTableCell(item.title)}](${contentLink("activities", item.slug)}) | ${escapeTableCell(item.data.role)} | ${escapeTableCell(eventOrVenue)} |`,
+      `| ${escapeTableCell(displayDate(item.data))} | [${escapeTableCell(item.title)}](${contentLink("activities", item.slug)}) | ${escapeTableCell(item.data.role)} | ${escapeTableCell(context)} |`,
     )
   }
-
-  if (items.length === 0) {
-    lines.push("| None | No entries currently listed. | None | None |")
-  }
-
+  if (items.length === 0) lines.push("| None | No entries currently listed. | None | None |")
   return lines.join("\n")
 }
 
@@ -344,18 +314,13 @@ function renderCoursesSection(items) {
     "| Year | Title | Role | Course and Institution |",
     "| --- | --- | --- | --- |",
   ]
-
   for (const item of items) {
     const context = joinContext(item.data.course, item.data.institution)
     lines.push(
       `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](${contentLink("teaching", item.slug)}) | ${escapeTableCell(item.data.role)} | ${escapeTableCell(context)} |`,
     )
   }
-
-  if (items.length === 0) {
-    lines.push("| None | No entries currently listed. | None | None |")
-  }
-
+  if (items.length === 0) lines.push("| None | No entries currently listed. | None | None |")
   return lines.join("\n")
 }
 
@@ -366,23 +331,39 @@ function renderSupervisionSection(items) {
     "| Year | Thesis | Student | Level |",
     "| --- | --- | --- | --- |",
   ]
-
   for (const item of items) {
     lines.push(
       `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](${contentLink("teaching", item.slug)}) | ${escapeTableCell(item.data.student)} | ${escapeTableCell(item.data.level)} |`,
     )
   }
+  if (items.length === 0) lines.push("| None | No entries currently listed. | None | None |")
+  return lines.join("\n")
+}
 
-  if (items.length === 0) {
-    lines.push("| None | No entries currently listed. | None | None |")
+function renderProjects(items) {
+  const lines = ["## Selected Academic Projects"]
+
+  for (const item of items) {
+    lines.push("", `### [${item.title}](${contentLink("projects", item.slug)})`)
+    const metadata = [
+      ["Period", item.data.period],
+      ["Role", item.data.role],
+      ["Institution", item.data.institution],
+      ["Funding", item.data.funding],
+    ].filter(([, value]) => String(value ?? "").trim())
+
+    for (const [label, value] of metadata) lines.push(`**${label}:** ${String(value).trim()}  `)
+
+    const description = String(item.data.description ?? "").trim()
+    if (description) lines.push("", description)
   }
 
+  if (items.length === 0) lines.push("", "No projects are currently listed.")
   return lines.join("\n")
 }
 
 function renderLinkedList(items, collection) {
   if (items.length === 0) return "- No entries currently listed."
-
   return items
     .map((item) => {
       const description = String(item.data.description ?? "").trim()
@@ -395,30 +376,21 @@ function renderLinkedList(items, collection) {
 async function listMarkdownFiles(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true })
   const files = []
-
   for (const entry of entries) {
     const absolutePath = path.join(directory, entry.name)
-    if (entry.isDirectory()) {
-      files.push(...(await listMarkdownFiles(absolutePath)))
-    } else if (entry.isFile() && entry.name.endsWith(".md")) {
-      files.push(absolutePath)
-    }
+    if (entry.isDirectory()) files.push(...(await listMarkdownFiles(absolutePath)))
+    else if (entry.isFile() && entry.name.endsWith(".md")) files.push(absolutePath)
   }
-
   return files
 }
 
 async function validateNoEmDash() {
   const files = await listMarkdownFiles(CONTENT_ROOT)
   const violations = []
-
   for (const filePath of files) {
     const source = await fs.readFile(filePath, "utf8")
-    if (source.includes("—")) {
-      violations.push(path.relative(ROOT, filePath))
-    }
+    if (source.includes("—")) violations.push(path.relative(ROOT, filePath))
   }
-
   if (violations.length > 0) {
     throw new Error(
       `Sentence level em dashes are not permitted in public content:\n${violations
@@ -431,92 +403,71 @@ async function validateNoEmDash() {
 async function main() {
   const changedFiles = []
 
-  const publicationsChanged = await updateManagedIndex(
-    "publications/index.md",
-    MARKERS.publications,
-    async (existingOrder) => {
+  if (
+    await updateManagedIndex("publications/index.md", MARKERS.publications, async (existingOrder) => {
       const items = await loadCollection("publications")
       items.sort(compareItems(existingOrder))
       return renderPublicationTable(items)
-    },
-  )
-  if (publicationsChanged) changedFiles.push("content/publications/index.md")
+    })
+  ) changedFiles.push("content/publications/index.md")
 
-  const workingPapersChanged = await updateManagedIndex(
-    "working-papers/index.md",
-    MARKERS.workingPapers,
-    async (existingOrder) => {
+  if (
+    await updateManagedIndex("working-papers/index.md", MARKERS.workingPapers, async (existingOrder) => {
       const items = await loadCollection("working-papers")
-      const leadAuthored = items.filter((item) => isLeadAuthored(item.data))
-      const coAuthored = items.filter((item) => !isLeadAuthored(item.data))
-      leadAuthored.sort(compareItems(existingOrder))
-      coAuthored.sort(compareItems(existingOrder))
-
+      const lead = items.filter((item) => isLeadAuthored(item.data))
+      const co = items.filter((item) => !isLeadAuthored(item.data))
+      lead.sort(compareItems(existingOrder))
+      co.sort(compareItems(existingOrder))
       return [
-        renderWorkingPaperSection("Lead-authored Working Papers", leadAuthored),
-        renderWorkingPaperSection("Co-authored Working Papers", coAuthored),
+        renderWorkingPaperSection("Lead-authored Working Papers", lead),
+        renderWorkingPaperSection("Co-authored Working Papers", co),
       ].join("\n\n")
-    },
-  )
-  if (workingPapersChanged) changedFiles.push("content/working-papers/index.md")
+    })
+  ) changedFiles.push("content/working-papers/index.md")
 
-  const activitiesChanged = await updateManagedIndex(
-    "activities/index.md",
-    MARKERS.activities,
-    async (existingOrder) => {
+  if (
+    await updateManagedIndex("activities/index.md", MARKERS.activities, async (existingOrder) => {
       const items = await loadCollection("activities")
-      const blogPosts = items.filter((item) => isBlogActivity(item.data))
-      const academicActivities = items.filter((item) => !isBlogActivity(item.data))
-      blogPosts.sort(compareDatedItems(existingOrder))
-      academicActivities.sort(compareDatedItems(existingOrder))
-
+      const blogs = items.filter((item) => activitySection(item.data) === "blog")
+      const talks = items.filter((item) => activitySection(item.data) === "talk")
+      const conferences = items.filter((item) => activitySection(item.data) === "conference")
+      blogs.sort(compareDatedItems(existingOrder))
+      talks.sort(compareDatedItems(existingOrder))
+      conferences.sort(compareDatedItems(existingOrder))
       return [
-        renderBlogSection(blogPosts),
-        renderAcademicActivitiesSection(academicActivities),
+        renderBlogSection(blogs),
+        renderActivityTable("Talks", talks),
+        renderActivityTable("Conferences and Presentations", conferences),
       ].join("\n\n")
-    },
-  )
-  if (activitiesChanged) changedFiles.push("content/activities/index.md")
+    })
+  ) changedFiles.push("content/activities/index.md")
 
-  const teachingChanged = await updateManagedIndex(
-    "teaching/index.md",
-    MARKERS.teaching,
-    async (existingOrder) => {
+  if (
+    await updateManagedIndex("teaching/index.md", MARKERS.teaching, async (existingOrder) => {
       const items = await loadCollection("teaching")
       const courses = items.filter((item) => !isSupervision(item.data))
       const supervision = items.filter((item) => isSupervision(item.data))
       courses.sort(compareItems(existingOrder))
       supervision.sort(compareItems(existingOrder))
+      return [renderCoursesSection(courses), renderSupervisionSection(supervision)].join("\n\n")
+    })
+  ) changedFiles.push("content/teaching/index.md")
 
-      return [
-        renderCoursesSection(courses),
-        renderSupervisionSection(supervision),
-      ].join("\n\n")
-    },
-  )
-  if (teachingChanged) changedFiles.push("content/teaching/index.md")
-
-  const projectsChanged = await updateManagedIndex(
-    "projects/index.md",
-    MARKERS.projects,
-    async (existingOrder) => {
+  if (
+    await updateManagedIndex("projects/index.md", MARKERS.projects, async (existingOrder) => {
       const items = await loadCollection("projects")
       items.sort(compareItems(existingOrder))
-      return `## Current notes\n\n${renderLinkedList(items, "projects")}`
-    },
-  )
-  if (projectsChanged) changedFiles.push("content/projects/index.md")
+      return renderProjects(items)
+    })
+  ) changedFiles.push("content/projects/index.md")
 
-  const methodsChanged = await updateManagedIndex(
-    "methods/index.md",
-    MARKERS.methods,
-    async (existingOrder) => {
+  if (
+    await updateManagedIndex("methods/index.md", MARKERS.methods, async (existingOrder) => {
       const items = await loadCollection("methods")
       items.sort(compareItems(existingOrder))
       return `## Available method notes\n\n${renderLinkedList(items, "methods")}`
-    },
-  )
-  if (methodsChanged) changedFiles.push("content/methods/index.md")
+    })
+  ) changedFiles.push("content/methods/index.md")
 
   await validateNoEmDash()
 
