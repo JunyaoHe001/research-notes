@@ -1,8 +1,6 @@
 ---
 title: Projects
 description: Selected doctoral and postdoctoral research projects in economic geography, spatial mobility, digital planning, and computational social science.
-tags:
-  - projects
 ---
 
 This page presents Junyao He's principal doctoral and postdoctoral research projects. Each project page records its institutional setting, funding, research focus, and Junyao's contribution.
