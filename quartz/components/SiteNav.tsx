@@ -23,38 +23,41 @@ const SiteNav: QuartzComponent = ({ fileData }) => {
     slug === "index" ? current === "index" : current === slug || current.startsWith(`${slug}/`)
 
   return (
-    <nav class="academic-top-nav" aria-label="Primary navigation">
-      <a class="academic-top-name internal" href={`${SITE_ROOT}/`}>
-        Junyao's Research Notes
-      </a>
-      <div class="academic-top-links">
-        {links.map((link) => (
-          <a
-            class={`internal academic-top-link${isActive(link.slug) ? " active" : ""}`}
-            href={link.href}
-            aria-current={isActive(link.slug) ? "page" : undefined}
-          >
-            {link.label}
-          </a>
-        ))}
-      </div>
-    </nav>
+    <>
+      <style>{`
+        #quartz-root.page {
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        @media (min-width: 1200px) {
+          #quartz-root.page {
+            max-width: 100rem;
+            padding-inline: clamp(1.5rem, 2.6vw, 3.25rem);
+          }
+        }
+      `}</style>
+      <nav class="academic-top-nav" aria-label="Primary navigation">
+        <a class="academic-top-name internal" href={`${SITE_ROOT}/`}>
+          Junyao's Research Notes
+        </a>
+        <div class="academic-top-links">
+          {links.map((link) => (
+            <a
+              class={`internal academic-top-link${isActive(link.slug) ? " active" : ""}`}
+              href={link.href}
+              aria-current={isActive(link.slug) ? "page" : undefined}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+    </>
   )
 }
 
 SiteNav.css = `
-.page {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-@media (min-width: 1200px) {
-  .page {
-    max-width: 100rem;
-    padding-inline: clamp(1.5rem, 2.6vw, 3.25rem);
-  }
-}
-
 .academic-top-nav {
   display: flex;
   flex: 1 1 auto;
