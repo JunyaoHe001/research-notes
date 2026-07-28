@@ -16,10 +16,7 @@ This section records Junyao He's research blogs, invited talks, guest lectures, 
 
 | Date | Title | Role | Event or Venue |
 | --- | --- | --- | --- |
-| 2024-01-15 | [Social Network Analysis Methods](../activities/social-network-analysis-methods-talk) | Guest Lecturer | Advanced Research Methodology for Spatial Planning, Utrecht University |
 | 2023-07-15 | [Revitalizing Strijp-S: From Forbidden City to Celebrity City](../activities/revitalizing-strijp-s) | Invited Speaker | Online Lecture by Shougang Industrial Park, Online |
-| 2022-03-01 | [Smart City and Urban Governance](../activities/smart-city-urban-governance-talk) | Guest Lecturer | Transforming China, Local and Global Perspectives, Utrecht University |
-| 2020-07-02 | [Narrative of Multiple Data and Public Empowerment in Planning](../activities/narrative-multiple-data-public-empowerment) | Guest Lecturer | Practice of Smart City Governance Course, Central University of Finance and Economics |
 | 2019-12-01 | [Community Symbiosis: Data Creation of Migrant and Aging Communities in Beijing and Shenzhen](../activities/community-symbiosis-bi-city-biennale) | Presenter | Bi-City Biennale of Urbanism and Architecture, Shenzhen, China |
 
 ## Conferences and Presentations
