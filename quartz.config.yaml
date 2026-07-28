@@ -4,7 +4,9 @@ configuration:
   pageTitleSuffix: " | Junyao He"
   enableSPA: true
   enablePopovers: true
-  analytics: null
+  analytics:
+    provider: google
+    tagId: G-B3K5MLRZ1N
   locale: en-US
   baseUrl: junyaohe001.github.io/research-notes
   ignorePatterns:
