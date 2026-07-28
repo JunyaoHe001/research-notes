@@ -97,6 +97,15 @@ SiteNav.css = `
   font-weight: 650;
 }
 
+body[data-slug="publications"] .page-listing,
+body[data-slug="working-papers"] .page-listing,
+body[data-slug="activities"] .page-listing,
+body[data-slug="teaching"] .page-listing,
+body[data-slug="projects"] .page-listing,
+body[data-slug="methods"] .page-listing {
+  display: none;
+}
+
 @media (max-width: 800px) {
   .academic-top-nav {
     width: 100%;
