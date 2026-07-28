@@ -1,9 +1,9 @@
 ---
 title: Activities
-description: Research blogs, invited talks, guest lectures, conference participation, and academic presentations.
+description: Research blogs, invited talks, conference participation, and academic presentations.
 ---
 
-This section records Junyao He's research blogs, invited talks, guest lectures, conference participation, and academic presentations. Each entry provides the date, role, venue or platform, and a concise account of the activity.
+This section records Junyao He's research blogs, invited talks, conference participation, and academic presentations. Each entry provides the month, role, venue or platform, and a concise account of the activity.
 
 <!-- AUTO-GENERATED:ACTIVITIES:START -->
 ## Blog Posts
