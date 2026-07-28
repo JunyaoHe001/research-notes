@@ -43,6 +43,9 @@ jobs:
       - name: Synchronize generated content indexes
         run: node scripts/sync-content-indexes.mjs
 
+      - name: Format activity dates by month
+        run: node scripts/format-activity-months.mjs
+
       - name: Commit synchronized indexes
         if: github.event_name == 'push' && github.ref == 'refs/heads/v5'
         run: |

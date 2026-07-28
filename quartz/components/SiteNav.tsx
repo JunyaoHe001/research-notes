@@ -30,10 +30,62 @@ const SiteNav: QuartzComponent = ({ fileData }) => {
           box-sizing: border-box;
         }
 
+        body[data-slug="projects"] .note-properties {
+          display: none !important;
+        }
+
         @media (min-width: 1200px) {
           #quartz-root.page {
             max-width: 100rem;
             padding-inline: clamp(1.5rem, 2.6vw, 3.25rem);
+          }
+
+          body:not([data-slug="index"]):not([data-slug="research"])
+            #quartz-root.page[data-frame="default"] > #quartz-body {
+            grid-template-columns: minmax(0, 1fr) !important;
+            grid-template-rows: auto auto !important;
+            grid-template-areas:
+              "grid-main"
+              "grid-footer" !important;
+            column-gap: 0 !important;
+          }
+
+          body:not([data-slug="index"]):not([data-slug="research"])
+            #quartz-root.page[data-frame="default"] > #quartz-body > .right.sidebar {
+            display: none !important;
+          }
+
+          body[data-slug="index"] #quartz-root.page[data-frame="default"] > #quartz-body,
+          body[data-slug="research"] #quartz-root.page[data-frame="default"] > #quartz-body {
+            grid-template-columns: minmax(0, 1fr) 13rem !important;
+            column-gap: 1.4rem !important;
+          }
+
+          body[data-slug="index"]
+            #quartz-root.page[data-frame="default"] > #quartz-body > .right.sidebar,
+          body[data-slug="research"]
+            #quartz-root.page[data-frame="default"] > #quartz-body > .right.sidebar {
+            display: block !important;
+            padding: 1.75rem 0.25rem 2rem 0 !important;
+          }
+
+          body[data-slug="index"] .right.sidebar .toc,
+          body[data-slug="research"] .right.sidebar .toc {
+            font-size: 0.8rem;
+            line-height: 1.35;
+          }
+
+          body[data-slug="index"] .right.sidebar .toc h3,
+          body[data-slug="index"] .right.sidebar .toc button,
+          body[data-slug="research"] .right.sidebar .toc h3,
+          body[data-slug="research"] .right.sidebar .toc button {
+            font-size: 0.92rem;
+          }
+
+          body[data-slug="index"] .right.sidebar .toc a,
+          body[data-slug="research"] .right.sidebar .toc a {
+            font-size: 0.8rem;
+            line-height: 1.35;
           }
         }
       `}</style>
