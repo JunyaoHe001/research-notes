@@ -43,6 +43,18 @@ const SiteNav: QuartzComponent = ({ fileData }) => {
 }
 
 SiteNav.css = `
+.page {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+  .page {
+    max-width: 100rem;
+    padding-inline: clamp(1.5rem, 2.6vw, 3.25rem);
+  }
+}
+
 .academic-top-nav {
   display: flex;
   flex: 1 1 auto;
