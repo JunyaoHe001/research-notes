@@ -1,6 +1,7 @@
 ---
 title: Digital Nomad Mobility
 description: Research notes on global digital nomad flows, city networks, and the drivers of mobility.
+show-in-overview: false
 tags:
   - digital nomads
   - mobility
