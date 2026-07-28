@@ -8,6 +8,7 @@ const SiteNav: QuartzComponent = ({ fileData }) => {
   const links = [
     { label: "Home", href: `${SITE_ROOT}/`, slug: "index" },
     { label: "Research", href: `${SITE_ROOT}/research`, slug: "research" },
+    { label: "Projects", href: `${SITE_ROOT}/projects/`, slug: "projects" },
     { label: "Publications", href: `${SITE_ROOT}/publications/`, slug: "publications" },
     {
       label: "Working papers",
