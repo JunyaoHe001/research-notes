@@ -19,90 +19,55 @@ content:
         type: file
         path: content/index.md
         format: code
-        operations:
-          create: false
-          rename: false
-          delete: false
-
+        operations: { create: false, rename: false, delete: false }
       - name: research
         label: Research
         type: file
         path: content/research.md
         format: code
-        operations:
-          create: false
-          rename: false
-          delete: false
-
+        operations: { create: false, rename: false, delete: false }
       - name: research-agenda
         label: Research Agenda
         type: file
         path: content/research-agenda.md
         format: code
-        operations:
-          create: false
-          rename: false
-          delete: false
-
+        operations: { create: false, rename: false, delete: false }
       - name: publications-index
         label: Publications Overview
         type: file
         path: content/publications/index.md
         format: code
-        operations:
-          create: false
-          rename: false
-          delete: false
-
+        operations: { create: false, rename: false, delete: false }
       - name: working-papers-index
         label: Working Papers Overview
         type: file
         path: content/working-papers/index.md
         format: code
-        operations:
-          create: false
-          rename: false
-          delete: false
-
+        operations: { create: false, rename: false, delete: false }
       - name: activities-index
         label: Activities Overview
         type: file
         path: content/activities/index.md
         format: code
-        operations:
-          create: false
-          rename: false
-          delete: false
-
+        operations: { create: false, rename: false, delete: false }
       - name: teaching-index
         label: Teaching Overview
         type: file
         path: content/teaching/index.md
         format: code
-        operations:
-          create: false
-          rename: false
-          delete: false
-
+        operations: { create: false, rename: false, delete: false }
       - name: projects-index
         label: Projects Overview
         type: file
         path: content/projects/index.md
         format: code
-        operations:
-          create: false
-          rename: false
-          delete: false
-
+        operations: { create: false, rename: false, delete: false }
       - name: methods-index
         label: Methods Overview
         type: file
         path: content/methods/index.md
         format: code
-        operations:
-          create: false
-          rename: false
-          delete: false
+        operations: { create: false, rename: false, delete: false }
 
   - name: research-outputs
     label: Research Outputs
@@ -113,160 +78,72 @@ content:
         type: collection
         path: content/publications
         format: yaml-frontmatter
-        exclude:
-          - index.md
+        exclude: [index.md]
         subfolders: false
         filename: "{primary}.md"
-        operations:
-          create: true
-          rename: false
-          delete: true
+        operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields:
-            - title
-            - year
-            - publication-type
-            - journal
-            - publisher
-          search:
-            - title
-            - authors
-            - journal
-            - publisher
-            - research-line
-            - tags
-          sort:
-            - year
-            - title
-          default:
-            sort: year
-            order: desc
+          fields: [title, year, publication-type, journal, publisher]
+          search: [title, authors, journal, publisher, research-line, tags]
+          sort: [year, title]
+          default: { sort: year, order: desc }
         fields:
-          - name: title
-            label: Title
-            type: string
-            required: true
-          - name: authors
-            label: Authors
-            type: string
-            list: true
-            required: true
-          - name: year
-            label: Year
-            type: number
-            required: true
+          - { name: title, label: Title, type: string, required: true }
+          - { name: authors, label: Authors, type: string, list: true, required: true }
+          - { name: year, label: Year, type: number, required: true }
           - name: publication-type
             label: Publication Type
             type: select
             required: true
             options:
-              values:
-                - Journal article
-                - Book chapter
-                - Doctoral thesis
-                - Deliverable report
-          - name: journal
-            label: Journal
-            type: string
-          - name: publisher
-            label: Publisher
-            type: string
-          - name: book
-            label: Book
-            type: string
-          - name: series
-            label: Series
-            type: string
-          - name: volume
-            label: Volume
-            type: string
-          - name: issue
-            label: Issue
-            type: string
-          - name: pages
-            label: Pages
-            type: string
-          - name: article-number
-            label: Article Number
-            type: string
-          - name: doi
-            label: DOI
-            type: string
-          - name: link
-            label: External Link
-            type: string
-          - name: research-line
-            label: Research Line
-            type: string
-          - name: description
-            label: Description
-            type: text
-          - name: tags
-            label: Tags
-            type: string
-            list: true
+              values: [Journal article, Book chapter, Doctoral thesis, Deliverable report]
+          - { name: journal, label: Journal, type: string }
+          - { name: publisher, label: Publisher, type: string }
+          - { name: book, label: Book, type: string }
+          - { name: series, label: Series, type: string }
+          - { name: volume, label: Volume, type: string }
+          - { name: issue, label: Issue, type: string }
+          - { name: pages, label: Pages, type: string }
+          - { name: article-number, label: Article Number, type: string }
+          - { name: doi, label: DOI, type: string }
+          - { name: link, label: External Link, type: string }
+          - { name: research-line, label: Research Line, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: tags, label: Tags, type: string, list: true }
           - name: body
             label: Abstract and Page Content
             type: code
-            options:
-              format: markdown
+            options: { format: markdown }
 
       - name: working-papers
         label: Working Papers
         type: collection
         path: content/working-papers
         format: yaml-frontmatter
-        exclude:
-          - index.md
+        exclude: [index.md]
         subfolders: false
         filename: "{primary}.md"
-        operations:
-          create: true
-          rename: false
-          delete: true
+        operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields:
-            - title
-            - year
-            - status
-            - research-line
-          search:
-            - title
-            - authors
-            - status
-            - research-line
-            - tags
-          sort:
-            - year
-            - status
-            - title
-          default:
-            sort: year
-            order: desc
+          fields: [title, year, status, research-line]
+          search: [title, authors, status, research-line, tags]
+          sort: [year, status, title]
+          default: { sort: year, order: desc }
         fields:
           - name: title
             label: Title
             type: string
             required: true
             description: The file name is generated automatically from this title.
-          - name: authors
-            label: Authors
-            type: string
-            list: true
-            required: true
-          - name: year
-            label: Year
-            type: number
-            required: true
+          - { name: authors, label: Authors, type: string, list: true, required: true }
+          - { name: year, label: Year, type: number, required: true }
           - name: publication-type
             label: Publication Type
             type: select
             required: true
-            options:
-              values:
-                - Working paper
+            options: { values: [Working paper] }
           - name: status
             label: Status
             type: select
@@ -281,21 +158,13 @@ content:
                 - Revise and Resubmit
                 - Revising for Resubmission
                 - Accepted
-          - name: research-line
-            label: Research Line
-            type: string
-          - name: description
-            label: Description
-            type: text
-          - name: tags
-            label: Tags
-            type: string
-            list: true
+          - { name: research-line, label: Research Line, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: tags, label: Tags, type: string, list: true }
           - name: body
             label: Public Summary and Related Pages
             type: code
-            options:
-              format: markdown
+            options: { format: markdown }
 
   - name: academic-profile
     label: Activities and Teaching
@@ -306,181 +175,93 @@ content:
         type: collection
         path: content/activities
         format: yaml-frontmatter
-        exclude:
-          - index.md
+        exclude: [index.md]
         subfolders: false
         filename: "{primary}.md"
-        operations:
-          create: true
-          rename: false
-          delete: true
+        operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields:
-            - title
-            - year
-            - date
-            - activity-type
-            - role
-            - event
-          search:
-            - title
-            - activity-type
-            - role
-            - event
-            - location
-            - tags
-          sort:
-            - date
-            - year
-            - title
-          default:
-            sort: date
-            order: desc
+          fields: [title, year, date, activity-section, activity-type, role, event]
+          search: [title, activity-section, activity-type, role, event, location, tags]
+          sort: [date, year, title]
+          default: { sort: date, order: desc }
         fields:
           - name: title
             label: Title
             type: string
             required: true
             description: The file name is generated automatically from this title.
-          - name: year
-            label: Year
-            type: number
-            required: true
+          - { name: year, label: Year, type: number, required: true }
           - name: date
             label: Date
             type: date
             default: ""
+            options: { format: yyyy-MM-dd }
+          - name: activity-section
+            label: Overview Section
+            type: select
+            description: Select the section where this entry should appear on Activities.
             options:
-              format: yyyy-MM-dd
+              values: [Blog Posts, Talks, Conferences and Presentations]
           - name: activity-type
             label: Activity Type
             type: select
             required: true
             options:
-              values:
-                - Blog post
-                - Conference
-                - Invited talk
-                - Workshop
-                - Exhibition
-                - Academic service
-          - name: role
-            label: Role
-            type: string
-          - name: event
-            label: Event or Platform
-            type: string
-          - name: location
-            label: Location
-            type: string
-          - name: external-link
-            label: External Link
-            type: string
-          - name: description
-            label: Description
-            type: text
-          - name: tags
-            label: Tags
-            type: string
-            list: true
+              values: [Blog post, Conference, Invited talk, Workshop, Exhibition, Academic service]
+          - { name: role, label: Role, type: string }
+          - { name: event, label: Event or Platform, type: string }
+          - { name: location, label: Location, type: string }
+          - { name: external-link, label: External Link, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: tags, label: Tags, type: string, list: true }
           - name: body
             label: Activity Page Content
             type: code
-            options:
-              format: markdown
+            options: { format: markdown }
 
       - name: teaching
         label: Teaching and Supervision
         type: collection
         path: content/teaching
         format: yaml-frontmatter
-        exclude:
-          - index.md
+        exclude: [index.md]
         subfolders: false
         filename: "{primary}.md"
-        operations:
-          create: true
-          rename: false
-          delete: true
+        operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields:
-            - title
-            - year
-            - teaching-type
-            - role
-            - student
-            - institution
-          search:
-            - title
-            - teaching-type
-            - role
-            - institution
-            - course
-            - student
-            - level
-            - tags
-          sort:
-            - year
-            - teaching-type
-            - title
-          default:
-            sort: year
-            order: desc
+          fields: [title, year, teaching-type, role, student, institution]
+          search: [title, teaching-type, role, institution, course, student, level, tags]
+          sort: [year, teaching-type, title]
+          default: { sort: year, order: desc }
         fields:
           - name: title
             label: Title
             type: string
             required: true
             description: Use the lecture title or thesis title.
-          - name: year
-            label: Year
-            type: number
-            required: true
+          - { name: year, label: Year, type: number, required: true }
           - name: teaching-type
             label: Teaching Type
             type: select
             required: true
-            options:
-              values:
-                - Course
-                - Guest lecture
-                - Thesis supervision
-          - name: role
-            label: Role
-            type: string
-          - name: institution
-            label: Institution
-            type: string
-          - name: course
-            label: Course
-            type: string
-          - name: student
-            label: Student
-            type: string
-          - name: level
-            label: Degree Level
-            type: string
-          - name: co-supervisors
-            label: Co supervisors
-            type: string
-            list: true
-          - name: description
-            label: Description
-            type: text
-          - name: tags
-            label: Tags
-            type: string
-            list: true
+            options: { values: [Course, Guest lecture, Thesis supervision] }
+          - { name: role, label: Role, type: string }
+          - { name: institution, label: Institution, type: string }
+          - { name: course, label: Course, type: string }
+          - { name: student, label: Student, type: string }
+          - { name: level, label: Degree Level, type: string }
+          - { name: co-supervisors, label: Co supervisors, type: string, list: true }
+          - { name: description, label: Description, type: text }
+          - { name: tags, label: Tags, type: string, list: true }
           - name: body
             label: Teaching or Supervision Page Content
             type: code
-            options:
-              format: markdown
+            options: { format: markdown }
 
   - name: research-notes
-    label: Research Notes
+    label: Projects and Methods
     type: group
     items:
       - name: projects
@@ -488,87 +269,60 @@ content:
         type: collection
         path: content/projects
         format: yaml-frontmatter
-        exclude:
-          - index.md
+        exclude: [index.md]
         subfolders: false
         filename: "{primary}.md"
-        operations:
-          create: true
-          rename: false
-          delete: true
+        operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields:
-            - title
-            - description
-          search:
-            - title
-            - description
-            - tags
-          sort:
-            - title
-          default:
-            sort: title
-            order: asc
+          fields: [title, project-type, period, role, institution]
+          search: [title, project-type, period, role, institution, funding, description, tags]
+          sort: [display-order, year, title]
+          default: { sort: display-order, order: asc }
         fields:
-          - name: title
-            label: Title
-            type: string
-            required: true
-          - name: description
-            label: Description
-            type: text
-          - name: tags
-            label: Tags
-            type: string
-            list: true
+          - { name: title, label: Title, type: string, required: true }
+          - name: project-type
+            label: Project Type
+            type: select
+            options: { values: [Academic project, Research note] }
+          - { name: year, label: Start Year, type: number }
+          - { name: period, label: Period, type: string }
+          - { name: role, label: Role, type: string }
+          - { name: institution, label: Institution, type: string }
+          - { name: funding, label: Funding, type: string }
+          - { name: external-link, label: External Link, type: string }
+          - { name: display-order, label: Display Order, type: number }
+          - name: show-in-overview
+            label: Show in Projects Overview
+            type: boolean
+            description: Turn this off for research notes that should remain accessible but not appear in the Projects overview.
+          - { name: description, label: Description, type: text }
+          - { name: tags, label: Tags, type: string, list: true }
           - name: body
-            label: Page Content
+            label: Project Page Content
             type: code
-            options:
-              format: markdown
+            options: { format: markdown }
 
       - name: methods
         label: Methods
         type: collection
         path: content/methods
         format: yaml-frontmatter
-        exclude:
-          - index.md
+        exclude: [index.md]
         subfolders: false
         filename: "{primary}.md"
-        operations:
-          create: true
-          rename: false
-          delete: true
+        operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields:
-            - title
-            - description
-          search:
-            - title
-            - description
-            - tags
-          sort:
-            - title
-          default:
-            sort: title
-            order: asc
+          fields: [title, description]
+          search: [title, description, tags]
+          sort: [title]
+          default: { sort: title, order: asc }
         fields:
-          - name: title
-            label: Title
-            type: string
-            required: true
-          - name: description
-            label: Description
-            type: text
-          - name: tags
-            label: Tags
-            type: string
-            list: true
+          - { name: title, label: Title, type: string, required: true }
+          - { name: description, label: Description, type: text }
+          - { name: tags, label: Tags, type: string, list: true }
           - name: body
             label: Page Content
             type: code
-            options:
-              format: markdown
+            options: { format: markdown }

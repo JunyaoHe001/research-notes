@@ -9,6 +9,7 @@ institution: Utrecht University
 funding: European Research Council Starting Grant
 external-link: https://collaborativeplanning.sites.uu.nl
 display-order: 2
+show-in-overview: true
 tags:
   - digital planning
   - network power

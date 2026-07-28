@@ -9,6 +9,7 @@ institution: University of Groningen
 funding: Horizon Europe
 external-link: http://mobi-twin-project.eu/
 display-order: 1
+show-in-overview: true
 tags:
   - economic geography
   - spatial mobility
