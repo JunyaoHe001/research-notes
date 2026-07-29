@@ -17,7 +17,7 @@ Junyao He completed a PhD in Human Geography and Spatial Planning at Utrecht Uni
 
 Junyao He's current research is organised around two connected programmes:
 
-- **Hybrid work and spatial restructuring:** Remote and hybrid work alter job home networks, residential relocation, labour market reach, housing pressures, and uneven regional development. See [Research](./research#hybrid-work-jobhome-networks-and-regional-restructuring) and the [Netherlands job home network paper](./working-papers/teleworkability-job-home-networks).
+- **Hybrid work and spatial restructuring:** Remote and hybrid work alter job home networks, residential relocation, labour market reach, housing pressures, and uneven regional development. See [Research](./research#hybrid-work-jobhome-networks-and-regional-restructuring), the [Netherlands job home network research](./working-papers/teleworkability-job-home-networks) and the [Spain hybrid-work network research](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks).
 - **Mobility networks and regional inequality:** Migration, relocation, and digitally enabled mobility connect cities and regions while redistributing opportunity. This includes [digital nomad mobility](./projects/digital-nomad-mobility) and heterogeneous Dutch migration networks.
 
 A continuing research line examines **digital planning, platform governance, and networked power**, extending his doctoral work on social media participation and inequalities in collaborative planning. A newer direction studies **AI, innovation, and regional networks** through large scale news text and graph based methods.
