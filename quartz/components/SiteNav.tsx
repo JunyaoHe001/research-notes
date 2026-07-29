@@ -1,3 +1,4 @@
+import { graphSettings } from "../graph-settings.generated"
 import { FullSlug } from "../util/path"
 import { QuartzComponent } from "./types"
 
@@ -5,9 +6,14 @@ const SITE_ROOT = "/research-notes"
 
 const SiteNav: QuartzComponent = ({ fileData }) => {
   const current = (fileData.slug ?? "index") as FullSlug
+  const graphLink =
+    graphSettings.enabled && graphSettings.placement === "network"
+      ? [{ label: "Network", href: `${SITE_ROOT}/network`, slug: "network" }]
+      : []
   const links = [
     { label: "Home", href: `${SITE_ROOT}/`, slug: "index" },
     { label: "Research", href: `${SITE_ROOT}/research`, slug: "research" },
+    ...graphLink,
     { label: "Projects", href: `${SITE_ROOT}/projects/`, slug: "projects" },
     { label: "Publications", href: `${SITE_ROOT}/publications/`, slug: "publications" },
     {
