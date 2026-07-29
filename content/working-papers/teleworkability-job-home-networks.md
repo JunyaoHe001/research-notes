@@ -1,5 +1,6 @@
 ---
-title: "Teleworkability and the Evolution of Job–Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands"
+title: "Teleworkability and the Evolution of Job-Home Networks after the
+  COVID-19 Shock: Causal Evidence from the Netherlands"
 authors:
   - He, J.
   - Wang, T.
@@ -9,14 +10,14 @@ year: 2026
 publication-type: Working paper
 status: Under Review
 research-line: Hybrid work, job–home networks, and regional restructuring
-description: Causal evidence on how remote-work exposure reshaped Dutch municipal job–home networks after COVID-19.
+description: Causal evidence on how remote-work exposure reshaped Dutch
+  municipal job–home networks after COVID-19.
 tags:
   - working-paper
   - remote-work
   - job-home-networks
   - causal-inference
 ---
-
 ## Abstract
 
 This article examines how actual remote-work patterns reshaped Dutch municipal job–home networks after the COVID-19 shock. It treats employment–residence relations as a spatial network and asks whether remote-work exposure changed commuting connections, employment and residential centrality, and the organisation of urban-regional labour markets.
