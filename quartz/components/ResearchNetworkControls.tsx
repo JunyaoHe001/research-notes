@@ -10,11 +10,10 @@ const ResearchNetworkControls: QuartzComponentConstructor = () => {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.7rem 1rem;
-  margin: 1.3rem 0 0.8rem;
-  padding: 0.85rem 0;
+  gap: 0.7rem 0.85rem;
+  margin: 1.3rem 0 0;
+  padding: 0.85rem 0 0.55rem;
   border-top: 1px solid var(--lightgray);
-  border-bottom: 1px solid var(--lightgray);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -46,9 +45,25 @@ const ResearchNetworkControls: QuartzComponentConstructor = () => {
 .network-isolate-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  flex: 0 0 auto;
+  gap: 0.5rem;
+  margin-left: 0.3rem;
+  padding-left: 0.85rem;
+  border-left: 1px solid var(--lightgray);
   font-size: 0.8rem;
   white-space: nowrap;
+}
+
+.network-isolate-toggle input[type="checkbox"] {
+  position: static !important;
+  inset: auto !important;
+  display: block;
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 !important;
+  transform: none !important;
+  accent-color: var(--secondary);
 }
 
 .network-filter-status {
@@ -71,6 +86,12 @@ body[data-slug="network"] .graph > .graph-outer {
   .network-filter-panel {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .network-isolate-toggle {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
   }
 
   body[data-slug="network"] .graph > .graph-outer {
