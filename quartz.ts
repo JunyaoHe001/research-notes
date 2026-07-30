@@ -1,10 +1,13 @@
 import { loadQuartzConfig, loadQuartzLayout } from "./quartz/plugins/loader/config-loader"
 import { registerCondition } from "./quartz/plugins/loader/conditions"
 import { componentRegistry } from "./quartz/components/registry"
+import ResearchNetworkControls from "./quartz/components/ResearchNetworkControls"
 import { graphSettings } from "./quartz/graph-settings.generated"
 
 const localDepth = graphSettings.scope === "entire-site" ? -1 : graphSettings.depth
 const localIsGlobal = graphSettings.scope === "entire-site"
+
+componentRegistry.register("research-network-controls", ResearchNetworkControls, "local")
 
 componentRegistry.setOptionOverrides("@quartz-community/graph", {
   localGraph: {
