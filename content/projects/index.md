@@ -9,7 +9,7 @@ This page presents Junyao He's principal doctoral and postdoctoral research proj
 ## Selected Academic Projects
 
 ### [MOBI-TWIN: Spatial Mobility and Regional Transformation in Europe's Twin Transition](../projects/mobi-twin)
-**Period:** 2025 to present  
+**Period:** 2025 to 2026  
 **Role:** Postdoctoral Researcher  
 **Institution:** University of Groningen  
 **Funding:** Horizon Europe  
