@@ -14,7 +14,7 @@ Remote and hybrid work change the spatial relationship between employment and re
 **Representative work**
 
 - [Teleworkability and the Evolution of Job–Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
-- [Hybrid Work and Job–Home Networks](./projects/hybrid-work-networks)
+- [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
 
 ## Mobility, migration, and uneven spatial opportunity
 
@@ -24,7 +24,7 @@ Mobility is relational. Cities and regions are shaped by the origins, destinatio
 
 **Representative work**
 
-- [Different Strokes for Different Folks: Heterogeneity, Teleworkability, and the Restructuring of Dutch Internal Migration Networks](./working-papers/dutch-migration-networks)
+- [Does Remote Work Deepen Inequality in Population Migration? Evidence from Mobility in the Netherlands](./working-papers/dutch-migration-networks)
 - [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
 - [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
 
