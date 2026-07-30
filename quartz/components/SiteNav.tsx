@@ -103,6 +103,17 @@ SiteNav.css = `
   font-weight: 650;
 }
 
+.graph-related-anchor,
+.graph-related-anchor + ul {
+  display: none !important;
+}
+
+article > .graph {
+  width: 100%;
+  min-height: 24rem;
+  margin-top: 2rem;
+}
+
 @media (max-width: 800px) {
   .academic-top-nav {
     width: 100%;
@@ -114,6 +125,10 @@ SiteNav.css = `
 
   .academic-top-links {
     column-gap: 1rem;
+  }
+
+  article > .graph {
+    min-height: 18rem;
   }
 }
 `
