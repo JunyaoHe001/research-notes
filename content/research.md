@@ -63,9 +63,11 @@ Across these empirical fields, Junyao He treats cities, regions, mobility system
 
 **Representative work**
 
-- [3D Walking Network Shapes Social Cohesion of the Elderly in Aging Communities: Evidence from Nanjing, China](./publications/3d-walking-network-social-cohesion)
-- [MOBI-TWIN D3.1: Methodological Report Describing the MOBI-TWIN Model](./publications/mobi-twin-d3-1-model)
 
+- [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
+- [MOBI-TWIN D3.1: Methodological Report Describing the MOBI-TWIN Model](./publications/mobi-twin-d3-1-model)
+- [3D Walking Network Shapes Social Cohesion of the Elderly in Aging Communities: Evidence from Nanjing, China](./publications/3d-walking-network-social-cohesion)
+- 
 See also [Methods and analytical approaches](./methods/) and [Complex networks as a shared framework](./methods/complex-networks).
 
 ## Collaboration
