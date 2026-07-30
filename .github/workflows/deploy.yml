@@ -46,7 +46,10 @@ jobs:
       - name: Format activity dates by month
         run: node scripts/format-activity-months.mjs
 
-      - name: Commit synchronized indexes
+      - name: Synchronize graph settings and relationships
+        run: node scripts/sync-graph-settings.mjs
+
+      - name: Commit synchronized files
         if: github.event_name == 'push' && github.ref == 'refs/heads/v5'
         run: |
           GENERATED_FILES=(
@@ -56,17 +59,19 @@ jobs:
             content/teaching/index.md
             content/projects/index.md
             content/methods/index.md
+            quartz/graph-settings.generated.ts
+            quartz.config.yaml
           )
 
           if git diff --quiet -- "${GENERATED_FILES[@]}"; then
-            echo "Generated indexes are already synchronized."
+            echo "Generated files are already synchronized."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "${GENERATED_FILES[@]}"
-          git commit -m "content: synchronize generated indexes"
+          git commit -m "content: synchronize generated site files"
           git push origin HEAD:v5
 
       - name: Build Quartz

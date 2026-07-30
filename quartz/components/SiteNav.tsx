@@ -1,3 +1,4 @@
+import { graphSettings } from "../graph-settings.generated"
 import { FullSlug } from "../util/path"
 import { QuartzComponent } from "./types"
 
@@ -5,9 +6,14 @@ const SITE_ROOT = "/research-notes"
 
 const SiteNav: QuartzComponent = ({ fileData }) => {
   const current = (fileData.slug ?? "index") as FullSlug
+  const graphLink =
+    graphSettings.enabled && graphSettings.placement === "network"
+      ? [{ label: "Network", href: `${SITE_ROOT}/network`, slug: "network" }]
+      : []
   const links = [
     { label: "Home", href: `${SITE_ROOT}/`, slug: "index" },
     { label: "Research", href: `${SITE_ROOT}/research`, slug: "research" },
+    ...graphLink,
     { label: "Projects", href: `${SITE_ROOT}/projects/`, slug: "projects" },
     { label: "Publications", href: `${SITE_ROOT}/publications/`, slug: "publications" },
     {
@@ -97,6 +103,17 @@ SiteNav.css = `
   font-weight: 650;
 }
 
+.graph-related-anchor,
+.graph-related-anchor + ul {
+  display: none !important;
+}
+
+article > .graph {
+  width: 100%;
+  min-height: 24rem;
+  margin-top: 2rem;
+}
+
 @media (max-width: 800px) {
   .academic-top-nav {
     width: 100%;
@@ -108,6 +125,10 @@ SiteNav.css = `
 
   .academic-top-links {
     column-gap: 1rem;
+  }
+
+  article > .graph {
+    min-height: 18rem;
   }
 }
 `

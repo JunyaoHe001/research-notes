@@ -26,6 +26,12 @@ content:
         path: content/research.md
         format: code
         operations: { create: false, rename: false, delete: false }
+      - name: network
+        label: Research Network
+        type: file
+        path: content/network.md
+        format: code
+        operations: { create: false, rename: false, delete: false }
       - name: research-agenda
         label: Research Agenda
         type: file
@@ -69,6 +75,40 @@ content:
         format: code
         operations: { create: false, rename: false, delete: false }
 
+  - name: visualisation-settings
+    label: Visualisation Settings
+    type: group
+    items:
+      - name: graph-settings
+        label: Research Network Settings
+        type: file
+        path: content/site-settings/graph.md
+        format: yaml-frontmatter
+        operations: { create: false, rename: false, delete: false }
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - name: graph-enabled
+            label: Enable Research Network
+            type: boolean
+            default: true
+          - name: graph-placement
+            label: Graph Placement
+            type: select
+            required: true
+            options:
+              values: [Network page, Home, Research]
+          - name: graph-scope
+            label: Graph Scope
+            type: select
+            required: true
+            options:
+              values: [Entire website, Current page links]
+          - name: graph-depth
+            label: Maximum Link Depth
+            type: number
+            default: 2
+            description: Used only when Graph Scope is Current page links. Supported values are 1 to 3.
+
   - name: research-outputs
     label: Research Outputs
     type: group
@@ -111,6 +151,15 @@ content:
           - { name: research-line, label: Research Line, type: string }
           - { name: description, label: Description, type: text }
           - { name: tags, label: Tags, type: string, list: true }
+          - name: show-in-graph
+            label: Include in Research Network
+            type: boolean
+            default: true
+          - name: related-pages
+            label: Related Pages
+            type: string
+            list: true
+            description: Enter internal page slugs such as research or projects/mobi-twin.
           - name: body
             label: Abstract and Page Content
             type: code
@@ -161,6 +210,15 @@ content:
           - { name: research-line, label: Research Line, type: string }
           - { name: description, label: Description, type: text }
           - { name: tags, label: Tags, type: string, list: true }
+          - name: show-in-graph
+            label: Include in Research Network
+            type: boolean
+            default: true
+          - name: related-pages
+            label: Related Pages
+            type: string
+            list: true
+            description: Enter internal page slugs such as research or projects/mobi-twin.
           - name: body
             label: Public Summary and Related Pages
             type: code
@@ -215,6 +273,15 @@ content:
           - { name: external-link, label: External Link, type: string }
           - { name: description, label: Description, type: text }
           - { name: tags, label: Tags, type: string, list: true }
+          - name: show-in-graph
+            label: Include in Research Network
+            type: boolean
+            default: true
+          - name: related-pages
+            label: Related Pages
+            type: string
+            list: true
+            description: Enter internal page slugs such as research or projects/mobi-twin.
           - name: body
             label: Activity Page Content
             type: code
@@ -255,6 +322,15 @@ content:
           - { name: co-supervisors, label: Co supervisors, type: string, list: true }
           - { name: description, label: Description, type: text }
           - { name: tags, label: Tags, type: string, list: true }
+          - name: show-in-graph
+            label: Include in Research Network
+            type: boolean
+            default: true
+          - name: related-pages
+            label: Related Pages
+            type: string
+            list: true
+            description: Enter internal page slugs such as research or projects/mobi-twin.
           - name: body
             label: Teaching or Supervision Page Content
             type: code
@@ -298,6 +374,15 @@ content:
             description: Turn this off for research notes that should remain accessible but not appear in the Projects overview.
           - { name: description, label: Description, type: text }
           - { name: tags, label: Tags, type: string, list: true }
+          - name: show-in-graph
+            label: Include in Research Network
+            type: boolean
+            default: true
+          - name: related-pages
+            label: Related Pages
+            type: string
+            list: true
+            description: Enter internal page slugs such as research or methods/complex-networks.
           - name: body
             label: Project Page Content
             type: code
@@ -322,6 +407,15 @@ content:
           - { name: title, label: Title, type: string, required: true }
           - { name: description, label: Description, type: text }
           - { name: tags, label: Tags, type: string, list: true }
+          - name: show-in-graph
+            label: Include in Research Network
+            type: boolean
+            default: true
+          - name: related-pages
+            label: Related Pages
+            type: string
+            list: true
+            description: Enter internal page slugs such as research or projects/mobi-twin.
           - name: body
             label: Page Content
             type: code
