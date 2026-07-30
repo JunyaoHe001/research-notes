@@ -1,6 +1,7 @@
 ---
-title: Collaborative Planning in China (CoChina)
-description: Doctoral research on collaborative planning, public spheres, digital participation, and power relations in China.
+title: "CoChina: Collaborative Planning in China "
+description: Doctoral research on collaborative planning, public spheres,
+  digital participation, and power relations in China.
 project-type: Academic project
 year: 2021
 period: 2021 to 2025
@@ -15,8 +16,8 @@ tags:
   - network power
   - public participation
   - computational social science
+show-in-graph: true
 ---
-
 ## Project
 
 CoChina examines collaborative planning, public spheres, and power relations in authoritarian and rapidly digitalising urban contexts.
