@@ -13,6 +13,7 @@ configuration:
     - private
     - templates
     - .obsidian
+    - site-settings
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
@@ -133,6 +134,13 @@ plugins:
 
   - source: "@quartz-community/tag-page"
     enabled: true
+
+  - source: "@quartz-community/graph"
+    enabled: true
+    layout:
+      position: afterBody
+      priority: 40
+      condition: graph-placement
 
   - source: "@quartz-community/search"
     enabled: true
