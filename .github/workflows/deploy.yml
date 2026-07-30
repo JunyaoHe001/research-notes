@@ -77,6 +77,9 @@ jobs:
       - name: Build Quartz
         run: npx quartz build
 
+      - name: Patch research network filters
+        run: node scripts/patch-graph-output.mjs
+
       - name: Upload preview artifact
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
