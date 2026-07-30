@@ -9,6 +9,7 @@ const ROOT = process.cwd()
 const CONTENT_ROOT = path.join(ROOT, "content")
 const SETTINGS_PATH = path.join(CONTENT_ROOT, "site-settings", "graph.md")
 const GENERATED_MODULE_PATH = path.join(ROOT, "quartz", "graph-settings.generated.ts")
+const QUARTZ_CONFIG_PATH = path.join(ROOT, "quartz.config.yaml")
 const HIDDEN_GRAPH_TAG = "graph-hidden"
 const RELATED_START = "<!-- GRAPH-RELATED-PAGES:START -->"
 const RELATED_END = "<!-- GRAPH-RELATED-PAGES:END -->"
@@ -101,6 +102,25 @@ async function writeGeneratedSettings(settings) {
   await fs.writeFile(GENERATED_MODULE_PATH, source, "utf8")
 }
 
+async function synchronizeQuartzConfig() {
+  let source = await fs.readFile(QUARTZ_CONFIG_PATH, "utf8")
+
+  if (!source.includes("    - site-settings")) {
+    source = source.replace("    - .obsidian\n", "    - .obsidian\n    - site-settings\n")
+  }
+
+  if (!source.includes('  - source: "@quartz-community/graph"')) {
+    const graphEntry = `  - source: "@quartz-community/graph"\n    enabled: true\n    layout:\n      position: afterBody\n      priority: 40\n      condition: graph-placement\n\n`
+    const searchEntry = '  - source: "@quartz-community/search"\n'
+    if (!source.includes(searchEntry)) {
+      throw new Error("Could not find the Search plugin insertion point in quartz.config.yaml")
+    }
+    source = source.replace(searchEntry, `${graphEntry}${searchEntry}`)
+  }
+
+  await fs.writeFile(QUARTZ_CONFIG_PATH, source, "utf8")
+}
+
 async function prepareGraphRelationships() {
   const files = await listMarkdownFiles(CONTENT_ROOT)
   let changed = 0
@@ -150,6 +170,7 @@ async function main() {
   }
 
   await writeGeneratedSettings(settings)
+  await synchronizeQuartzConfig()
   const relationshipFiles = await prepareGraphRelationships()
 
   console.log(
