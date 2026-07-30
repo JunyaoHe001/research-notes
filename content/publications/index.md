@@ -22,4 +22,4 @@ Peer-reviewed journal articles, book chapters, thesis, and research deliverables
 | 2021 | [Design Empowerment for Urban Micro-renewal Driven by New Technology: Shuangjing Micro-renewal Practice Based on Human and Evidence-based Participatory Design Methodology](../publications/design-empowerment-micro-renewal) | New Architecture |
 <!-- AUTO-GENERATED:PUBLICATIONS:END -->
 
-Current manuscripts are listed separately under [Working Papers](../working-papers/).
+Ongoing research are listed separately under [Working Papers](../working-papers/).
