@@ -13,16 +13,16 @@ const SiteNav: QuartzComponent = ({ fileData }) => {
   const links = [
     { label: "Home", href: `${SITE_ROOT}/`, slug: "index" },
     { label: "Research", href: `${SITE_ROOT}/research`, slug: "research" },
-    ...graphLink,
-    { label: "Projects", href: `${SITE_ROOT}/projects/`, slug: "projects" },
     { label: "Publications", href: `${SITE_ROOT}/publications/`, slug: "publications" },
     {
       label: "Working papers",
       href: `${SITE_ROOT}/working-papers/`,
       slug: "working-papers",
     },
-    { label: "Activities", href: `${SITE_ROOT}/activities/`, slug: "activities" },
     { label: "Teaching", href: `${SITE_ROOT}/teaching/`, slug: "teaching" },
+    { label: "Projects", href: `${SITE_ROOT}/projects/`, slug: "projects" },
+    { label: "Activities", href: `${SITE_ROOT}/activities/`, slug: "activities" },
+    ...graphLink,
   ]
 
   const isActive = (slug: string) =>
