@@ -16,7 +16,7 @@ This page presents Junyao He's principal doctoral and postdoctoral research proj
 
 Research on how digital and green transitions reshape spatial mobility, regional inequality, sustainability, and resilience across European regions.
 
-### [Collaborative Planning in China (CoChina)](../projects/collaborative-planning-in-china)
+### [CoChina: Collaborative Planning in China ](../projects/collaborative-planning-in-china)
 **Period:** 2021 to 2025  
 **Role:** Doctoral Researcher  
 **Institution:** Utrecht University  
