@@ -1,5 +1,6 @@
 ---
-title: "Different Strokes for Different Folks: Heterogeneity, Teleworkability, and the Restructuring of Dutch Internal Migration Networks"
+title: Does Remote Work Deepen Inequality in Population Migration? Evidence from
+  the Netherlands
 authors:
   - He, J.
   - Ballas, D.
@@ -7,14 +8,15 @@ year: 2026
 publication-type: Working paper
 status: Finalizing
 research-line: Migration, teleworkability, and regional inequality
-description: Heterogeneous relocation responses to teleworkability across demographic groups in the Netherlands.
+description: Heterogeneous relocation responses to telework transition across
+  demographic groups in the Netherlands.
 tags:
   - working-paper
   - internal-migration
   - teleworkability
   - spatial-microsimulation
+show-in-graph: true
 ---
-
 ## Abstract
 
 This article investigates how teleworkability is associated with heterogeneous relocation responses across demographic groups in the Netherlands. It asks whether flexible work changes migration networks differently for age, household, income, and occupational groups, and whether these differences reinforce or reduce existing spatial inequalities.
