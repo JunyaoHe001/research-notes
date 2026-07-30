@@ -1,9 +1,12 @@
 ---
-title: "MOBI-TWIN: Spatial Mobility and Regional Transformation in Europe's Twin Transition"
-description: Research on how digital and green transitions reshape spatial mobility, regional inequality, sustainability, and resilience across European regions.
+title: "MOBI-TWIN: Spatial Mobility and Regional Transformation in Europe's Twin
+  Transition"
+description: Research on how digital and green transitions reshape spatial
+  mobility, regional inequality, sustainability, and resilience across European
+  regions.
 project-type: Academic project
 year: 2025
-period: 2025 to present
+period: 2025 to 2026
 role: Postdoctoral Researcher
 institution: University of Groningen
 funding: Horizon Europe
@@ -16,8 +19,8 @@ tags:
   - regional inequality
   - agent based modelling
   - spatial microsimulation
+show-in-graph: true
 ---
-
 ## Project
 
 MOBI-TWIN examines how digital and green transitions reshape spatial mobility, regional inequality, sustainability, and resilience across European regions.
