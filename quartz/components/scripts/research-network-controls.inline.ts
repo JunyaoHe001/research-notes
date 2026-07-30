@@ -63,16 +63,33 @@
     const selected = new Set(state.categories ?? [])
     const showAll = selected.size === 0
     const originalKeyBySlug = new Map()
+    const eligibleSlugs = new Set()
 
-    for (const key of Object.keys(source)) originalKeyBySlug.set(normalizeSlug(key), key)
+    for (const key of Object.keys(source)) {
+      const slug = normalizeSlug(key)
+      originalKeyBySlug.set(slug, key)
+      const item = source[key]
+      const tags = Array.isArray(item?.tags) ? item.tags : []
+      if (categoryForSlug(slug) && !tags.includes("graph-hidden")) eligibleSlugs.add(slug)
+    }
+
+    const globalDegree = new Map([...eligibleSlugs].map((slug) => [slug, 0]))
+    for (const slug of eligibleSlugs) {
+      const item = source[originalKeyBySlug.get(slug)]
+      for (const link of item?.links ?? []) {
+        const targetSlug = normalizeSlug(link)
+        if (!eligibleSlugs.has(targetSlug)) continue
+        globalDegree.set(slug, (globalDegree.get(slug) ?? 0) + 1)
+        globalDegree.set(targetSlug, (globalDegree.get(targetSlug) ?? 0) + 1)
+      }
+    }
 
     const visibleSlugs = new Set()
-    for (const [slug, originalKey] of originalKeyBySlug) {
-      const item = source[originalKey]
-      const tags = Array.isArray(item?.tags) ? item.tags : []
+    for (const slug of eligibleSlugs) {
       const category = categoryForSlug(slug)
-      if (!category || tags.includes("graph-hidden")) continue
-      if (showAll || selected.has(category)) visibleSlugs.add(slug)
+      const categoryVisible = showAll || selected.has(category)
+      const connected = (globalDegree.get(slug) ?? 0) > 0
+      if (categoryVisible && (!state.hideIsolates || connected)) visibleSlugs.add(slug)
     }
 
     const filtered = {}
@@ -83,31 +100,6 @@
         ? item.links.filter((link) => visibleSlugs.has(normalizeSlug(link)))
         : []
       filtered[originalKey] = { ...item, links }
-    }
-
-    if (state.hideIsolates) {
-      const degree = new Map([...visibleSlugs].map((slug) => [slug, 0]))
-      for (const [originalKey, item] of Object.entries(filtered)) {
-        const sourceSlug = normalizeSlug(originalKey)
-        for (const link of item.links ?? []) {
-          const targetSlug = normalizeSlug(link)
-          if (!degree.has(targetSlug)) continue
-          degree.set(sourceSlug, (degree.get(sourceSlug) ?? 0) + 1)
-          degree.set(targetSlug, (degree.get(targetSlug) ?? 0) + 1)
-        }
-      }
-
-      for (const [slug, count] of degree) {
-        if (count === 0) {
-          const originalKey = originalKeyBySlug.get(slug)
-          delete filtered[originalKey]
-          visibleSlugs.delete(slug)
-        }
-      }
-
-      for (const item of Object.values(filtered)) {
-        item.links = (item.links ?? []).filter((link) => visibleSlugs.has(normalizeSlug(link)))
-      }
     }
 
     window.__researchGraphVisibleCount = Object.keys(filtered).length
@@ -145,7 +137,7 @@
       const categories = showAll
         ? "All content types"
         : state.categories.map((category) => CATEGORY_LABELS[category]).join(", ")
-      status.textContent = `${categories}. ${state.hideIsolates ? "Isolated pages hidden." : "Isolated pages shown."}`
+      status.textContent = `${categories}. ${state.hideIsolates ? "Pages without links hidden." : "Pages without links shown."}`
     }
   }
 
