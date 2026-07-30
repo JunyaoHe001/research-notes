@@ -26,10 +26,12 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 
 ## Recent
 
+- Current research: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
+- Current research: [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
+- Current research: [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
 - PhD thesis (2026): [Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China](./publications/network-power-social-media-thesis).
 - Journal article (2026): [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning).
-- Current project: hybrid work and the restructuring of Spanish and Dutch job home networks.
-- Current project: global digital nomad mobility networks and their urban drivers.
+
 
 ## Contact
 
