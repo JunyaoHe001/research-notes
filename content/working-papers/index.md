@@ -14,7 +14,7 @@ Current manuscripts and research papers in development. Click any title for auth
 | 2026 | [From Interaction Networks to Interpretive Samples: Networked Discourse Analysis for Digital Social Research](../working-papers/networked-discourse-analysis) | Under Review |
 | 2026 | [Social Media Influence on Citizen Power in Online Planning Controversies: An Edge-based Social Network Analysis of Network Power](../working-papers/edge-based-network-power) | Under Review |
 | 2026 | [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](../working-papers/digital-nomad-mobility) | Finalizing |
-| 2026 | [Different Strokes for Different Folks: Heterogeneity, Teleworkability, and the Restructuring of Dutch Internal Migration Networks](../working-papers/dutch-migration-networks) | Finalizing |
+| 2026 | [Does Remote Work Deepen Inequality in Population Migration? Evidence from the Netherlands](../working-papers/dutch-migration-networks) | Finalizing |
 | 2026 | [Measuring AI-Related Cooperation, Competition, and Innovation across Global Subnational Regions Using News Text](../working-papers/ai-regional-networks) | In Preparation |
 | 2026 | [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](../working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks) | Submitted |
 
