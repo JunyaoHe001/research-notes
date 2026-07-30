@@ -8,4 +8,5 @@ role: Co-author
 event: World Planning Schools Congress 2026
 location: Helsinki
 show-in-graph: true
+date: 2026-07-02
 ---
