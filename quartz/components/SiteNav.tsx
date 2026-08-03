@@ -1,4 +1,4 @@
-import { graphSettings } from "../graph-settings.generated"
+import { tagNetworkSettings } from "../graph-settings.generated"
 import { FullSlug } from "../util/path"
 import { QuartzComponent } from "./types"
 
@@ -6,10 +6,9 @@ const SITE_ROOT = "/research-notes"
 
 const SiteNav: QuartzComponent = ({ fileData }) => {
   const current = (fileData.slug ?? "index") as FullSlug
-  const graphLink =
-    graphSettings.enabled && graphSettings.placement === "network"
-      ? [{ label: "Network", href: `${SITE_ROOT}/network`, slug: "network" }]
-      : []
+  const networkLink = tagNetworkSettings.enabled
+    ? [{ label: "Network", href: `${SITE_ROOT}/network`, slug: "network" }]
+    : []
   const links = [
     { label: "Home", href: `${SITE_ROOT}/`, slug: "index" },
     { label: "Research", href: `${SITE_ROOT}/research`, slug: "research" },
@@ -22,7 +21,7 @@ const SiteNav: QuartzComponent = ({ fileData }) => {
     { label: "Teaching", href: `${SITE_ROOT}/teaching/`, slug: "teaching" },
     { label: "Projects", href: `${SITE_ROOT}/projects/`, slug: "projects" },
     { label: "Activities", href: `${SITE_ROOT}/activities/`, slug: "activities" },
-    ...graphLink,
+    ...networkLink,
   ]
 
   const isActive = (slug: string) =>
@@ -108,12 +107,6 @@ SiteNav.css = `
   display: none !important;
 }
 
-article > .graph {
-  width: 100%;
-  min-height: 24rem;
-  margin-top: 2rem;
-}
-
 @media (max-width: 800px) {
   .academic-top-nav {
     width: 100%;
@@ -125,10 +118,6 @@ article > .graph {
 
   .academic-top-links {
     column-gap: 1rem;
-  }
-
-  article > .graph {
-    min-height: 18rem;
   }
 }
 `
