@@ -1,6 +1,6 @@
 ---
-title: Does Remote Work Deepen Inequality in Population Migration? Evidence from
-  Mobility in the Netherlands
+title: "Different Strokes for Different Folks: Teleworkability, Heterogeneity,
+  and the Restructuring of Dutch Internal Migration Networks"
 authors:
   - He, J.
   - Ballas, D.
@@ -17,6 +17,7 @@ tags:
   - teleworkability
   - spatial-microsimulation
 show-in-graph: true
+show-in-tag-network: true
 ---
 ## Abstract
 
