@@ -7,7 +7,7 @@ authors:
   - Li, Z.
 year: 2026
 publication-type: Working paper
-status: In Preparation
+status: Finalizing
 research-line: AI, innovation, and computational economic geography
 description: A GeoAI framework for measuring AI-related cooperation,
   competition, and innovation across subnational regions.
@@ -16,6 +16,7 @@ tags:
   - artificial-intelligence
   - economic-geography
   - news-text
+show-in-graph: true
 ---
 ## Abstract
 
