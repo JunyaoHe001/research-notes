@@ -62,6 +62,13 @@ function normalizeArray(value) {
   return [value]
 }
 
+function normalizeBoolean(value, fallback = true) {
+  if (typeof value === "boolean") return value
+  if (value === undefined || value === null || value === "") return fallback
+  const text = String(value).trim().toLowerCase()
+  return !["false", "0", "no", "off"].includes(text)
+}
+
 function normalizeTag(value) {
   return String(value)
     .trim()
@@ -127,6 +134,11 @@ async function main() {
     const markdown = await fs.readFile(absolutePath, "utf8")
     const data = parseFrontmatter(markdown, absolutePath)
     if (data.draft === true || data.unlisted === true) continue
+    const includeInNetwork = normalizeBoolean(
+      data["show-in-tag-network"] ?? data["show-in-graph"],
+      true,
+    )
+    if (!includeInNetwork) continue
 
     const tags = []
     const seen = new Set()
@@ -148,7 +160,10 @@ async function main() {
     })
   }
 
-  documents.sort((left, right) => left.source.localeCompare(right.source) || left.title.localeCompare(right.title, "en"))
+  documents.sort(
+    (left, right) =>
+      left.source.localeCompare(right.source) || left.title.localeCompare(right.title, "en"),
+  )
 
   const data = {
     version: 1,
@@ -164,7 +179,10 @@ async function main() {
 
   const uniqueTags = new Set(documents.flatMap((document) => document.tags))
   const sourceSummary = Object.fromEntries(
-    SOURCE_ORDER.map((source) => [source, documents.filter((document) => document.source === source).length]),
+    SOURCE_ORDER.map((source) => [
+      source,
+      documents.filter((document) => document.source === source).length,
+    ]),
   )
 
   console.log(
