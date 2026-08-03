@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate Pages CMS configuration
+        run: node --input-type=module -e 'import fs from "node:fs"; import YAML from "yaml"; YAML.parse(fs.readFileSync(".pages.yml", "utf8")); console.log("Pages CMS configuration is valid YAML.")'
+
       - name: Synchronize generated content indexes
         run: node scripts/sync-content-indexes.mjs
 
