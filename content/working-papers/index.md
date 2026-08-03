@@ -3,7 +3,7 @@ title: Working Papers
 description: Lead-authored and co-authored manuscripts on hybrid work, migration, digital nomads, network power, urban AI, regional transitions, and computational urban research.
 ---
 
-Current manuscripts and research papers in development. Click any title for authors, year, status, research line, and a public summary. Submission destinations are not displayed.
+Current manuscripts and research papers in development. Click any title for research tags and a summary. 
 
 <!-- AUTO-GENERATED:WORKING-PAPERS:START -->
 ## Lead-authored Working Papers
