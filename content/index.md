@@ -24,16 +24,18 @@ An established research line examines **digital planning, platform governance, a
 
 See the [Research page](./research) for fuller descriptions, [Projects](./projects/) for principal doctoral and postdoctoral projects, [Publications](./publications/) for published work, [Working Papers](./working-papers/) for current manuscripts, [Activities](./activities/) for blogs, talks, and conferences, and [Teaching](./teaching/) for courses and supervision. 
 
-## Recent
+## Recent hightlights
 
 - Under review: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
 - Under review: [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
 - Finalizing manuscript: [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](./working-papers/dutch-migration-networks)
 - Finalizing manuscript: [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
 - Ongoing manuscript (Abstract accepted): [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
+- Report (2026): [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
 - PhD thesis (2026): [Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China](./publications/network-power-social-media-thesis).
 - Journal article (2026): [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning).
-
+- Journal article (2024): [Informal participation in digital planning: How can third parties use social media to shift power relations in planning?](./publications/informal-participation-digital-planning).
+- Journal article (2025): [Measuring social network influence on power relations in collaborative planning: A case study of Beijing City, China](./publications/measuring-social-network-influence).
 
 ## Contact
 
