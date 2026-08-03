@@ -135,13 +135,6 @@ plugins:
   - source: "@quartz-community/tag-page"
     enabled: true
 
-  - source: "@quartz-community/graph"
-    enabled: true
-    layout:
-      position: afterBody
-      priority: 40
-      condition: graph-placement
-
   - source: "@quartz-community/search"
     enabled: true
 

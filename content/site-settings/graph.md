@@ -1,7 +1,4 @@
 ---
-title: Graph Settings
-graph-enabled: true
-graph-placement: Network page
-graph-scope: Entire website
-graph-depth: 3
+title: Tag Network Settings
+tag-network-enabled: true
 ---
