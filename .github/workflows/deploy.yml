@@ -46,7 +46,7 @@ jobs:
       - name: Format activity dates by month
         run: node scripts/format-activity-months.mjs
 
-      - name: Synchronize graph settings and relationships
+      - name: Synchronize tag network settings
         run: node scripts/sync-graph-settings.mjs
 
       - name: Commit synchronized files
@@ -60,7 +60,6 @@ jobs:
             content/projects/index.md
             content/methods/index.md
             quartz/graph-settings.generated.ts
-            quartz.config.yaml
           )
 
           if git diff --quiet -- "${GENERATED_FILES[@]}"; then
@@ -77,8 +76,8 @@ jobs:
       - name: Build Quartz
         run: npx quartz build
 
-      - name: Patch research network filters
-        run: node scripts/patch-graph-output.mjs
+      - name: Generate tag network data
+        run: node scripts/build-tag-network-data.mjs
 
       - name: Upload preview artifact
         if: github.event_name == 'pull_request'
