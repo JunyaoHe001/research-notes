@@ -28,6 +28,19 @@ Mobility is relational. Cities and regions are shaped by the origins, destinatio
 - [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
 - [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
 
+
+## AI, innovation, and computational economic geography
+
+Emerging research line.
+
+AI and digital transformation are reshaping regional economies. Patents, firms, and administrative units capture only part of this geography. Junyao He is developing relational approaches that use large scale news text to identify cooperation, competition, innovation, and attention networks across subnational regions. This line connects GeoAI, graph based modelling, natural language processing, and interpretable machine learning with debates on regional capabilities, technological transitions, and uneven development. Related co authored work examines regional cognitive composition under the green and digital transitions and applies visual Large Language Models to urban environmental and crime data.
+
+**Representative work**
+
+- [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
+- [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./working-papers/cognitive-composition-regional-trajectories)
+- [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](./working-papers/discursive-algorithmic-opportunity-europe)
+
 ## Digital planning, platform governance, and networked power
 
 Established research line.
@@ -42,18 +55,6 @@ Digital platforms have become important arenas for planning participation, contr
 - [Social Media Influence on Citizen Power in Online Planning Controversies: An Edge-based Social Network Analysis of Network Power](./working-papers/edge-based-network-power)
 - [Institutionalizing AI in Urban Planning: Discursive AI Opportunity Structures in China](./working-papers/institutionalizing-ai-urban-planning)
 
-
-## AI, innovation, and computational economic geography
-
-Emerging research line.
-
-AI and digital transformation are reshaping regional economies. Patents, firms, and administrative units capture only part of this geography. Junyao He is developing relational approaches that use large scale news text to identify cooperation, competition, innovation, and attention networks across subnational regions. This line connects GeoAI, graph based modelling, natural language processing, and interpretable machine learning with debates on regional capabilities, technological transitions, and uneven development. Related co authored work examines regional cognitive composition under the green and digital transitions and applies visual Large Language Models to urban environmental and crime data.
-
-**Representative work**
-
-- [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
-- [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./working-papers/cognitive-composition-regional-trajectories)
-- [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](./working-papers/discursive-algorithmic-opportunity-europe)
 
 ## Complex networks and complex systems methods
 
