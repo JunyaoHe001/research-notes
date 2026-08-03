@@ -35,7 +35,7 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 - PhD thesis (2026): [Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China](./publications/network-power-social-media-thesis).
 - Journal article (2026): [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning).
 - Journal article (2024): [Informal participation in digital planning: How can third parties use social media to shift power relations in planning?](./publications/informal-participation-digital-planning).
-- Journal article (2025): [Measuring social network influence on power relations in collaborative planning: A case study of Beijing City, China](./publications/measuring-social-network-influence).
+- Journal article (2024): [Measuring social network influence on power relations in collaborative planning: A case study of Beijing City, China](./publications/measuring-social-network-influence).
 
 ## Contact
 
