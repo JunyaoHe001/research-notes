@@ -9,9 +9,9 @@ description: Economic geographer and computational social scientist working on c
 
 Junyao He is an economic geographer and computational social scientist affiliated with the Department of Economic Geography at the University of Groningen. His research uses **complex networks and spatial economics** to study how remote work, digitalisation, and emerging technologies reshape labour markets, urban systems, migration, human mobility, and regional inequality.
 
-His work connects four empirical fields: urban planning and urban studies; urban and economic geography; mobility and migration; and computational social science. His methodological work combines network analysis, spatial econometrics, causal inference, agent based modelling, spatial microsimulation, large scale text analysis, and interpretable machine learning.
+His work connects four empirical fields: urban studies; urban and economic geography; mobility and migration; and computational social science. His methodological work combines complex network analysis, spatial econometrics, causal inference, agent-based modelling, spatial microsimulation, large-scale text analysis, and interpretable machine learning.
 
-Junyao He completed a PhD in Human Geography and Spatial Planning at Utrecht University. He holds an MSc in Urban Design and International Planning from the University of Manchester and a BSc in Human Geography and Urban and Rural Planning from Southwest University.
+Junyao He completed a PhD in Human Geography and Spatial Planning at Utrecht University. He holds an MSc in Urban Design and International Planning from the University of Manchester and a BSc in Human Geography and Urban and Rural Planning from Southwest University. Junyao has accumulated nearly four years of experience in the consulting industry and has led large-scale consulting projects for both the public and private sectors, primarily related to urban analytics and urban policy.
 
 ## Current research
 
