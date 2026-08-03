@@ -1,6 +1,6 @@
 ---
-title: Measuring AI-Related Cooperation, Competition, and Innovation across
-  Global Subnational Regions Using News Text
+title: "Measuring Global AI Cooperation, Competition and Innovation through News
+  Text: A Graph-based Approach"
 authors:
   - He, J.
   - Wang, T.
@@ -17,6 +17,7 @@ tags:
   - economic-geography
   - news-text
 show-in-graph: true
+show-in-tag-network: true
 ---
 ## Abstract
 
