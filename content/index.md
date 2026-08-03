@@ -22,15 +22,15 @@ Junyao He's current research is organised around two connected programmes:
 
 An established research line examines **digital planning, platform governance, and networked power**, extending his doctoral work on social media participation and inequalities in collaborative planning. An emerging direction focuses **AI, innovation, and regional networks** through large scale news text and graph based methods.
 
-See the [Research page](./research) for fuller descriptions, [Projects](./projects/) for principal doctoral and postdoctoral projects, [Publications](./publications/) for published work, [Working Papers](./working-papers/) for current manuscripts, [Activities](./activities/) for blogs, talks, and conferences, and [Teaching](./teaching/) for courses and supervision.
+See the [Research page](./research) for fuller descriptions, [Projects](./projects/) for principal doctoral and postdoctoral projects, [Publications](./publications/) for published work, [Working Papers](./working-papers/) for current manuscripts, [Activities](./activities/) for blogs, talks, and conferences, and [Teaching](./teaching/) for courses and supervision. 
 
 ## Recent
 
-- Current research (Under review): [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
-- Current research (Under review): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
-- Ongoing manuscript (Finalizing): [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](./working-papers/dutch-migration-networks)
-- Ongoing manuscript (Finalizing): [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
-- Ongoing manuscript (Abstract accepted): [Measuring AI-Related Cooperation, Competition, and Innovation across Global Subnational Regions Using News Text](./working-papers/ai-regional-networks)
+- Under review: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
+- Under review: [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
+- Finalizing manuscript: [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](./working-papers/dutch-migration-networks)
+- Finalizing manuscript: [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
+- Ongoing manuscript (Abstract accepted): [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
 - PhD thesis (2026): [Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China](./publications/network-power-social-media-thesis).
 - Journal article (2026): [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning).
 
