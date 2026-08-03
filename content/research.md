@@ -24,7 +24,7 @@ Mobility is relational. Cities and regions are shaped by the origins, destinatio
 
 **Representative work**
 
-- [Does Remote Work Deepen Inequality in Population Migration? Evidence from Mobility in the Netherlands](./working-papers/dutch-migration-networks)
+- [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](./working-papers/dutch-migration-networks)
 - [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
 - [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
 
@@ -51,7 +51,7 @@ AI and digital transformation are reshaping regional economies. Patents, firms, 
 
 **Representative work**
 
-- [Measuring AI-Related Cooperation, Competition, and Innovation across Global Subnational Regions Using News Text](./working-papers/ai-regional-networks)
+- [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
 - [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./working-papers/cognitive-composition-regional-trajectories)
 - [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](./working-papers/discursive-algorithmic-opportunity-europe)
 
