@@ -79,9 +79,9 @@ const TagNetworkResources: QuartzComponentConstructor = () => {
 .tag-network-frame {
   position: relative;
   width: 100%;
-  height: clamp(450px, 45vw, 680px);
-  min-height: 450px;
-  max-height: 680px;
+  height: clamp(560px, 52vw, 780px);
+  min-height: 560px;
+  max-height: 780px;
   margin-top: 1.4rem;
   overflow: hidden;
   border: 1px solid var(--lightgray);
@@ -102,9 +102,12 @@ const TagNetworkResources: QuartzComponentConstructor = () => {
 }
 
 .tag-network-edge {
+  fill: none;
   stroke: var(--gray);
-  stroke-opacity: 0.28;
+  stroke-linecap: round;
+  stroke-opacity: 0.24;
   vector-effect: non-scaling-stroke;
+  transition: opacity 120ms ease, stroke-opacity 120ms ease;
 }
 
 .tag-network-node {
@@ -113,22 +116,24 @@ const TagNetworkResources: QuartzComponentConstructor = () => {
 
 .tag-network-node circle {
   fill: var(--secondary);
-  fill-opacity: 0.82;
+  fill-opacity: 0.8;
   stroke: var(--light);
   stroke-width: 1.4;
   vector-effect: non-scaling-stroke;
+  transition: fill-opacity 120ms ease, stroke-width 120ms ease, opacity 120ms ease;
 }
 
 .tag-network-node text {
   fill: var(--darkgray);
-  font-size: 11px;
   font-weight: 550;
+  letter-spacing: 0.005em;
   paint-order: stroke;
   stroke: var(--light);
-  stroke-width: 3px;
+  stroke-width: 3.2px;
   stroke-linejoin: round;
   pointer-events: none;
   user-select: none;
+  transition: opacity 120ms ease;
 }
 
 .tag-network-node.is-focus circle {
@@ -137,9 +142,14 @@ const TagNetworkResources: QuartzComponentConstructor = () => {
   stroke-width: 2;
 }
 
+.tag-network-node.is-focus text {
+  fill: var(--dark);
+  font-weight: 650;
+}
+
 .tag-network-node.is-dim,
 .tag-network-edge.is-dim {
-  opacity: 0.12;
+  opacity: 0.1;
 }
 
 .tag-network-tooltip {
@@ -193,13 +203,13 @@ const TagNetworkResources: QuartzComponentConstructor = () => {
   }
 
   .tag-network-frame {
-    height: 430px;
-    min-height: 430px;
+    height: 520px;
+    min-height: 520px;
     max-height: none;
   }
 
   .tag-network-node text {
-    font-size: 10px;
+    stroke-width: 2.8px;
   }
 }
 `

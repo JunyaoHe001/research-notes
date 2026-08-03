@@ -4,8 +4,9 @@
   const DATA_URL = "/research-notes/static/tag-network-data.json"
   const STORAGE_KEY = "tag-network-source-filter-state"
   const MAX_TAGS = 140
-  const VIEWBOX_WIDTH = 1200
-  const VIEWBOX_HEIGHT = 560
+  const VIEWBOX_WIDTH = 1280
+  const VIEWBOX_HEIGHT = 700
+  const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5))
 
   function readState(validSources) {
     try {
@@ -160,7 +161,7 @@
             <p class="tag-network-status" data-tag-network-status aria-live="polite"></p>
           </div>
           <div class="tag-network-frame">
-            <svg class="tag-network-svg" viewBox="0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}" role="img" aria-label="Tag co-occurrence network"></svg>
+            <svg class="tag-network-svg" viewBox="0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}" role="img" aria-label="Tag co occurrence network"></svg>
             <div class="tag-network-tooltip" data-tag-network-tooltip></div>
           </div>
         `
@@ -194,7 +195,7 @@
             state.sources.length === 0
               ? "All sources"
               : state.sources.map((source) => sourceLabels[source] ?? source).join(", ")
-          status.textContent = `${sourceDescription}. ${network.nodes.length} tags, ${network.links.length} co-occurrence links, ${network.documents.length} source items${network.truncated ? `. Showing the ${MAX_TAGS} most frequent tags` : ""}.`
+          status.textContent = `${sourceDescription}. ${network.nodes.length} tags, ${network.links.length} co occurrence links, ${network.documents.length} source items${network.truncated ? `. Showing the ${MAX_TAGS} most frequent tags` : ""}.`
           cancelSimulation = renderSvg(svg, tooltip, network, sourceLabels)
         }
 
@@ -244,6 +245,117 @@
       })
   }
 
+  function buildWeightedAdjacency(nodes, links) {
+    const adjacency = new Map(nodes.map((node) => [node.id, new Map()]))
+    for (const link of links) {
+      adjacency.get(link.source)?.set(link.target, link.weight)
+      adjacency.get(link.target)?.set(link.source, link.weight)
+    }
+    return adjacency
+  }
+
+  function detectCommunities(nodes, adjacency) {
+    const community = new Map(nodes.map((node) => [node.id, node.id]))
+    const communitySizes = new Map(nodes.map((node) => [node.id, 1]))
+    const ordered = [...nodes].sort((a, b) => {
+      const degreeA = [...(adjacency.get(a.id)?.values() ?? [])].reduce((sum, value) => sum + value, 0)
+      const degreeB = [...(adjacency.get(b.id)?.values() ?? [])].reduce((sum, value) => sum + value, 0)
+      return degreeB - degreeA || a.id.localeCompare(b.id)
+    })
+
+    for (let iteration = 0; iteration < 14; iteration += 1) {
+      let changes = 0
+      const offset = iteration % Math.max(1, ordered.length)
+      for (let step = 0; step < ordered.length; step += 1) {
+        const node = ordered[(step + offset) % ordered.length]
+        const current = community.get(node.id)
+        const scores = new Map()
+
+        for (const [neighborId, weight] of adjacency.get(node.id) ?? []) {
+          const neighborCommunity = community.get(neighborId)
+          scores.set(neighborCommunity, (scores.get(neighborCommunity) ?? 0) + weight)
+        }
+        if (scores.size === 0) continue
+
+        let bestCommunity = current
+        let bestScore = (scores.get(current) ?? 0) / Math.sqrt(communitySizes.get(current) ?? 1)
+        for (const [candidate, rawScore] of scores) {
+          const size = Math.max(1, communitySizes.get(candidate) ?? 1)
+          const score = rawScore / Math.sqrt(size)
+          if (
+            score > bestScore + 1e-8 ||
+            (Math.abs(score - bestScore) < 1e-8 && String(candidate) < String(bestCommunity))
+          ) {
+            bestCommunity = candidate
+            bestScore = score
+          }
+        }
+
+        if (bestCommunity !== current && bestScore > 0) {
+          community.set(node.id, bestCommunity)
+          communitySizes.set(current, Math.max(0, (communitySizes.get(current) ?? 1) - 1))
+          communitySizes.set(bestCommunity, (communitySizes.get(bestCommunity) ?? 0) + 1)
+          changes += 1
+        }
+      }
+      if (changes === 0) break
+    }
+
+    return community
+  }
+
+  function buildCommunityCenters(nodes, communityByNode) {
+    const groups = new Map()
+    for (const node of nodes) {
+      const community = communityByNode.get(node.id)
+      const group = groups.get(community) ?? []
+      group.push(node)
+      groups.set(community, group)
+    }
+
+    const ordered = [...groups.entries()].sort((left, right) => {
+      const leftWeight = left[1].reduce((sum, node) => sum + node.weightedDegree + node.count * 2, 0)
+      const rightWeight = right[1].reduce((sum, node) => sum + node.weightedDegree + node.count * 2, 0)
+      return rightWeight - leftWeight || String(left[0]).localeCompare(String(right[0]))
+    })
+
+    const centers = new Map()
+    const total = Math.max(1, ordered.length - 1)
+    for (let index = 0; index < ordered.length; index += 1) {
+      const [community] = ordered[index]
+      if (index === 0) {
+        centers.set(community, { x: VIEWBOX_WIDTH / 2, y: VIEWBOX_HEIGHT / 2 })
+        continue
+      }
+      const progress = Math.sqrt(index / total)
+      const angle = index * GOLDEN_ANGLE
+      centers.set(community, {
+        x: VIEWBOX_WIDTH / 2 + Math.cos(angle) * VIEWBOX_WIDTH * 0.34 * progress,
+        y: VIEWBOX_HEIGHT / 2 + Math.sin(angle) * VIEWBOX_HEIGHT * 0.34 * progress,
+      })
+    }
+    return centers
+  }
+
+  function curvedPath(link) {
+    const dx = link.target.x - link.source.x
+    const dy = link.target.y - link.source.y
+    const distance = Math.max(1, Math.sqrt(dx * dx + dy * dy))
+    const ux = dx / distance
+    const uy = dy / distance
+    const startX = link.source.x + ux * link.source.radius
+    const startY = link.source.y + uy * link.source.radius
+    const endX = link.target.x - ux * link.target.radius
+    const endY = link.target.y - uy * link.target.radius
+    const midpointX = (startX + endX) / 2
+    const midpointY = (startY + endY) / 2
+    const sign = deterministicUnit(`${link.source.id}:${link.target.id}:curve`) > 0.5 ? 1 : -1
+    const bend = sign * Math.min(52, 10 + distance * 0.1) / Math.sqrt(Math.max(1, link.weight))
+    const controlX = midpointX - uy * bend
+    const controlY = midpointY + ux * bend
+    return `M ${startX.toFixed(2)} ${startY.toFixed(2)} Q ${controlX.toFixed(2)} ${controlY.toFixed(2)} ${endX.toFixed(2)} ${endY.toFixed(2)}`
+  }
+
   function renderSvg(svg, tooltip, network, sourceLabels) {
     svg.replaceChildren()
     tooltip.classList.remove("is-visible")
@@ -267,21 +379,74 @@
     viewport.append(edgeLayer, nodeLayer)
     svg.append(viewport)
 
+    const rawLinks = network.links.map((link) => ({ ...link }))
+    const weightedDegree = new Map(network.nodes.map((node) => [node.id, 0]))
+    for (const link of rawLinks) {
+      weightedDegree.set(link.source, (weightedDegree.get(link.source) ?? 0) + link.weight)
+      weightedDegree.set(link.target, (weightedDegree.get(link.target) ?? 0) + link.weight)
+    }
+
+    const counts = network.nodes.map((node) => node.count)
+    const minCount = Math.min(...counts)
+    const maxCount = Math.max(...counts)
+    const maxDegree = Math.max(1, ...weightedDegree.values())
+
     const nodes = network.nodes.map((node) => {
-      const angle = deterministicUnit(node.id) * Math.PI * 2
-      const distance = 80 + deterministicUnit(`${node.id}:radius`) * 150
+      const countRange = Math.sqrt(maxCount) - Math.sqrt(minCount)
+      const countScore = countRange > 0
+        ? (Math.sqrt(node.count) - Math.sqrt(minCount)) / countRange
+        : 0.5
+      const degreeScore = Math.sqrt((weightedDegree.get(node.id) ?? 0) / maxDegree)
+      const importance = Math.max(0, Math.min(1, countScore * 0.72 + degreeScore * 0.28))
+      const radius = 7 + Math.pow(importance, 0.82) * 18
+      const fontSize = 9.6 + Math.pow(importance, 0.72) * 3.4
+      const labelWidth = Math.max(24, node.label.length * fontSize * 0.53)
+
       return {
         ...node,
-        radius: 5 + Math.min(8, Math.sqrt(node.count) * 2),
-        x: VIEWBOX_WIDTH / 2 + Math.cos(angle) * distance,
-        y: VIEWBOX_HEIGHT / 2 + Math.sin(angle) * distance,
+        weightedDegree: weightedDegree.get(node.id) ?? 0,
+        importance,
+        radius,
+        fontSize,
+        labelWidth,
+        collisionRadius: radius + 9 + Math.min(30, labelWidth * 0.14),
+        x: VIEWBOX_WIDTH / 2,
+        y: VIEWBOX_HEIGHT / 2,
         vx: 0,
         vy: 0,
         fixed: false,
       }
     })
+
+    const adjacency = buildWeightedAdjacency(nodes, rawLinks)
+    const communityByNode = detectCommunities(nodes, adjacency)
+    const communityCenters = buildCommunityCenters(nodes, communityByNode)
+
+    const nodesByCommunity = new Map()
+    for (const node of nodes) {
+      node.community = communityByNode.get(node.id)
+      node.communityCenter = communityCenters.get(node.community) ?? {
+        x: VIEWBOX_WIDTH / 2,
+        y: VIEWBOX_HEIGHT / 2,
+      }
+      const group = nodesByCommunity.get(node.community) ?? []
+      group.push(node)
+      nodesByCommunity.set(node.community, group)
+    }
+
+    for (const group of nodesByCommunity.values()) {
+      group.sort((a, b) => b.weightedDegree - a.weightedDegree || b.count - a.count || a.id.localeCompare(b.id))
+      for (let index = 0; index < group.length; index += 1) {
+        const node = group[index]
+        const angle = deterministicUnit(`${node.id}:angle`) * Math.PI * 2
+        const radialDistance = index === 0 ? 0 : 28 + Math.sqrt(index) * 23 + deterministicUnit(`${node.id}:radius`) * 15
+        node.x = node.communityCenter.x + Math.cos(angle) * radialDistance
+        node.y = node.communityCenter.y + Math.sin(angle) * radialDistance
+      }
+    }
+
     const nodesById = new Map(nodes.map((node) => [node.id, node]))
-    const links = network.links
+    const links = rawLinks
       .map((link) => ({
         ...link,
         source: nodesById.get(link.source),
@@ -289,37 +454,36 @@
       }))
       .filter((link) => link.source && link.target)
 
-    const adjacency = new Map(nodes.map((node) => [node.id, new Set()]))
+    const adjacencyIds = new Map(nodes.map((node) => [node.id, new Set()]))
     for (const link of links) {
-      adjacency.get(link.source.id).add(link.target.id)
-      adjacency.get(link.target.id).add(link.source.id)
+      adjacencyIds.get(link.source.id).add(link.target.id)
+      adjacencyIds.get(link.target.id).add(link.source.id)
     }
 
     const linkElements = links.map((link) => {
-      const line = createSvgElement("line", {
+      const path = createSvgElement("path", {
         class: "tag-network-edge",
-        "stroke-width": 0.65 + Math.log1p(link.weight) * 0.7,
+        fill: "none",
+        "stroke-width": 0.65 + Math.log1p(link.weight) * 0.82,
       })
-      edgeLayer.append(line)
-      return { link, line }
+      edgeLayer.append(path)
+      return { link, path }
     })
 
     const nodeElements = nodes.map((node) => {
       const group = createSvgElement("g", { class: "tag-network-node", tabindex: 0 })
-      const circle = createSvgElement("circle", { r: node.radius })
-      const text = createSvgElement("text", {
-        x: node.radius + 4,
-        y: 4,
-      })
+      const circle = createSvgElement("circle", { r: node.radius.toFixed(2) })
+      const text = createSvgElement("text", { y: 4 })
       text.textContent = node.label
+      text.style.fontSize = `${node.fontSize.toFixed(2)}px`
       group.append(circle, text)
       nodeLayer.append(group)
-      return { node, group }
+      return { node, group, text }
     })
 
     let transform = { x: 0, y: 0, scale: 1 }
     let animationFrame = 0
-    let alpha = 1
+    let liveAlpha = 0.2
     let activeNode = null
     let draggingNode = null
     let panning = false
@@ -333,28 +497,26 @@
     }
 
     function updatePositions() {
-      for (const { link, line } of linkElements) {
-        line.setAttribute("x1", link.source.x)
-        line.setAttribute("y1", link.source.y)
-        line.setAttribute("x2", link.target.x)
-        line.setAttribute("y2", link.target.y)
-      }
-      for (const { node, group } of nodeElements) {
-        group.setAttribute("transform", `translate(${node.x} ${node.y})`)
+      for (const { link, path } of linkElements) path.setAttribute("d", curvedPath(link))
+      for (const { node, group, text } of nodeElements) {
+        group.setAttribute("transform", `translate(${node.x.toFixed(2)} ${node.y.toFixed(2)})`)
+        const outwardRight = node.x >= node.communityCenter.x
+        text.setAttribute("x", outwardRight ? node.radius + 5 : -(node.radius + 5))
+        text.setAttribute("text-anchor", outwardRight ? "start" : "end")
       }
     }
 
     function focusNode(node, event) {
       activeNode = node
-      const neighbors = adjacency.get(node.id) ?? new Set()
+      const neighbors = adjacencyIds.get(node.id) ?? new Set()
       for (const { node: candidate, group } of nodeElements) {
         const visible = candidate.id === node.id || neighbors.has(candidate.id)
         group.classList.toggle("is-focus", candidate.id === node.id)
         group.classList.toggle("is-dim", !visible)
       }
-      for (const { link, line } of linkElements) {
+      for (const { link, path } of linkElements) {
         const visible = link.source.id === node.id || link.target.id === node.id
-        line.classList.toggle("is-dim", !visible)
+        path.classList.toggle("is-dim", !visible)
       }
 
       const breakdown = Object.entries(node.sourceCounts)
@@ -371,7 +533,7 @@
       activeNode = null
       tooltip.classList.remove("is-visible")
       for (const { group } of nodeElements) group.classList.remove("is-focus", "is-dim")
-      for (const { line } of linkElements) line.classList.remove("is-dim")
+      for (const { path } of linkElements) path.classList.remove("is-dim")
     }
 
     function svgPoint(event) {
@@ -426,7 +588,7 @@
         draggingNode.y = point.y
         draggingNode.vx = 0
         draggingNode.vy = 0
-        alpha = Math.max(alpha, 0.2)
+        liveAlpha = Math.max(liveAlpha, 0.12)
         updatePositions()
         return
       }
@@ -457,7 +619,7 @@
     const handleWheel = (event) => {
       event.preventDefault()
       const point = svgPoint(event)
-      const nextScale = Math.max(0.45, Math.min(3.2, transform.scale * Math.exp(-event.deltaY * 0.001)))
+      const nextScale = Math.max(0.4, Math.min(3.4, transform.scale * Math.exp(-event.deltaY * 0.001)))
       const ratio = nextScale / transform.scale
       transform.x = point.rawX - (point.rawX - transform.x) * ratio
       transform.y = point.rawY - (point.rawY - transform.y) * ratio
@@ -472,11 +634,10 @@
     svg.addEventListener("pointerleave", handlePointerUp)
     svg.addEventListener("wheel", handleWheel, { passive: false })
 
-    function simulate() {
-      alpha *= 0.975
-      const repulsionStrength = 1150 * alpha
-      const springStrength = 0.035 * alpha
-      const centerStrength = 0.018 * alpha
+    function tick(alpha) {
+      const chargeStrength = 4300 * alpha
+      const centerStrength = 0.0018 * alpha
+      const communityStrength = 0.0105 * alpha
 
       for (let left = 0; left < nodes.length; left += 1) {
         for (let right = left + 1; right < nodes.length; right += 1) {
@@ -490,10 +651,21 @@
             dy = 0.5 - deterministicUnit(`${b.id}:${a.id}`)
             distanceSquared = dx * dx + dy * dy
           }
-          const force = repulsionStrength / Math.max(60, distanceSquared)
           const distance = Math.sqrt(distanceSquared)
-          const fx = (dx / distance) * force
-          const fy = (dy / distance) * force
+          const minimumDistance = a.collisionRadius + b.collisionRadius + 8
+
+          const charge = chargeStrength * (0.72 + (a.importance + b.importance) * 0.38)
+          const repulsion = charge / Math.max(180, distanceSquared)
+          let fx = (dx / distance) * repulsion
+          let fy = (dy / distance) * repulsion
+
+          if (distance < minimumDistance) {
+            const overlap = minimumDistance - distance
+            const collision = overlap * 0.22 * alpha
+            fx += (dx / distance) * collision
+            fy += (dy / distance) * collision
+          }
+
           if (!a.fixed) {
             a.vx -= fx
             a.vy -= fy
@@ -509,7 +681,11 @@
         const dx = link.target.x - link.source.x
         const dy = link.target.y - link.source.y
         const distance = Math.max(1, Math.sqrt(dx * dx + dy * dy))
-        const targetDistance = Math.max(48, 96 - Math.min(5, link.weight) * 7)
+        const targetDistance =
+          105 +
+          (link.source.radius + link.target.radius) * 1.65 +
+          24 / Math.sqrt(Math.max(1, link.weight))
+        const springStrength = (0.010 + Math.min(0.014, link.weight * 0.0035)) * alpha
         const force = (distance - targetDistance) * springStrength
         const fx = (dx / distance) * force
         const fy = (dy / distance) * force
@@ -525,18 +701,53 @@
 
       for (const node of nodes) {
         if (node.fixed) continue
+        node.vx += (node.communityCenter.x - node.x) * communityStrength
+        node.vy += (node.communityCenter.y - node.y) * communityStrength
         node.vx += (VIEWBOX_WIDTH / 2 - node.x) * centerStrength
         node.vy += (VIEWBOX_HEIGHT / 2 - node.y) * centerStrength
-        node.vx *= 0.82
-        node.vy *= 0.82
+        node.vx *= 0.78
+        node.vy *= 0.78
         node.x += node.vx
         node.y += node.vy
-        node.x = Math.max(25, Math.min(VIEWBOX_WIDTH - 190, node.x))
-        node.y = Math.max(24, Math.min(VIEWBOX_HEIGHT - 24, node.y))
+        node.x = Math.max(42, Math.min(VIEWBOX_WIDTH - 42, node.x))
+        node.y = Math.max(38, Math.min(VIEWBOX_HEIGHT - 38, node.y))
       }
+    }
 
+    function fitLayout() {
+      const minX = Math.min(...nodes.map((node) => node.x - node.collisionRadius))
+      const maxX = Math.max(...nodes.map((node) => node.x + node.collisionRadius + Math.min(70, node.labelWidth * 0.38)))
+      const minY = Math.min(...nodes.map((node) => node.y - node.collisionRadius))
+      const maxY = Math.max(...nodes.map((node) => node.y + node.collisionRadius))
+      const width = Math.max(1, maxX - minX)
+      const height = Math.max(1, maxY - minY)
+      const scale = Math.max(
+        0.72,
+        Math.min(1.14, Math.min((VIEWBOX_WIDTH - 90) / width, (VIEWBOX_HEIGHT - 80) / height)),
+      )
+      const centerX = (minX + maxX) / 2
+      const centerY = (minY + maxY) / 2
+      for (const node of nodes) {
+        node.x = VIEWBOX_WIDTH / 2 + (node.x - centerX) * scale
+        node.y = VIEWBOX_HEIGHT / 2 + (node.y - centerY) * scale
+        node.communityCenter = {
+          x: VIEWBOX_WIDTH / 2 + (node.communityCenter.x - centerX) * scale,
+          y: VIEWBOX_HEIGHT / 2 + (node.communityCenter.y - centerY) * scale,
+        }
+      }
+    }
+
+    for (let iteration = 0; iteration < 300; iteration += 1) {
+      const alpha = Math.max(0.045, Math.pow(1 - iteration / 300, 1.45))
+      tick(alpha)
+    }
+    fitLayout()
+
+    function simulate() {
+      tick(liveAlpha)
+      liveAlpha *= 0.965
       updatePositions()
-      if (alpha > 0.025) animationFrame = requestAnimationFrame(simulate)
+      if (liveAlpha > 0.008) animationFrame = requestAnimationFrame(simulate)
     }
 
     applyTransform()
