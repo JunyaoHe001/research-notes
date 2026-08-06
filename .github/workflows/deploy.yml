@@ -15,12 +15,12 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-recovery-${{ github.event_name }}-${{ github.ref }}
+  group: pages-recovery-macos-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -103,7 +103,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Cancel stale Pages deployment
         env:
