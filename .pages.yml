@@ -212,8 +212,8 @@ content:
         operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields: [title, year, date, activity-section, activity-type, role, event]
-          search: [title, activity-section, activity-type, role, event, location, tags]
+          fields: [title, year, date, period, activity-section, activity-type, role, event]
+          search: [title, activity-section, activity-type, role, event, journals, location, tags]
           sort: [date, year, title]
           default: { sort: date, order: desc }
         fields:
@@ -228,22 +228,46 @@ content:
             type: date
             default: ""
             options: { format: yyyy-MM-dd }
+          - { name: period, label: Period, type: string }
           - name: activity-section
             label: Overview Section
             type: select
+            required: true
             description: Select the section where this entry should appear on Activities.
             options:
-              values: [Blog Posts, Talks, Conferences and Presentations]
+              values:
+                - Editorial and Academic Service
+                - Conferences and Presentations
+                - Blog Posts
+                - Talks
           - name: activity-type
             label: Activity Type
             type: select
             required: true
             options:
-              values: [Blog post, Conference, Invited talk, Workshop, Exhibition, Academic service]
+              values:
+                - Guest editorship
+                - Journal reviewing
+                - Blog post
+                - Conference
+                - Invited talk
+                - Workshop
+                - Exhibition
+                - Academic service
           - { name: role, label: Role, type: string }
           - { name: event, label: Event or Platform, type: string }
+          - { name: journals, label: Journals, type: string, list: true }
           - { name: location, label: Location, type: string }
           - { name: external-link, label: External Link, type: string }
+          - name: feature-on-home
+            label: Feature in Recent Highlights
+            type: boolean
+            default: false
+          - { name: home-highlight-order, label: Home Highlight Order, type: number }
+          - name: home-highlight-text
+            label: Home Highlight Text
+            type: text
+            description: Markdown is supported. This text appears as one bullet under Recent highlights.
           - { name: description, label: Description, type: text }
           - { name: tags, label: Tags, type: string, list: true }
           - name: show-in-tag-network
