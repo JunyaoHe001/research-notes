@@ -22,10 +22,13 @@ Junyao He's current research is organised around two connected programmes:
 
 An established research line examines **digital planning, platform governance, and networked power**, extending his doctoral work on social media participation and inequalities in collaborative planning. An emerging direction focuses **AI, innovation, and regional networks** through large scale news text and graph based methods.
 
-See the [Research page](./research) for fuller descriptions, [Projects](./projects/) for principal doctoral and postdoctoral projects, [Publications](./publications/) for published work, [Working Papers](./working-papers/) for current manuscripts, [Activities](./activities/) for blogs, talks, and conferences, and [Teaching](./teaching/) for courses and supervision. 
+See the [Research page](./research) for fuller descriptions, [Projects](./projects/) for principal doctoral and postdoctoral projects, [Publications](./publications/) for published work, [Working Papers](./working-papers/) for current manuscripts, [Activities](./activities/) for editorial service, academic service, blogs, talks, and conferences, and [Teaching](./teaching/) for courses and supervision.
 
-## Recent hightlights
+## Recent highlights
 
+<!-- AUTO-GENERATED:HOME-HIGHLIGHTS:START -->
+- Guest Co-Editor for the 2027 *Society Register* Special Issue, [*Participatory Urban Governance Beyond Western Democracies: Motivations, Expressions, and Outcomes*](./activities/participatory-urban-governance-beyond-western-democracies).
+<!-- AUTO-GENERATED:HOME-HIGHLIGHTS:END -->
 - Under review: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
 - Under review: [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
 - Finalizing manuscript: [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](./working-papers/dutch-migration-networks)
