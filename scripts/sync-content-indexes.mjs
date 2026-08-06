@@ -9,6 +9,10 @@ const ROOT = process.cwd()
 const CONTENT_ROOT = path.join(ROOT, "content")
 
 const MARKERS = {
+  homeHighlights: {
+    start: "<!-- AUTO-GENERATED:HOME-HIGHLIGHTS:START -->",
+    end: "<!-- AUTO-GENERATED:HOME-HIGHLIGHTS:END -->",
+  },
   publications: {
     start: "<!-- AUTO-GENERATED:PUBLICATIONS:START -->",
     end: "<!-- AUTO-GENERATED:PUBLICATIONS:END -->",
@@ -114,6 +118,11 @@ function displayDate(data) {
   return year > 0 ? String(year) : ""
 }
 
+function displayPeriod(data) {
+  const period = String(data.period ?? "").trim()
+  return period || displayDate(data)
+}
+
 function escapeTableCell(value) {
   return String(value ?? "")
     .replace(/\r?\n/g, " ")
@@ -123,6 +132,10 @@ function escapeTableCell(value) {
 
 function contentLink(collection, slug) {
   return `../${collection}/${slug}`
+}
+
+function homeActivityLink(slug) {
+  return `./activities/${slug}`
 }
 
 function extractExistingOrder(indexSource) {
@@ -184,6 +197,21 @@ function compareDatedItems(existingOrder) {
   }
 }
 
+function compareHomeHighlights(a, b) {
+  const aOrder = Number(a.data["home-highlight-order"])
+  const bOrder = Number(b.data["home-highlight-order"])
+  const aHasOrder = Number.isFinite(aOrder)
+  const bHasOrder = Number.isFinite(bOrder)
+
+  if (aHasOrder || bHasOrder) {
+    if (!aHasOrder) return 1
+    if (!bHasOrder) return -1
+    if (aOrder !== bOrder) return aOrder - bOrder
+  }
+
+  return dateSortValue(b.data) - dateSortValue(a.data)
+}
+
 function replaceManagedBlock(source, markers, generatedContent, filePath) {
   const startIndex = source.indexOf(markers.start)
   const endIndex = source.indexOf(markers.end)
@@ -231,11 +259,15 @@ function isLeadAuthored(data) {
 
 function activitySection(data) {
   const explicit = String(data["activity-section"] ?? "").toLowerCase()
+  if (explicit.includes("editorial") || explicit.includes("academic service")) return "service"
+  if (explicit.includes("conference") || explicit.includes("presentation")) return "conference"
   if (explicit.includes("blog")) return "blog"
   if (explicit.includes("talk")) return "talk"
-  if (explicit.includes("conference") || explicit.includes("presentation")) return "conference"
 
   const type = String(data["activity-type"] ?? "").toLowerCase()
+  if (type.includes("guest edit") || type.includes("review") || type.includes("academic service")) {
+    return "service"
+  }
   if (type.includes("blog")) return "blog"
   if (type.includes("talk") || type.includes("lecture") || type.includes("exhibition")) return "talk"
   return "conference"
@@ -250,6 +282,22 @@ function joinContext(...values) {
     .map((value) => String(value ?? "").trim())
     .filter(Boolean)
     .join(", ")
+}
+
+function renderHomeHighlights(items) {
+  const featured = items.filter((item) => item.data["feature-on-home"] === true)
+  featured.sort(compareHomeHighlights)
+
+  if (featured.length === 0) return "- No featured activity is currently listed."
+
+  return featured
+    .map((item) => {
+      const custom = String(item.data["home-highlight-text"] ?? "").trim()
+      if (custom) return `- ${custom}`
+      const role = String(item.data.role ?? "Academic activity").trim()
+      return `- ${role}: [${item.title}](${homeActivityLink(item.slug)})`
+    })
+    .join("\n")
 }
 
 function renderPublicationTable(items) {
@@ -269,6 +317,28 @@ function renderWorkingPaperSection(title, items) {
       `| ${escapeTableCell(item.data.year)} | [${escapeTableCell(item.title)}](${contentLink("working-papers", item.slug)}) | ${escapeTableCell(item.data.status)} |`,
     )
   }
+  if (items.length === 0) lines.push("| None | No entries currently listed. | None |")
+  return lines.join("\n")
+}
+
+function renderServiceSection(items) {
+  const lines = [
+    "## Editorial and Academic Service",
+    "",
+    "| Period | Role | Service |",
+    "| --- | --- | --- |",
+  ]
+
+  for (const item of items) {
+    const context = String(item.data.event ?? "").trim()
+    const service = context
+      ? `[${escapeTableCell(item.title)}](${contentLink("activities", item.slug)}), ${escapeTableCell(context)}`
+      : `[${escapeTableCell(item.title)}](${contentLink("activities", item.slug)})`
+    lines.push(
+      `| ${escapeTableCell(displayPeriod(item.data))} | ${escapeTableCell(item.data.role)} | ${service} |`,
+    )
+  }
+
   if (items.length === 0) lines.push("| None | No entries currently listed. | None |")
   return lines.join("\n")
 }
@@ -404,6 +474,13 @@ async function main() {
   const changedFiles = []
 
   if (
+    await updateManagedIndex("index.md", MARKERS.homeHighlights, async () => {
+      const items = await loadCollection("activities")
+      return renderHomeHighlights(items)
+    })
+  ) changedFiles.push("content/index.md")
+
+  if (
     await updateManagedIndex("publications/index.md", MARKERS.publications, async (existingOrder) => {
       const items = await loadCollection("publications")
       items.sort(compareItems(existingOrder))
@@ -428,16 +505,19 @@ async function main() {
   if (
     await updateManagedIndex("activities/index.md", MARKERS.activities, async (existingOrder) => {
       const items = await loadCollection("activities")
+      const service = items.filter((item) => activitySection(item.data) === "service")
+      const conferences = items.filter((item) => activitySection(item.data) === "conference")
       const blogs = items.filter((item) => activitySection(item.data) === "blog")
       const talks = items.filter((item) => activitySection(item.data) === "talk")
-      const conferences = items.filter((item) => activitySection(item.data) === "conference")
+      service.sort(compareDatedItems(existingOrder))
+      conferences.sort(compareDatedItems(existingOrder))
       blogs.sort(compareDatedItems(existingOrder))
       talks.sort(compareDatedItems(existingOrder))
-      conferences.sort(compareDatedItems(existingOrder))
       return [
+        renderServiceSection(service),
+        renderActivityTable("Conferences and Presentations", conferences),
         renderBlogSection(blogs),
         renderActivityTable("Talks", talks),
-        renderActivityTable("Conferences and Presentations", conferences),
       ].join("\n\n")
     })
   ) changedFiles.push("content/activities/index.md")
