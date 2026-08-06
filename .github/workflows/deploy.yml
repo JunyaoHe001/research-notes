@@ -15,7 +15,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-${{ github.event_name }}-${{ github.ref }}
+  group: pages-recovery-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
