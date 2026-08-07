@@ -15,13 +15,72 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-recovery-macos-${{ github.event_name }}-${{ github.ref }}
+  group: pages-recovery-v3-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
+      - name: Clear stale Pages deployment
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STALE_DEPLOYMENT_ID: 4156dfa546187fcf41c72ce4bf22fb720981b42e
+        run: |
+          set -euo pipefail
+
+          api_url="https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/deployments/${STALE_DEPLOYMENT_ID}"
+          http_status="$(curl --silent --show-error --output /tmp/pages-cancel-response --write-out '%{http_code}' \
+            --request POST \
+            --header 'Accept: application/vnd.github+json' \
+            --header "Authorization: Bearer ${GH_TOKEN}" \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            "${api_url}/cancel")"
+
+          case "${http_status}" in
+            200|202|204)
+              echo "Cancellation requested for stale Pages deployment ${STALE_DEPLOYMENT_ID}."
+              ;;
+            404)
+              echo "Stale Pages deployment is already absent."
+              ;;
+            *)
+              echo "Cancellation request returned HTTP ${http_status}. Checking the current deployment state."
+              cat /tmp/pages-cancel-response || true
+              ;;
+          esac
+
+          current_state="unknown"
+          for attempt in $(seq 1 24); do
+            response="$(curl --silent --show-error \
+              --header 'Accept: application/vnd.github+json' \
+              --header "Authorization: Bearer ${GH_TOKEN}" \
+              --header 'X-GitHub-Api-Version: 2022-11-28' \
+              "${api_url}")"
+            current_state="$(printf '%s' "${response}" | python3 -c 'import json, sys; print(json.load(sys.stdin).get("status", "unknown"))' 2>/dev/null || echo unknown)"
+            echo "Stale deployment state: ${current_state} (check ${attempt}/24)"
+
+            case "${current_state}" in
+              deployment_in_progress|deployment_queued|in_progress|queued)
+                sleep 5
+                ;;
+              *)
+                break
+                ;;
+            esac
+          done
+
+          case "${current_state}" in
+            deployment_in_progress|deployment_queued|in_progress|queued)
+              echo "The stale Pages deployment remains locked after the cancellation request."
+              exit 1
+              ;;
+            *)
+              echo "The stale Pages deployment no longer blocks publication."
+              ;;
+          esac
+
       - name: Checkout
         uses: actions/checkout@v6
         with:
@@ -72,7 +131,7 @@ jobs:
           fi
 
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "418982418+github-actions[bot]@users.noreply.github.com"
           git add "${GENERATED_FILES[@]}"
           git commit -m "content: synchronize generated site files"
           git push origin HEAD:v5
@@ -103,30 +162,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Cancel stale Pages deployment
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          STALE_DEPLOYMENT_ID: 4156dfa546187fcf41c72ce4bf22fb720981b42e
-        run: |
-          http_status="$(curl --silent --show-error --output /tmp/pages-cancel-response --write-out '%{http_code}' \
-            --request POST \
-            --header 'Accept: application/vnd.github+json' \
-            --header "Authorization: Bearer ${GH_TOKEN}" \
-            --header 'X-GitHub-Api-Version: 2022-11-28' \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/deployments/${STALE_DEPLOYMENT_ID}/cancel")"
-
-          if [[ "${http_status}" == "204" ]]; then
-            echo "Cancelled stale Pages deployment ${STALE_DEPLOYMENT_ID}."
-          elif [[ "${http_status}" == "404" ]]; then
-            echo "Stale Pages deployment was already cleared."
-          else
-            echo "Unable to clear stale Pages deployment. HTTP ${http_status}."
-            cat /tmp/pages-cancel-response
-            exit 1
-          fi
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
