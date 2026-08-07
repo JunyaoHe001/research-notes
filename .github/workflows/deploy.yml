@@ -11,150 +11,17 @@ on:
 
 permissions:
   contents: write
-  deployments: write
   pages: write
   id-token: write
 
 concurrency:
-  group: pages-recovery-v4-${{ github.event_name }}-${{ github.ref }}
+  group: pages-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Recover GitHub Pages state
-        if: github.event_name != 'pull_request'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          STALE_PAGES_DEPLOYMENT_ID: 4156dfa546187fcf41c72ce4bf22fb720981b42e
-          STALE_GITHUB_DEPLOYMENT_IDS: "5780876401 5780695143"
-        run: |
-          set -euo pipefail
-
-          api_version="2026-03-10"
-          repository_api="https://api.github.com/repos/${GITHUB_REPOSITORY}"
-          pages_deployment_api="${repository_api}/pages/deployments/${STALE_PAGES_DEPLOYMENT_ID}"
-
-          echo "Marking stale GitHub deployments inactive."
-          for deployment_id in ${STALE_GITHUB_DEPLOYMENT_IDS}; do
-            status_code="$(curl --silent --show-error --output "/tmp/deployment-${deployment_id}-response" --write-out '%{http_code}' \
-              --request POST \
-              --header 'Accept: application/vnd.github+json' \
-              --header "Authorization: Bearer ${GH_TOKEN}" \
-              --header "X-GitHub-Api-Version: ${api_version}" \
-              "${repository_api}/deployments/${deployment_id}/statuses" \
-              --data '{"state":"inactive","description":"Cleared before GitHub Pages recovery","environment":"github-pages","auto_inactive":false}')"
-
-            if [[ "${status_code}" == "201" ]]; then
-              echo "Deployment ${deployment_id} is now inactive."
-            else
-              echo "Deployment ${deployment_id} status update returned HTTP ${status_code}."
-              cat "/tmp/deployment-${deployment_id}-response" || true
-            fi
-          done
-
-          echo "Requesting cancellation of the stale Pages deployment."
-          cancel_status="$(curl --silent --show-error --output /tmp/pages-cancel-response --write-out '%{http_code}' \
-            --request POST \
-            --header 'Accept: application/vnd.github+json' \
-            --header "Authorization: Bearer ${GH_TOKEN}" \
-            --header "X-GitHub-Api-Version: ${api_version}" \
-            "${pages_deployment_api}/cancel")"
-          echo "Pages cancellation request returned HTTP ${cancel_status}."
-          cat /tmp/pages-cancel-response || true
-
-          get_pages_deployment_state() {
-            local response_file="/tmp/pages-deployment-state"
-            local status_code
-            status_code="$(curl --silent --show-error --output "${response_file}" --write-out '%{http_code}' \
-              --header 'Accept: application/vnd.github+json' \
-              --header "Authorization: Bearer ${GH_TOKEN}" \
-              --header "X-GitHub-Api-Version: ${api_version}" \
-              "${pages_deployment_api}")"
-
-            if [[ "${status_code}" == "404" ]]; then
-              echo "absent"
-              return
-            fi
-
-            python3 - "${response_file}" <<'PY'
-          import json
-          import pathlib
-          import sys
-
-          path = pathlib.Path(sys.argv[1])
-          try:
-              print(json.loads(path.read_text()).get("status", "unknown"))
-          except Exception:
-              print("unknown")
-          PY
-          }
-
-          current_state="unknown"
-          for attempt in $(seq 1 18); do
-            current_state="$(get_pages_deployment_state)"
-            echo "Stale Pages deployment state: ${current_state} (check ${attempt}/18)"
-            case "${current_state}" in
-              deployment_in_progress|deployment_queued|in_progress|queued)
-                sleep 5
-                ;;
-              *)
-                break
-                ;;
-            esac
-          done
-
-          case "${current_state}" in
-            deployment_in_progress|deployment_queued|in_progress|queued)
-              echo "Cancellation did not clear the lock. Attempting a complete Pages site reset."
-
-              delete_status="$(curl --silent --show-error --output /tmp/pages-delete-response --write-out '%{http_code}' \
-                --request DELETE \
-                --header 'Accept: application/vnd.github+json' \
-                --header "Authorization: Bearer ${GH_TOKEN}" \
-                --header "X-GitHub-Api-Version: ${api_version}" \
-                "${repository_api}/pages")"
-              echo "Pages deletion returned HTTP ${delete_status}."
-              cat /tmp/pages-delete-response || true
-
-              if [[ "${delete_status}" != "204" && "${delete_status}" != "404" ]]; then
-                echo "The Pages site could not be reset with the workflow token."
-                exit 1
-              fi
-
-              for attempt in $(seq 1 18); do
-                site_status="$(curl --silent --show-error --output /tmp/pages-site-response --write-out '%{http_code}' \
-                  --header 'Accept: application/vnd.github+json' \
-                  --header "Authorization: Bearer ${GH_TOKEN}" \
-                  --header "X-GitHub-Api-Version: ${api_version}" \
-                  "${repository_api}/pages")"
-                echo "Pages site removal status: HTTP ${site_status} (check ${attempt}/18)"
-                [[ "${site_status}" == "404" ]] && break
-                sleep 5
-              done
-
-              create_status="$(curl --silent --show-error --output /tmp/pages-create-response --write-out '%{http_code}' \
-                --request POST \
-                --header 'Accept: application/vnd.github+json' \
-                --header "Authorization: Bearer ${GH_TOKEN}" \
-                --header 'Content-Type: application/json' \
-                --header "X-GitHub-Api-Version: ${api_version}" \
-                "${repository_api}/pages" \
-                --data '{"build_type":"workflow"}')"
-              echo "Pages recreation returned HTTP ${create_status}."
-              cat /tmp/pages-create-response || true
-
-              if [[ "${create_status}" != "201" && "${create_status}" != "409" ]]; then
-                echo "The Pages site could not be recreated."
-                exit 1
-              fi
-              ;;
-            *)
-              echo "The stale Pages deployment no longer blocks publication."
-              ;;
-          esac
-
       - name: Checkout
         uses: actions/checkout@v6
         with:
