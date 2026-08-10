@@ -2,7 +2,7 @@
   {
     "title": "Dutch Population Relocation Networks",
     "subtitle": "Netherlands · 2011–2024",
-    "description": "Explore reconstructed municipality-level relocation flows across years and demographic strata. Municipality colours show net relocation balance, while directed curves show the strongest origin–destination flows.",
+    "description": "Explore reconstructed municipality-level relocation flows by year range and demographic stratum. Municipality colours show net relocation balance, while directed curves show the strongest origin–destination flows.",
     "externalLink": "https://junyaohe001.github.io/Netherlands-Relocation-Network/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/dutch-population-relocation-networks.webp",
     "imageAlt": "The Dutch Population Relocation Networks atlas, showing demographic controls and a map of municipal net relocation flows in the Netherlands.",
