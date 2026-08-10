@@ -1,3 +1,12 @@
+media:
+  - name: interactive-map-images
+    label: Interactive map screenshots
+    input: quartz/static/interactive-maps
+    output: /research-notes/static/interactive-maps
+    rename: safe
+    extensions: [png, jpg, jpeg, webp]
+    categories: [image]
+
 settings:
   content:
     merge: true
@@ -89,6 +98,34 @@ content:
           - { name: title, label: Title, type: string, required: true }
           - name: tag-network-enabled
             label: Enable Tag Network
+            type: boolean
+            default: true
+
+      - name: interactive-maps
+        label: Interactive Maps
+        type: file
+        path: quartz/static/interactive-maps.json
+        format: json
+        list: true
+        operations: { create: false, rename: false, delete: false }
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: subtitle, label: Subtitle or Coverage, type: string }
+          - { name: description, label: Short Description, type: text, required: true }
+          - { name: externalLink, label: Interactive Map URL, type: string, required: true }
+          - name: screenshot
+            label: Screenshot
+            type: image
+            required: true
+            options:
+              media: interactive-map-images
+              extensions: [png, jpg, jpeg, webp]
+              categories: [image]
+              rename: safe
+          - { name: imageAlt, label: Screenshot Alt Text, type: string, required: true }
+          - { name: displayOrder, label: Display Order, type: number, default: 10 }
+          - name: showOnResearch
+            label: Show on Research Page
             type: boolean
             default: true
 

@@ -5,6 +5,17 @@ description: Five interconnected research lines organised around complex network
 
 Five interconnected research lines organise Junyao He's work. Complex networks and complex systems provide the shared analytical foundation. The empirical questions span economic geography, urban studies, mobility and migration, planning governance, and computational social science.
 
+<section class="interactive-maps-section" aria-labelledby="interactive-maps-heading">
+  <div class="interactive-maps-header">
+    <p id="interactive-maps-heading" class="interactive-maps-heading" role="heading" aria-level="2">Interactive maps</p>
+    <p class="interactive-maps-deck">Standalone visualisations linked to current research projects.</p>
+  </div>
+  <div class="interactive-maps-grid" data-interactive-maps-root aria-live="polite">
+    <p class="interactive-maps-message">Loading interactive maps…</p>
+  </div>
+</section>
+
+
 ## Hybrid work, job–home networks, and regional restructuring
 
 Major active research line.
