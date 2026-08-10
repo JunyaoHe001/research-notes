@@ -2,6 +2,7 @@
 
 ;(function () {
   const DATA_URL = "/research-notes/static/interactive-maps.json"
+  const prefetchedDocuments = new Set()
 
   function normaliseExternalUrl(value) {
     try {
@@ -22,6 +23,22 @@
     }
   }
 
+  function prefetchDocument(href) {
+    if (prefetchedDocuments.has(href)) return
+    try {
+      const url = new URL(href)
+      if (url.origin !== window.location.origin) return
+      const link = document.createElement("link")
+      link.rel = "prefetch"
+      link.as = "document"
+      link.href = url.toString()
+      document.head.append(link)
+      prefetchedDocuments.add(href)
+    } catch {
+      // Prefetching is an optional optimisation.
+    }
+  }
+
   function createTextElement(tagName, className, text) {
     const element = document.createElement(tagName)
     element.className = className
@@ -34,11 +51,11 @@
     const screenshot = normaliseImageUrl(entry.screenshot)
     if (!href || !screenshot || !entry.title) return null
 
+    prefetchDocument(href)
+
     const card = document.createElement("a")
     card.className = "interactive-map-card"
     card.href = href
-    card.target = "_blank"
-    card.rel = "noopener noreferrer"
     card.setAttribute("aria-label", `Open interactive map: ${entry.title}`)
 
     const media = document.createElement("span")
