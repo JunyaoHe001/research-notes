@@ -3,7 +3,7 @@ title: Research
 description: Five interconnected research lines organised around complex networks, spatial mobility, digital transformation, and uneven regional development.
 ---
 
-Five interconnected research lines organise Junyao He's work. Complex networks and complex systems provide the shared analytical foundation. The empirical questions span economic geography, urban studies, mobility and migration, planning governance, and computational social science.
+Five interconnected research lines organise Junyao He's work. Complex networks and complex systems provide the shared analytical foundation. The empirical questions span economic geography, urban studies, mobility and migration, planning governance, and computational social science. Several interactive map atlases from recent research are also listed below.
 
 <section class="interactive-maps-section" aria-labelledby="interactive-maps-heading">
   <div class="interactive-maps-header">
