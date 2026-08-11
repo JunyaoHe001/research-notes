@@ -8,5 +8,15 @@
     "imageAlt": "The Dutch Population Relocation Networks atlas, showing demographic controls and a map of municipal net relocation flows in the Netherlands.",
     "displayOrder": 1,
     "showOnResearch": true
+  },
+  {
+    "title": "Hybrid Work and Job–Home Networks in Spain",
+    "subtitle": "Spain · 2022–2024",
+    "description": "Explore Spain’s job–home networks across six workplace-attendance recurrence layers. Directed flows show residential-to-employment connections, while district colours reveal hybrid-work intensity, network outcomes, settlement context, and spatial heterogeneity.",
+    "externalLink": "https://junyaohe001.github.io/hybrid-work-job-home-networks-spain/atlas/",
+    "screenshot": "/research-notes/static/interactive-maps/spainhybridworknetwork.png",
+    "imageAlt": "Interactive atlas of hybrid-work and job–home networks in Spain, showing district-level measures and directed residential-to-employment flows across workplace-attendance recurrence layers.",
+    "displayOrder": 2,
+    "showOnResearch": true
   }
 ]
