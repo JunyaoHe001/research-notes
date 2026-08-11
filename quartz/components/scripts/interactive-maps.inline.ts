@@ -56,6 +56,12 @@
     const card = document.createElement("a")
     card.className = "interactive-map-card"
     card.href = href
+    // Interactive-map products may share the junyaohe001.github.io origin while
+    // living in different GitHub Pages repositories. Quartz otherwise treats
+    // them as internal SPA routes and morphs their HTML into Research Notes,
+    // which prevents their page-level JavaScript bootstrap from running.
+    // Force a normal browser navigation for every interactive-map card.
+    card.dataset.routerIgnore = ""
     card.setAttribute("aria-label", `Open interactive map: ${entry.title}`)
 
     const media = document.createElement("span")
