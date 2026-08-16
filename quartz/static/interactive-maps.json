@@ -18,5 +18,15 @@
     "imageAlt": "Interactive atlas of hybrid-work and job–home networks in Spain, showing district-level measures and directed residential-to-employment flows across workplace-attendance recurrence layers.",
     "displayOrder": 2,
     "showOnResearch": true
+  },
+  {
+    "title": "Power Network Map on Social Media",
+    "subtitle": "Bell and Drum Tower Planning Controversy, Beijing · 2012–2014",
+    "description": "An interactive visualisation of three anonymised Weibo forwarding networks formed during the Bell and Drum Tower planning controversy in Beijing. Users can switch between expert-, government-, and civil-society-initiated networks to explore community structure, interaction intensity, and node prominence.",
+    "externalLink": "https://junyaohe001.github.io/weibo-3-networks/atlas/",
+    "screenshot": "/research-notes/static/interactive-maps/3-power-networks.png",
+    "imageAlt": "Interactive visualisation of an anonymised expert-initiated Weibo forwarding network, with filtering controls on the left and a community-coloured network graph on the right.",
+    "displayOrder": 3,
+    "showOnResearch": true
   }
 ]
