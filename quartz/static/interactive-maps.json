@@ -38,5 +38,15 @@
     "imageAlt": "Interactive visualisation of an anonymised expert-initiated Weibo forwarding network, with filtering controls on the left and a community-coloured network graph on the right.",
     "displayOrder": 4,
     "showOnResearch": true
+  },
+  {
+    "title": "Informal Participation and Network on Social Media in Guangzhou",
+    "subtitle": "Mashi Street Protection Controversy, Guangzhou · 2012",
+    "description": "An interactive temporal network visualisation of Weibo forwarding activity during the Mashi Street Protection Movement in Guangzhou’s Enning Road regeneration controversy. The atlas traces how the network developed over time and allows users to explore communities, ego networks, and the network positions of journalism and civil society actors.",
+    "externalLink": "https://junyaohe001.github.io/weibo-enning-road-network/",
+    "screenshot": "/research-notes/static/interactive-maps/enningroadwebsite.png",
+    "imageAlt": "Interactive temporal Weibo network of the Mashi Street Protection Movement in Guangzhou, with timeline and network controls on the left.",
+    "displayOrder": 5,
+    "showOnResearch": true
   }
 ]
