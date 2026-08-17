@@ -28,5 +28,15 @@
     "imageAlt": "Interactive visualisation of an anonymised expert-initiated Weibo forwarding network, with filtering controls on the left and a community-coloured network graph on the right.",
     "displayOrder": 3,
     "showOnResearch": true
+  },
+  {
+    "title": "Regional Mobility ABM (Central Macedonia, Greece)",
+    "subtitle": "MOBI-TWIN · Interactive agent-based modelling demonstration",
+    "description": "An interactive agent-based modelling demonstration of regional mobility and population change in a pilot region - Central Macedonia. The browser-based model uses a synthetic population to explore how alternative transition scenarios, remote work, relocation behaviour, congestion, and social influence shape regional outcomes over time.",
+    "externalLink": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
+    "screenshot": "/research-notes/static/interactive-maps/mobi-twin-abm-example-website.png",
+    "imageAlt": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
+    "displayOrder": 3,
+    "showOnResearch": true
   }
 ]
