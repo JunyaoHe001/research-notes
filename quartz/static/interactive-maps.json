@@ -30,7 +30,7 @@
     "showOnResearch": true
   },
   {
-    "title": "Power Network Map on Social Media",
+    "title": "Power Network on Social Media",
     "subtitle": "Bell and Drum Tower Planning Controversy, Beijing · 2012–2014",
     "description": "An interactive visualisation of three anonymised Weibo forwarding networks formed during the Bell and Drum Tower planning controversy in Beijing. Users can switch between expert-, government-, and civil-society-initiated networks to explore community structure, interaction intensity, and node prominence.",
     "externalLink": "https://junyaohe001.github.io/weibo-3-networks/atlas/",
@@ -40,7 +40,7 @@
     "showOnResearch": true
   },
   {
-    "title": "Informal Participation and Network on Social Media in Guangzhou",
+    "title": "Network of Informal Participation · Enning Road",
     "subtitle": "Mashi Street Protection Controversy, Guangzhou · 2012",
     "description": "An interactive temporal network visualisation of Weibo forwarding activity during the Mashi Street Protection Movement in Guangzhou’s Enning Road regeneration controversy. The atlas traces how the network developed over time and allows users to explore communities, ego networks, and the network positions of journalism and civil society actors.",
     "externalLink": "https://junyaohe001.github.io/weibo-enning-road-network/",
