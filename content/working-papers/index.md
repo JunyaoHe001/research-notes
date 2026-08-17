@@ -16,13 +16,13 @@ Current manuscripts and research in progress. Click any title for research tags 
 | 2026 | [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](../working-papers/digital-nomad-mobility) | Finalizing |
 | 2026 | [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](../working-papers/dutch-migration-networks) | Finalizing |
 | 2026 | [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](../working-papers/ai-regional-networks) | Finalizing |
-| 2026 | [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](../working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks) | Under Review |
+| 2026 | [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](../working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks) | Revising for Resubmission |
 
 ## Co-authored Working Papers
 
 | Year | Title | Status |
 | --- | --- | --- |
-| 2026 | [Institutionalizing AI in Urban Planning: Discursive AI Opportunity Structures in China](../working-papers/institutionalizing-ai-urban-planning) | Under Review |
+| 2026 | [Institutionalizing AI in Urban Planning: Discursive AI Opportunity Structures in China](../working-papers/institutionalizing-ai-urban-planning) | Revising for Resubmission |
 | 2026 | [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](../working-papers/cognitive-composition-regional-trajectories) | Revising for Resubmission |
 | 2026 | [Exploring day–night heterogeneity in links between street green space features and crime incidents via visual Large Language Model](../working-papers/street-green-space-crime-vllm) | Submitted |
 | 2026 | [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](../working-papers/discursive-algorithmic-opportunity-europe) | In Preparation |
