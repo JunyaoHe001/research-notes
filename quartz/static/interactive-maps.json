@@ -20,6 +20,16 @@
     "showOnResearch": true
   },
   {
+    "title": "ABM of Regional Mobility in Central Macedonia",
+    "subtitle": "MOBI-TWIN · Interactive agent-based modelling example · Greece · 2025–2035",
+    "description": "An interactive agent-based modelling demonstration of regional mobility and population change in a pilot region - Central Macedonia. The browser-based model uses a synthetic population to explore how alternative transition scenarios, remote work, relocation behaviour, congestion, and social influence shape regional outcomes over time.",
+    "externalLink": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
+    "screenshot": "/research-notes/static/interactive-maps/mobi-twin-abm-example-website.png",
+    "imageAlt": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
+    "displayOrder": 3,
+    "showOnResearch": true
+  },
+  {
     "title": "Power Network Map on Social Media",
     "subtitle": "Bell and Drum Tower Planning Controversy, Beijing · 2012–2014",
     "description": "An interactive visualisation of three anonymised Weibo forwarding networks formed during the Bell and Drum Tower planning controversy in Beijing. Users can switch between expert-, government-, and civil-society-initiated networks to explore community structure, interaction intensity, and node prominence.",
@@ -27,16 +37,6 @@
     "screenshot": "/research-notes/static/interactive-maps/3-power-networks.png",
     "imageAlt": "Interactive visualisation of an anonymised expert-initiated Weibo forwarding network, with filtering controls on the left and a community-coloured network graph on the right.",
     "displayOrder": 4,
-    "showOnResearch": true
-  },
-  {
-    "title": "ABM of Regional Mobility (Central Macedonia)",
-    "subtitle": "MOBI-TWIN · Interactive agent-based modelling example Greece · 2025–2035",
-    "description": "An interactive agent-based modelling demonstration of regional mobility and population change in a pilot region - Central Macedonia. The browser-based model uses a synthetic population to explore how alternative transition scenarios, remote work, relocation behaviour, congestion, and social influence shape regional outcomes over time.",
-    "externalLink": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
-    "screenshot": "/research-notes/static/interactive-maps/mobi-twin-abm-example-website.png",
-    "imageAlt": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
-    "displayOrder": 3,
     "showOnResearch": true
   }
 ]
