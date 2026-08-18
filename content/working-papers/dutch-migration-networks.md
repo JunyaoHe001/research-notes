@@ -1,12 +1,14 @@
 ---
-title: "Different Strokes for Different Folks: Teleworkability, Heterogeneity,
-  and the Restructuring of Dutch Internal Migration Networks"
+title: "Different Strokes for Different Folks: Remote Work, Heterogeneity, and
+  Restructuring of Relocation Networks in the Netherlands"
 authors:
   - He, J.
   - Ballas, D.
+  - Pan, X.
+  - Yang, C.
 year: 2026
 publication-type: Working paper
-status: Finalizing
+status: Submitted
 research-line: Migration, teleworkability, and regional inequality
 description: This study examines whether and how remote work affects people’s
   relocation patterns, with a particular focus on the heterogeneous outcomes
@@ -21,7 +23,7 @@ show-in-tag-network: true
 ---
 ## Abstract
 
-This article investigates how teleworkability is associated with heterogeneous relocation responses across demographic groups in the Netherlands. It asks whether flexible work changes migration networks differently for age, household, income, and occupational groups, and whether these differences reinforce or reduce existing spatial inequalities. The study uses iterative proportional fitting and population-flow synthesis to reconstruct layered internal-migration networks from aggregate data. Network measures are then used to compare destination reach, origin diversity, spatial distance, and changes in regional hierarchy across demographic layers. The study contributes to remote-work and migration research by showing that the spatial consequences of teleworkability depend on who is able and willing to relocate, not simply on the aggregate prevalence of remote work.
+Remote work is decoupling workplace and residence, yet how it reorganizes relocation systems remains unclear. Existing studies largely focus on individual moves or place-level population change, with less attention to the direction of origin-destination structure and demographic heterogeneity of flows. Using annual inter-municipal relocation flows in the Netherlands, the study reconstructs directed relocation networks of age, nationality, marital status and sex through iterative proportional fitting of observed OD totals and demographic margins. The study combines pre-pandemic local industry structure with sectoral remote-work growth above prior trends to construct remote-work exposure. It uses HDFE-PPML models to distinguish destination absorption, origin release and demographic differences in relocation mobility. The results indicate that the Dutch relocation system is persistently asymmetric and demographically layered. Following the pandemic shock, such flows shifted towards more highly exposed destinations, while highly exposed origins did not correspondingly release more residents. Significant heterogeneity is also evident across age, nationality and marital status. The findings reveal that the pandemic-accelerated transition of remote work is associated with asymmetric population reallocation between municipalities and uneven destination responses across population groups. The flexibility emerging from this transition is unevenly translated and may reinforce spatial inequality across places and populations, challenging the expectation that remote work will broadly promote regional rebalancing. 
 
 ## Related pages
 
