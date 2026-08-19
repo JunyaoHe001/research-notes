@@ -8,7 +8,7 @@ authors:
   - Yang, C.
 year: 2026
 publication-type: Working paper
-status: Submitted
+status: Under Review
 research-line: Migration, teleworkability, and regional inequality
 description: This study examines whether and how remote work affects people’s
   relocation patterns, with a particular focus on the heterogeneous outcomes
