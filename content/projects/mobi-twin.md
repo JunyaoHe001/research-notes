@@ -11,7 +11,7 @@ role: Postdoctoral Researcher
 institution: University of Groningen
 funding: Horizon Europe
 external-link: http://mobi-twin-project.eu/
-display-order: 1
+display-order: 2
 show-in-overview: true
 tags:
   - economic geography
@@ -20,6 +20,7 @@ tags:
   - agent based modelling
   - spatial microsimulation
 show-in-graph: true
+show-in-tag-network: true
 ---
 ## Project
 
