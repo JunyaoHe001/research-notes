@@ -9,5 +9,14 @@ show-in-overview: true
 tags:
   - remote-work
   - mobility
+  - inequality
+  - labour-market
+  - economic-geography
+  - UK
+  - Netherlands
+  - Spain
+  - US
+  - Sweden
+  - China
 show-in-tag-network: true
 ---
