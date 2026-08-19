@@ -26,7 +26,7 @@
     "externalLink": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
     "screenshot": "/research-notes/static/interactive-maps/mobi-twin-abm-example-website.png",
     "imageAlt": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
-    "displayOrder": 3,
+    "displayOrder": 4,
     "showOnResearch": true
   },
   {
@@ -36,7 +36,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-3-networks/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/3-power-networks.png",
     "imageAlt": "Interactive visualisation of an anonymised expert-initiated Weibo forwarding network, with filtering controls on the left and a community-coloured network graph on the right.",
-    "displayOrder": 4,
+    "displayOrder": 5,
     "showOnResearch": true
   },
   {
@@ -46,7 +46,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-enning-road-network/",
     "screenshot": "/research-notes/static/interactive-maps/enningroadwebsite.png",
     "imageAlt": "Interactive temporal Weibo network of the Mashi Street Protection Movement in Guangzhou, with timeline and network controls on the left.",
-    "displayOrder": 5,
+    "displayOrder": 6,
     "showOnResearch": true
   }
 ]
