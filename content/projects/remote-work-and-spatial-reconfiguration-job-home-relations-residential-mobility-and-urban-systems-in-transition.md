@@ -4,7 +4,7 @@ title: "Remote Work and Spatial Reconfiguration: Job-Home Relations, Residential
 project-type: Research note
 year: 2026
 period: Ongoing
-display-order: 2
+display-order: 1
 show-in-overview: true
 tags:
   - remote-work
