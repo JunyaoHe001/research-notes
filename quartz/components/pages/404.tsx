@@ -19,6 +19,7 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
               if (basePath.length > 1 && basePath.endsWith("/")) {
                 basePath = basePath.slice(0, -1);
               }
+
               var pathname = window.location.pathname;
               var hasBasePrefix = basePath.length > 1 && pathname.startsWith(basePath);
               if (hasBasePrefix) {
@@ -27,20 +28,28 @@ const NotFound: QuartzComponent = ({ cfg, ctx }: QuartzComponentProps) => {
               if (pathname.startsWith("/")) {
                 pathname = pathname.slice(1);
               }
-              if (pathname.endsWith("/")) {
-                pathname = pathname.slice(0, -1);
+
+              var requestedSlug = pathname;
+              var canonicalSlug = requestedSlug.replace(/\\/+$/, "");
+              if (canonicalSlug.endsWith(".html")) {
+                canonicalSlug = canonicalSlug.slice(0, -5);
               }
-              if (pathname.endsWith(".html")) {
-                pathname = pathname.slice(0, -5);
+              if (canonicalSlug.endsWith("/index")) {
+                canonicalSlug = canonicalSlug.slice(0, -6);
               }
-              if (pathname.endsWith("/index")) {
-                pathname = pathname.slice(0, -6);
+
+              var loweredSlug = canonicalSlug.toLowerCase();
+              var targetSlug = null;
+              if (canonicalSlug && index[canonicalSlug] != null) {
+                targetSlug = canonicalSlug;
+              } else if (loweredSlug && index[loweredSlug] != null) {
+                targetSlug = loweredSlug;
               }
-              var lowered = pathname.toLowerCase();
-              if (lowered !== pathname && index[lowered] != null) {
+
+              if (targetSlug != null && requestedSlug !== targetSlug) {
                 var prefix = hasBasePrefix ? basePath : "";
-                var target = prefix + (prefix.endsWith("/") ? "" : "/") + lowered;
-                window.location.replace(target);
+                var target = prefix + (prefix.endsWith("/") ? "" : "/") + targetSlug;
+                window.location.replace(target + window.location.search + window.location.hash);
               }
             });
           }
