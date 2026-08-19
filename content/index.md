@@ -1,6 +1,6 @@
 ---
 title: Junyao He
-description: Economic geographer and computational social scientist working on complex networks, spatial mobility, regional inequality, and digital transformation.
+description: Economic geographer and computational social scientist working on complex networks, spatial mobility, regional inequality, and digital transition.
 ---
 
 <figure class="home-portrait">
