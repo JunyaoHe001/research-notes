@@ -48,5 +48,15 @@
     "imageAlt": "Interactive temporal Weibo network of the Mashi Street Protection Movement in Guangzhou, with timeline and network controls on the left.",
     "displayOrder": 6,
     "showOnResearch": true
+  },
+  {
+    "title": "Global AI Co-occurrence Network from News",
+    "subtitle": "A spatial co-occurrence network in global AI news, aggregated into ADM1 spatial units.",
+    "description": "This network, derived from global news, represents preliminary data for an ongoing study on global AI cooperation and competition. Currently, the study is working to further identify differences in competition and cooperation and apply them to machine learning.",
+    "externalLink": "https://junyaohe001.github.io/global-ai-network-atlas/",
+    "screenshot": "/research-notes/static/interactive-maps/global-ai-coopeeration-network.png",
+    "imageAlt": "Interactive atlas of global AI co-occurrence network from news",
+    "displayOrder": 10,
+    "showOnResearch": true
   }
 ]
