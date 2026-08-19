@@ -9,7 +9,7 @@ role: Doctoral Researcher
 institution: Utrecht University
 funding: European Research Council Starting Grant
 external-link: https://collaborativeplanning.sites.uu.nl
-display-order: 2
+display-order: 3
 show-in-overview: true
 tags:
   - digital planning
@@ -17,6 +17,7 @@ tags:
   - public participation
   - computational social science
 show-in-graph: true
+show-in-tag-network: true
 ---
 ## Project
 
