@@ -8,6 +8,9 @@ This page presents Junyao He's principal doctoral and postdoctoral research proj
 <!-- AUTO-GENERATED:PROJECTS:START -->
 ## Selected Academic Projects
 
+### [Remote Work and Spatial Reconfiguration: Job-Home Relations, Residential Mobility, and Urban Systems in Transition](../projects/remote-work-and-spatial-reconfiguration-job-home-relations-residential-mobility-and-urban-systems-in-transition)
+**Period:** 2026 to 2030  
+
 ### [MOBI-TWIN: Spatial Mobility and Regional Transformation in Europe's Twin Transition](../projects/mobi-twin)
 **Period:** 2025 to 2026  
 **Role:** Postdoctoral Researcher  
