@@ -10,13 +10,23 @@
     "showOnResearch": true
   },
   {
+    "title": "Age-Specific Migration Networks in England and Wales",
+    "subtitle": "England and Wales · 2012–2025",
+    "description": "Explore inter-local-authority migration networks across five age groups from 2012 to 2025. LAD colours show migration balance or flow intensity, while directed curves reveal the strongest origin–destination links and selected-area network relationships.",
+    "externalLink": "https://junyaohe001.github.io/EnglandAndWalesRelocationNetwork/",
+    "screenshot": "/research-notes/static/interactive-maps/england-wales-relocation-network.webp",
+    "imageAlt": "Interactive atlas of age-specific migration networks in England and Wales, with controls for year, age group, local-authority measures and directed migration flows.",
+    "displayOrder": 2,
+    "showOnResearch": true
+  },
+  {
     "title": "Job-Home Networks in Spain",
     "subtitle": "Spain · 2022–2024",
     "description": "Explore Spain’s job–home networks across six workplace-attendance recurrence layers. Directed flows show residential-to-employment connections, while district colours reveal hybrid-work intensity, network outcomes, settlement context, and spatial heterogeneity.",
     "externalLink": "https://junyaohe001.github.io/hybrid-work-job-home-networks-spain/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/spainhybridworknetwork.png",
     "imageAlt": "Interactive atlas of hybrid-work and job–home networks in Spain, showing district-level measures and directed residential-to-employment flows across workplace-attendance recurrence layers.",
-    "displayOrder": 2,
+    "displayOrder": 3,
     "showOnResearch": true
   },
   {
@@ -26,7 +36,7 @@
     "externalLink": "https://junyaohe001.github.io/global-ai-network-atlas/",
     "screenshot": "/research-notes/static/interactive-maps/global-ai-coopeeration-network.png",
     "imageAlt": "Interactive atlas of global AI co-occurrence network from news, aggregated into ADM1 spatial units.",
-    "displayOrder": 3,
+    "displayOrder": 4,
     "showOnResearch": true
   },
   {
@@ -36,7 +46,7 @@
     "externalLink": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
     "screenshot": "/research-notes/static/interactive-maps/mobi-twin-abm-example-website.png",
     "imageAlt": "An interactive ABM example",
-    "displayOrder": 4,
+    "displayOrder": 5,
     "showOnResearch": true
   },
   {
@@ -46,7 +56,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-3-networks/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/3-power-networks.png",
     "imageAlt": "Interactive visualisation of an anonymised expert-initiated Weibo forwarding network, with filtering controls on the left and a community-coloured network graph on the right.",
-    "displayOrder": 5,
+    "displayOrder": 6,
     "showOnResearch": true
   },
   {
@@ -56,7 +66,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-enning-road-network/",
     "screenshot": "/research-notes/static/interactive-maps/enningroadwebsite.png",
     "imageAlt": "Interactive temporal Weibo network of the Mashi Street Protection Movement in Guangzhou, with timeline and network controls on the left.",
-    "displayOrder": 6,
+    "displayOrder": 7,
     "showOnResearch": true
   }
 ]
