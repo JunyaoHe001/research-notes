@@ -20,3 +20,8 @@ tags:
   - China
 show-in-tag-network: true
 ---
+Ongoing research includes: 
+- Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands
+- Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks
+- Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands
+- Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning
