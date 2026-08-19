@@ -8,5 +8,6 @@ display-order: 2
 show-in-overview: true
 tags:
   - remote-work
+  - mobility
 show-in-tag-network: true
 ---
