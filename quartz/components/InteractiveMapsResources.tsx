@@ -7,8 +7,10 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
 
   Component.css = `
 .interactive-maps-section {
-  margin: 1.65rem 0 2.7rem;
-  padding: 1.2rem 0 1.45rem;
+  container-name: interactive-maps;
+  container-type: inline-size;
+  margin: 1.45rem 0 2.25rem;
+  padding: 1rem 0 1.15rem;
   border-top: 1px solid var(--lightgray);
   border-bottom: 1px solid var(--lightgray);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -18,8 +20,8 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
 }
 
 .interactive-maps-heading,
@@ -29,7 +31,7 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
 
 .interactive-maps-heading {
   color: var(--secondary);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 750;
   letter-spacing: 0.095em;
   line-height: 1.3;
@@ -38,15 +40,16 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
 
 .interactive-maps-deck {
   color: var(--gray);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   line-height: 1.4;
   text-align: right;
 }
 
 .interactive-maps-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.15rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+  align-items: stretch;
 }
 
 .interactive-map-card {
@@ -69,8 +72,8 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
 .interactive-map-card:hover,
 .interactive-map-card:focus-visible {
   border-color: color-mix(in srgb, var(--secondary) 50%, var(--lightgray));
-  box-shadow: 0 9px 24px rgba(0, 0, 0, 0.09);
-  transform: translateY(-2px);
+  box-shadow: 0 7px 19px rgba(0, 0, 0, 0.075);
+  transform: translateY(-1px);
 }
 
 .interactive-map-card:focus-visible {
@@ -99,7 +102,7 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
 }
 
 .interactive-map-card:hover .interactive-map-media img {
-  transform: scale(1.018);
+  transform: scale(1.012);
 }
 
 .interactive-map-media.is-missing {
@@ -109,7 +112,7 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
 
 .interactive-map-image-fallback {
   color: var(--gray);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
 }
 
 .interactive-map-body {
@@ -117,7 +120,7 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
   flex: 1 1 auto;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0.88rem 0.95rem 0.92rem;
+  padding: 0.7rem 0.72rem 0.74rem;
 }
 
 .interactive-map-title,
@@ -128,34 +131,46 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
 }
 
 .interactive-map-title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   color: var(--dark);
   font-family: var(--headerFont);
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  line-height: 1.32;
+  line-height: 1.28;
 }
 
 .interactive-map-subtitle {
-  margin-top: 0.28rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: 0.22rem;
   color: var(--secondary);
-  font-size: 0.72rem;
+  font-size: 0.67rem;
   font-weight: 650;
   letter-spacing: 0.02em;
-  line-height: 1.35;
+  line-height: 1.32;
 }
 
 .interactive-map-description {
-  margin-top: 0.56rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  margin-top: 0.42rem;
   color: var(--darkgray);
-  font-size: 0.78rem;
-  line-height: 1.48;
+  font-size: 0.72rem;
+  line-height: 1.42;
 }
 
 .interactive-map-action {
   margin-top: auto;
-  padding-top: 0.78rem;
+  padding-top: 0.55rem;
   color: var(--secondary);
-  font-size: 0.74rem;
+  font-size: 0.69rem;
   font-weight: 700;
   line-height: 1.3;
 }
@@ -167,10 +182,10 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
 .interactive-maps-message {
   grid-column: 1 / -1;
   margin: 0 !important;
-  padding: 1.3rem;
+  padding: 1.15rem;
   border: 1px dashed var(--lightgray);
   color: var(--gray);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   text-align: center;
 }
 
@@ -178,21 +193,47 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
   color: var(--darkgray);
 }
 
-@media (max-width: 1050px) {
+@container interactive-maps (max-width: 1050px) {
+  .interactive-maps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@container interactive-maps (max-width: 760px) {
   .interactive-maps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+@container interactive-maps (max-width: 520px) {
+  .interactive-maps-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@supports not (container-type: inline-size) {
+  @media (max-width: 1350px) {
+    .interactive-maps-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 900px) {
+    .interactive-maps-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
 @media (max-width: 650px) {
   .interactive-maps-section {
-    margin-top: 1.35rem;
+    margin-top: 1.25rem;
   }
 
   .interactive-maps-header {
     align-items: flex-start;
     flex-direction: column;
-    gap: 0.35rem;
+    gap: 0.3rem;
   }
 
   .interactive-maps-deck {
@@ -201,6 +242,26 @@ const InteractiveMapsResources: QuartzComponentConstructor = () => {
 
   .interactive-maps-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .interactive-map-body {
+    padding: 0.78rem 0.82rem 0.82rem;
+  }
+
+  .interactive-map-title {
+    font-size: 0.95rem;
+  }
+
+  .interactive-map-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .interactive-map-description {
+    font-size: 0.76rem;
+  }
+
+  .interactive-map-action {
+    font-size: 0.72rem;
   }
 }
 `
