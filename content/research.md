@@ -16,7 +16,7 @@ Five interconnected research lines organise Junyao He's work. Complex networks a
 </section>
 
 
-## Hybrid work, job–home networks, and regional restructuring
+## Hybrid work, job–home networks, and regional inequality
 
 Major active research line.
 
