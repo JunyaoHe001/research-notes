@@ -84,5 +84,5 @@ See also [Methods and analytical approaches](./methods/) and [Complex networks a
 
 ## Collaboration
 
-Junyao He welcomes collaboration on complex networks, spatial mobility, remote work, migration, economic geography, digital planning, and computational urban research. Enquiries concerning papers, data, or research collaboration can be sent to [J.HE@RUG.NL](mailto:J.HE@RUG.NL) or [junyaohe.utrecht@gmail.com
+Junyao He welcomes collaboration on complex networks, spatial mobility, remote work, migration, economic geography, digital planning, and computational urban research. Enquiries concerning papers, data, or research collaboration can be sent to [j.he@rug.nl](mailto:J.HE@RUG.NL) or [junyaohe.utrecht@gmail.com
 ](mailto:junyaohe.utrecht@gmail.com).
