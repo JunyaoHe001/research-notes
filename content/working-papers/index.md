@@ -26,7 +26,7 @@ Current manuscripts and research in progress. Click any title for research tags 
 | 2026 | [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](../working-papers/cognitive-composition-regional-trajectories) | Revise and Resubmit |
 | 2026 | [Exploring day–night heterogeneity in links between street green space features and crime incidents via visual Large Language Model](../working-papers/street-green-space-crime-vllm) | Submitted |
 | 2026 | [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](../working-papers/discursive-algorithmic-opportunity-europe) | In Preparation |
-| 2022 | [When Projects Meet Platforms: Aestheticizing Industrial Heritage for Tourism in Urban China](../working-papers/when-projects-meet-platforms-aestheticizing-industrial-heritage-for-tourism-in-urban-china) | Submitted |
+| 2026 | [When Projects Meet Platforms: Aestheticizing Industrial Heritage for Tourism in Urban China](../working-papers/when-projects-meet-platforms-aestheticizing-industrial-heritage-for-tourism-in-urban-china) | Submitted |
 <!-- AUTO-GENERATED:WORKING-PAPERS:END -->
 
 The statuses on this page describe the current stage of each manuscript and may change as the projects develop.
