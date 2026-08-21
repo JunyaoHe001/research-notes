@@ -5,7 +5,7 @@ authors:
   - Yang, C
   - " He, J"
   - Liu, Z
-year: 2022
+year: 2026
 publication-type: Working paper
 status: Submitted
 research-line: Digital planning, platform governance, and networked power
@@ -14,4 +14,12 @@ description: The study examines how urban regeneration and social media
   It shows that platform visibility favors photogenic, consumption-oriented
   activities, shaping how tourism value and benefits are distributed.
 show-in-tag-network: true
+tags:
+  - aestheticization
+  - industrial heritage tourism
+  - social media
+  - tourist photography
+  - digital platforms
+  - urban regeneration
+  - China
 ---
