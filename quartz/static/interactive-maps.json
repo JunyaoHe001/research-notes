@@ -40,13 +40,23 @@
     "showOnResearch": true
   },
   {
+    "title": "Global Digital Nomad Mobility Network",
+    "subtitle": "City-to-city mobility networks · 2015–2025",
+    "description": "A deliberately lossy, visualisation-only public representation. It is not the analytical research dataset.",
+    "externalLink": "https://junyaohe001.github.io/digital-nomad-mobility-atlas/",
+    "screenshot": "/research-notes/static/interactive-maps/digital-nomad-network.png",
+    "imageAlt": "A deliberately lossy, visualisation-only public representation. It is not the analytical research dataset.",
+    "displayOrder": 5,
+    "showOnResearch": true
+  },
+  {
     "title": "ABM of Regional Mobility in Central Macedonia",
     "subtitle": "MOBI-TWIN · Interactive agent-based modelling · Greece · 2025–2035",
     "description": "An interactive agent-based modelling demonstration of regional mobility and population change in a pilot region - Central Macedonia. The browser-based model uses a synthetic population to explore how alternative transition scenarios, remote work, relocation behaviour, congestion, and social influence shape regional outcomes over time.",
     "externalLink": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
     "screenshot": "/research-notes/static/interactive-maps/mobi-twin-abm-example-website.png",
     "imageAlt": "An interactive ABM example",
-    "displayOrder": 5,
+    "displayOrder": 6,
     "showOnResearch": true
   },
   {
@@ -56,7 +66,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-3-networks/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/3-power-networks.png",
     "imageAlt": "Interactive visualisation of an anonymised expert-initiated Weibo forwarding network, with filtering controls on the left and a community-coloured network graph on the right.",
-    "displayOrder": 6,
+    "displayOrder": 7,
     "showOnResearch": true
   },
   {
@@ -66,7 +76,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-enning-road-network/",
     "screenshot": "/research-notes/static/interactive-maps/enningroadwebsite.png",
     "imageAlt": "Interactive temporal Weibo network of the Mashi Street Protection Movement in Guangzhou, with timeline and network controls on the left.",
-    "displayOrder": 7,
+    "displayOrder": 8,
     "showOnResearch": true
   }
 ]
