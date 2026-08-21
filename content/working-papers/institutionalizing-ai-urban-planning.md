@@ -8,7 +8,7 @@ authors:
   - Yang, C.
 year: 2026
 publication-type: Working paper
-status: Revising for Resubmission
+status: Revise and Resubmit
 research-line: Digital planning, platform governance, and networked power
 description: The article conceptualizes Discursive AI Opportunity Structure to
   examine how artificial intelligence is framed, justified, and
