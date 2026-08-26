@@ -4,41 +4,22 @@ on:
   push:
     branches: [v5]
   workflow_dispatch:
-  schedule:
-    - cron: '*/5 * * * *'
 
 permissions:
-  actions: write
   contents: read
   pages: write
   id-token: write
 
 concurrency:
-  group: research-notes-publish-v2
+  group: research-notes-pages
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    steps:
-      - name: Cancel stale queued workflow runs
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          run_ids="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/actions/runs?status=queued&per_page=100" --jq '.workflow_runs[].id' || true)"
-          for run_id in ${run_ids}; do
-            if [[ "${run_id}" == "${GITHUB_RUN_ID}" ]]; then
-              continue
-            fi
-            echo "Cancelling stale queued run ${run_id}"
-            gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/runs/${run_id}/cancel" >/dev/null 2>&1 \
-              || gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/runs/${run_id}/force-cancel" >/dev/null 2>&1 \
-              || true
-          done
 
+    steps:
       - name: Check out website source
         uses: actions/checkout@v4
         with:
@@ -56,24 +37,37 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
-      - name: Validate CMS data and refreshed screenshot
+      - name: Validate Pages CMS data and interactive-map screenshots
         run: |
           node --input-type=module <<'NODE'
           import fs from "node:fs"
+          import path from "node:path"
           import YAML from "yaml"
 
           YAML.parse(fs.readFileSync(".pages.yml", "utf8"))
-          const entries = JSON.parse(fs.readFileSync("quartz/static/interactive-maps.json", "utf8"))
-          const entry = entries.find((item) => item.title === "Dutch Municipal Job–Home Networks")
 
-          if (!entry) throw new Error("Dutch job-home card is missing")
-          if (entry.screenshot !== "/research-notes/static/interactive-maps/nl-job-home-2-1.png?v=20260826-2") {
-            throw new Error(`Unexpected screenshot reference: ${entry.screenshot}`)
+          const sourceFile = "quartz/static/interactive-maps.json"
+          const entries = JSON.parse(fs.readFileSync(sourceFile, "utf8"))
+          if (!Array.isArray(entries)) throw new Error(`${sourceFile} must contain an array`)
+
+          for (const entry of entries.filter((item) => item && item.showOnResearch !== false)) {
+            if (!entry.title || !entry.externalLink || !entry.screenshot) {
+              throw new Error(`Incomplete interactive-map entry: ${JSON.stringify(entry)}`)
+            }
+
+            const screenshotPath = String(entry.screenshot).split("?", 1)[0]
+            const sitePrefix = "/research-notes/"
+            const relativePath = screenshotPath.startsWith(sitePrefix)
+              ? screenshotPath.slice(sitePrefix.length)
+              : screenshotPath.replace(/^\/+/, "")
+            const localPath = path.join("quartz", relativePath)
+
+            if (!fs.existsSync(localPath)) {
+              throw new Error(`Screenshot is missing for ${entry.title}: ${localPath}`)
+            }
           }
-          if (!fs.existsSync("quartz/static/interactive-maps/nl-job-home-2-1.png")) {
-            throw new Error("Refreshed Dutch job-home screenshot file is missing")
-          }
-          console.log("CMS data and refreshed screenshot are valid.")
+
+          console.log(`Validated ${entries.length} interactive-map entries.`)
           NODE
 
       - name: Synchronize generated content
@@ -88,11 +82,31 @@ jobs:
       - name: Generate tag-network data
         run: node scripts/build-tag-network-data.mjs
 
-      - name: Validate built card assets
+      - name: Validate built interactive-map assets
         run: |
-          test -f public/static/interactive-maps/nl-job-home-2-1.png
-          test -f public/static/interactive-maps.json
-          grep -F 'nl-job-home-2-1.png?v=20260826-2' public/static/interactive-maps.json
+          node --input-type=module <<'NODE'
+          import fs from "node:fs"
+          import path from "node:path"
+
+          const builtData = "public/static/interactive-maps.json"
+          if (!fs.existsSync(builtData)) throw new Error(`${builtData} was not generated`)
+
+          const entries = JSON.parse(fs.readFileSync(builtData, "utf8"))
+          for (const entry of entries.filter((item) => item && item.showOnResearch !== false)) {
+            const screenshotPath = String(entry.screenshot).split("?", 1)[0]
+            const sitePrefix = "/research-notes/"
+            const relativePath = screenshotPath.startsWith(sitePrefix)
+              ? screenshotPath.slice(sitePrefix.length)
+              : screenshotPath.replace(/^\/+/, "")
+            const publicPath = path.join("public", relativePath)
+
+            if (!fs.existsSync(publicPath)) {
+              throw new Error(`Built screenshot is missing for ${entry.title}: ${publicPath}`)
+            }
+          }
+
+          console.log("Built interactive-map assets are complete.")
+          NODE
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
@@ -106,6 +120,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy website
         id: deployment
