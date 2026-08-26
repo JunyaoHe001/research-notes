@@ -1,109 +1,66 @@
-name: Deploy Quartz site to GitHub Pages
+name: Deploy Research Notes
 
 on:
-  push:
-    branches:
-      - v5
-  pull_request:
-    branches:
-      - v5
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 concurrency:
-  group: pages-${{ github.event_name }}-${{ github.ref }}
+  group: research-notes-pages
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - name: Checkout
+      - name: Check out v5
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
-      - name: Setup Node
+      - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version-file: .node-version
           cache: npm
 
       - name: Configure GitHub Pages
-        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-audit --no-fund
 
       - name: Validate Pages CMS configuration
         run: node --input-type=module -e 'import fs from "node:fs"; import YAML from "yaml"; YAML.parse(fs.readFileSync(".pages.yml", "utf8")); console.log("Pages CMS configuration is valid YAML.")'
 
-      - name: Synchronize generated content indexes
-        run: node scripts/sync-content-indexes.mjs
-
-      - name: Format activity dates by month
-        run: node scripts/format-activity-months.mjs
-
-      - name: Synchronize tag network settings
-        run: node scripts/sync-graph-settings.mjs
-
-      - name: Commit synchronized files
-        if: github.event_name == 'push' && github.ref == 'refs/heads/v5'
+      - name: Synchronize generated content
         run: |
-          GENERATED_FILES=(
-            content/index.md
-            content/publications/index.md
-            content/working-papers/index.md
-            content/activities/index.md
-            content/teaching/index.md
-            content/projects/index.md
-            content/methods/index.md
-            quartz/graph-settings.generated.ts
-          )
+          node scripts/sync-content-indexes.mjs
+          node scripts/format-activity-months.mjs
+          node scripts/sync-graph-settings.mjs
 
-          if git diff --quiet -- "${GENERATED_FILES[@]}"; then
-            echo "Generated files are already synchronized."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "${GENERATED_FILES[@]}"
-          git commit -m "content: synchronize generated site files"
-          git push origin HEAD:v5
-
-      - name: Build Quartz
+      - name: Build Quartz site
         run: npx quartz build
 
-      - name: Generate tag network data
+      - name: Generate tag-network data
         run: node scripts/build-tag-network-data.mjs
 
-      - name: Upload preview artifact
-        if: github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v4
-        with:
-          name: quartz-preview
-          path: public
-          retention-days: 3
-
-      - name: Upload Pages artifact
-        if: github.event_name != 'pull_request'
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: public
 
   deploy:
-    if: github.event_name != 'pull_request'
     needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
