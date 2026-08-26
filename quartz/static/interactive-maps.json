@@ -4,7 +4,7 @@
     "subtitle": "Netherlands · 2014–2024",
     "description": "Explore annual home-to-work links between Dutch municipalities from 2014 to 2024. Municipality colours show net job-flow balance and other network measures. Directed lines trace the strongest links from municipalities of residence to municipalities of work. While the paper is under review, the public map includes the strongest 70% of positive intermunicipal links in each year.",
     "externalLink": "https://junyaohe001.github.io/Netherlands-Job-Home-Network/",
-    "screenshot": "/research-notes/static/interactive-maps/nl-job-home-2-1.png",
+    "screenshot": "/research-notes/static/interactive-maps/nl-job-home-2-1.png?v=20260826-2",
     "imageAlt": "Interactive map of Dutch municipal job–home networks, with year and network controls on the left and directed home-to-work links across Dutch municipalities.",
     "displayOrder": 1,
     "showOnResearch": true
