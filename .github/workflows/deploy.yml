@@ -4,6 +4,8 @@ on:
   push:
     branches: [v5]
   workflow_dispatch:
+  issues:
+    types: [opened]
 
 permissions:
   contents: read
@@ -16,6 +18,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'issues' || github.event.issue.title == '[deploy] Research Notes'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
