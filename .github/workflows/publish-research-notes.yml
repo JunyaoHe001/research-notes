@@ -1,0 +1,94 @@
+name: Publish Research Notes
+
+on:
+  push:
+    branches: [v5]
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: research-notes-publish-v2
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out website source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Validate CMS data and refreshed screenshot
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs"
+          import YAML from "yaml"
+
+          YAML.parse(fs.readFileSync(".pages.yml", "utf8"))
+          const entries = JSON.parse(fs.readFileSync("quartz/static/interactive-maps.json", "utf8"))
+          const entry = entries.find((item) => item.title === "Dutch Municipal Job–Home Networks")
+
+          if (!entry) throw new Error("Dutch job-home card is missing")
+          if (entry.screenshot !== "/research-notes/static/interactive-maps/nl-job-home-2-1.png?v=20260826-2") {
+            throw new Error(`Unexpected screenshot reference: ${entry.screenshot}`)
+          }
+          if (!fs.existsSync("quartz/static/interactive-maps/nl-job-home-2-1.png")) {
+            throw new Error("Refreshed Dutch job-home screenshot file is missing")
+          }
+          console.log("CMS data and refreshed screenshot are valid.")
+          NODE
+
+      - name: Synchronize generated content
+        run: |
+          node scripts/sync-content-indexes.mjs
+          node scripts/format-activity-months.mjs
+          node scripts/sync-graph-settings.mjs
+
+      - name: Build Quartz website
+        run: npx quartz build
+
+      - name: Generate tag-network data
+        run: node scripts/build-tag-network-data.mjs
+
+      - name: Validate built card assets
+        run: |
+          test -f public/static/interactive-maps/nl-job-home-2-1.png
+          test -f public/static/interactive-maps.json
+          grep -F 'nl-job-home-2-1.png?v=20260826-2' public/static/interactive-maps.json
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
