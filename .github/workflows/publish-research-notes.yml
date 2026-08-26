@@ -8,6 +8,7 @@ on:
     - cron: '*/5 * * * *'
 
 permissions:
+  actions: write
   contents: read
   pages: write
   id-token: write
@@ -21,6 +22,23 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      - name: Cancel stale queued workflow runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          run_ids="$(gh api --paginate "repos/${GITHUB_REPOSITORY}/actions/runs?status=queued&per_page=100" --jq '.workflow_runs[].id' || true)"
+          for run_id in ${run_ids}; do
+            if [[ "${run_id}" == "${GITHUB_RUN_ID}" ]]; then
+              continue
+            fi
+            echo "Cancelling stale queued run ${run_id}"
+            gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/runs/${run_id}/cancel" >/dev/null 2>&1 \
+              || gh api --method POST "repos/${GITHUB_REPOSITORY}/actions/runs/${run_id}/force-cancel" >/dev/null 2>&1 \
+              || true
+          done
+
       - name: Check out website source
         uses: actions/checkout@v4
         with:
