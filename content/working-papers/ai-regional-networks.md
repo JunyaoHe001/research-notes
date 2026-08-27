@@ -27,6 +27,6 @@ This manuscript develops a GeoAI-based framework for measuring AI-related cooper
 The research links computational text analysis with economic-geography debates on regional capabilities, technological transitions, and uneven innovation.
 
 ## Related pages
-- https://junyaohe001.github.io/global-ai-network-atlas
+
 - [[../research#ai-innovation-and-computational-economic-geography|AI and computational economic geography]]
 - [[../methods/complex-networks|Complex networks as a shared framework]]
