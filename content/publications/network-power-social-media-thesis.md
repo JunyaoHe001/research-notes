@@ -2,7 +2,7 @@
 title: "Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China"
 authors:
   - "He, J."
-year: 2026
+year-month: 2026-01
 publication-type: Doctoral thesis
 publisher: InPlanning
 series: InPlanning PhD Series
