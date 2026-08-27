@@ -6,7 +6,7 @@ authors:
   - Ballas, D.
   - Pan, X.
   - Yang, C.
-year: 2026
+year-month: 2026-08
 publication-type: Working paper
 status: Under Review
 research-line: Migration, teleworkability, and regional inequality
