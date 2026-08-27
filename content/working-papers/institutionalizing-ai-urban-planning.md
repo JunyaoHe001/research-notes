@@ -6,7 +6,7 @@ authors:
   - Lin, Y.
   - He, J.
   - Yang, C.
-year-month: 2026-08
+year-month: 2026-07
 publication-type: Working paper
 status: Revise and Resubmit
 research-line: Digital planning, platform governance, and networked power
