@@ -5,7 +5,7 @@ authors:
   - Lin, Y.
   - Hooimeijer, P.
   - Monstadt, J.
-year: 2026
+year-month: 2026-07
 publication-type: Working paper
 status: Under Review
 research-line: Digital methods, networked discourse, and computational social science
