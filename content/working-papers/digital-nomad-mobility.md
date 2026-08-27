@@ -5,7 +5,7 @@ authors:
   - Yang, C.
   - Zhang, S.
   - Mao, Y.
-year: 2026
+year-month: 2026-08
 publication-type: Working paper
 status: Finalizing
 research-line: Mobility networks and uneven urban opportunity
