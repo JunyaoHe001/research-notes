@@ -2,7 +2,7 @@
 title: "Gaining Discursive Power through Framing: Citizens' Strategic Use of Social Media in Collaborative Planning"
 authors:
   - "He, J."
-year: 2026
+year-month: 2026-05
 publication-type: Book chapter
 publisher: Routledge
 book: "Chinese Collaborative Planning in the Digital Era: Institutions, Power Relations, and Public Spheres"
