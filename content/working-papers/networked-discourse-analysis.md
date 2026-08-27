@@ -1,22 +1,24 @@
 ---
-title: "From Interaction Networks to Interpretive Samples: Networked Discourse Analysis for Digital Social Research"
+title: "From Interaction Networks to Interpretive Samples: Networked Discourse
+  Analysis for Digital Social Research"
 authors:
   - He, J.
   - Lin, Y.
   - Hooimeijer, P.
   - Monstadt, J.
-year-month: 2026-07
+year-month: 2026-06
 publication-type: Working paper
 status: Under Review
 research-line: Digital methods, networked discourse, and computational social science
-description: A framework integrating network analysis and discourse analysis to study networked power and discursive influence in digital data.
+description: A framework integrating network analysis and discourse analysis to
+  study networked power and discursive influence in digital data.
 tags:
   - working-paper
   - network-analysis
   - discourse-analysis
   - digital-methods
+show-in-tag-network: true
 ---
-
 ## Abstract
 
 This paper develops a general framework that connects interaction-network analysis with theoretically informed interpretive sampling. Digital social research often faces a trade-off between large-scale relational measurement and close interpretation of discourse. The proposed approach uses network structure to identify strategically meaningful actors, ties, communities, and communication episodes for qualitative analysis.
