@@ -5,7 +5,7 @@ authors:
   - "Lin, Y."
   - "Hooimeijer, P."
   - "Monstadt, J."
-year: 2024
+year-month: 2024-05
 publication-type: Journal article
 journal: Cities
 volume: "148"

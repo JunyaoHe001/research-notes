@@ -3,6 +3,8 @@ name: Publish Research Notes
 on:
   push:
     branches: [v5]
+  pull_request:
+    branches: [v5]
   workflow_dispatch:
 
 permissions:
@@ -11,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: research-notes-pages
+  group: research-notes-pages-${{ github.event_name }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -32,6 +34,7 @@ jobs:
           cache: npm
 
       - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
@@ -67,14 +70,37 @@ jobs:
             }
           }
 
-          console.log(`Validated ${entries.length} interactive-map entries.`)
+          const yearMonthPattern = /^[0-9]{4}-(0[1-9]|1[0-2])$/
+          for (const collection of ["publications", "working-papers"]) {
+            const directory = path.join("content", collection)
+            const files = fs
+              .readdirSync(directory)
+              .filter((file) => file.endsWith(".md") && file !== "index.md")
+
+            for (const file of files) {
+              const filePath = path.join(directory, file)
+              const source = fs.readFileSync(filePath, "utf8")
+              const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)
+              if (!match) throw new Error(`Missing YAML frontmatter in ${filePath}`)
+              const data = YAML.parse(match[1]) ?? {}
+              const yearMonth = String(data["year-month"] ?? "").trim()
+              if (!yearMonthPattern.test(yearMonth)) {
+                throw new Error(`Invalid year-month in ${filePath}: ${yearMonth || "missing"}`)
+              }
+            }
+          }
+
+          console.log(`Validated ${entries.length} interactive-map entries and all research-output year-month fields.`)
           NODE
 
       - name: Synchronize generated content
         run: |
           node scripts/sync-content-indexes.mjs
+          node scripts/sync-research-output-months.mjs
           node scripts/format-activity-months.mjs
           node scripts/sync-graph-settings.mjs
+          grep -F '| Year–Month |' content/publications/index.md
+          grep -F '| Year–Month |' content/working-papers/index.md
 
       - name: Build Quartz website
         run: npx quartz build
@@ -82,7 +108,7 @@ jobs:
       - name: Generate tag-network data
         run: node scripts/build-tag-network-data.mjs
 
-      - name: Validate built interactive-map assets
+      - name: Validate built interactive-map assets and research-output pages
         run: |
           node --input-type=module <<'NODE'
           import fs from "node:fs"
@@ -105,15 +131,23 @@ jobs:
             }
           }
 
-          console.log("Built interactive-map assets are complete.")
+          for (const pagePath of ["public/publications/index.html", "public/working-papers/index.html"]) {
+            if (!fs.existsSync(pagePath)) throw new Error(`Built page is missing: ${pagePath}`)
+            const html = fs.readFileSync(pagePath, "utf8")
+            if (!html.includes("Year–Month")) throw new Error(`Year–Month heading is missing in ${pagePath}`)
+          }
+
+          console.log("Built interactive-map assets and year-month research-output pages are complete.")
           NODE
 
       - name: Upload GitHub Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
           path: public
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 10

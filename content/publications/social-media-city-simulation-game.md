@@ -5,7 +5,7 @@ authors:
   - "Lin, Y."
   - "He, J."
   - "Lu, H."
-year: 2024
+year-month: 2024-10
 publication-type: Journal article
 journal: Simulation & Gaming
 volume: "55"

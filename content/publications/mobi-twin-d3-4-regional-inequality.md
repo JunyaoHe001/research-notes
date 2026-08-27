@@ -6,7 +6,7 @@ authors:
   - "Zhang, J."
   - "Jager, W."
   - "Ballas, D."
-year: 2026
+year-month: 2026-02
 publication-type: Deliverable report
 publisher: MOBI-TWIN
 link: "https://mobi-twin-project.eu/wp-content/uploads/2026/04/MOBI-TWIN_D3.4_27022026_Main_v1-4-FINAL-1-1.pdf"

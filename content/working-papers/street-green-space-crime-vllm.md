@@ -10,7 +10,7 @@ authors:
   - Li, P.
   - Zhao, B.
   - Zhang, J.
-year: 2026
+year-month: 2026-08
 publication-type: Working paper
 status: Submitted
 research-line: AI, urban analytics, and the built environment

@@ -5,7 +5,7 @@ authors:
   - "He, J."
   - "Han, Y."
   - "Chen, Q."
-year: 2022
+year-month: 2022-11
 publication-type: Journal article
 journal: World Architecture
 issue: "11"

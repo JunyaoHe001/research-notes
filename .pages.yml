@@ -144,14 +144,18 @@ content:
         operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields: [title, year, publication-type, journal, publisher]
+          fields: [title, year-month, publication-type, journal, publisher]
           search: [title, authors, journal, publisher, research-line, tags]
-          sort: [year, title]
-          default: { sort: year, order: desc }
+          sort: [year-month, title]
+          default: { sort: year-month, order: desc }
         fields:
           - { name: title, label: Title, type: string, required: true }
           - { name: authors, label: Authors, type: string, list: true, required: true }
-          - { name: year, label: Year, type: number, required: true }
+          - name: year-month
+            label: Year–Month (YYYY-MM)
+            type: string
+            required: true
+            description: Use YYYY-MM, for example 2026-08. This field controls display and chronological ordering.
           - name: publication-type
             label: Publication Type
             type: select
@@ -191,10 +195,10 @@ content:
         operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields: [title, year, status, research-line]
+          fields: [title, year-month, status, research-line]
           search: [title, authors, status, research-line, tags]
-          sort: [year, status, title]
-          default: { sort: year, order: desc }
+          sort: [year-month, status, title]
+          default: { sort: year-month, order: desc }
         fields:
           - name: title
             label: Title
@@ -202,7 +206,11 @@ content:
             required: true
             description: The file name is generated automatically from this title.
           - { name: authors, label: Authors, type: string, list: true, required: true }
-          - { name: year, label: Year, type: number, required: true }
+          - name: year-month
+            label: Year–Month (YYYY-MM)
+            type: string
+            required: true
+            description: Use YYYY-MM, for example 2026-08. This field controls display and chronological ordering.
           - name: publication-type
             label: Publication Type
             type: select

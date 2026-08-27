@@ -5,7 +5,7 @@ authors:
   - Yang, C
   - " He, J"
   - Liu, Z
-year: 2026
+year-month: 2026-08
 publication-type: Working paper
 status: Submitted
 research-line: Digital planning, platform governance, and networked power

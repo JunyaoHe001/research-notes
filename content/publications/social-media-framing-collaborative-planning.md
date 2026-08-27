@@ -6,7 +6,7 @@ authors:
   - "Lin, Y."
   - "Hooimeijer, P."
   - "Monstadt, J."
-year: 2026
+year-month: 2026-05
 publication-type: Journal article
 journal: Planning Practice & Research
 doi: "10.1080/02697459.2026.2665271"
