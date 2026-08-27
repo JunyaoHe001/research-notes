@@ -10,7 +10,7 @@ authors:
   - Li, P.
   - Zhao, B.
   - Zhang, J.
-year-month: 2026-08
+year-month: 2026-06
 publication-type: Working paper
 status: Submitted
 research-line: AI, urban analytics, and the built environment
@@ -24,6 +24,7 @@ tags:
   - crime
   - urban-analytics
 show-in-graph: true
+show-in-tag-network: true
 ---
 ## Abstract
 
