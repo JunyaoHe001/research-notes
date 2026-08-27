@@ -1,15 +1,5 @@
 [
   {
-    "title": "Dutch Municipal Job–Home Networks",
-    "subtitle": "Netherlands · 2014–2024",
-    "description": "Explore annual home-to-work links between Dutch municipalities from 2014 to 2024. Municipality colours show net job-flow balance and other network measures. Directed lines trace the strongest links from municipalities of residence to municipalities of work. While the paper is under review, the public map includes the strongest 70% of positive intermunicipal links in each year.",
-    "externalLink": "https://junyaohe001.github.io/Netherlands-Job-Home-Network/",
-    "screenshot": "/research-notes/static/interactive-maps/nl-job-home-2-1.png?v=20260826-2",
-    "imageAlt": "Interactive map of Dutch municipal job–home networks, with year and network controls on the left and directed home-to-work links across Dutch municipalities.",
-    "displayOrder": 1,
-    "showOnResearch": true
-  },
-  {
     "title": "Dutch Population Relocation Networks",
     "subtitle": "Netherlands · 2011–2024",
     "description": "Explore reconstructed municipality-level relocation flows by year range and demographic stratum. Municipality colours show net relocation balance, while directed curves show the strongest origin–destination flows.",
@@ -17,16 +7,6 @@
     "screenshot": "/research-notes/static/interactive-maps/dutch-population-relocation-networks.webp",
     "imageAlt": "The Dutch Population Relocation Networks atlas, showing demographic controls and a map of municipal net relocation flows in the Netherlands.",
     "displayOrder": 1,
-    "showOnResearch": true
-  },
-  {
-    "title": "Migration Networks in England and Wales",
-    "subtitle": "England and Wales · 2012–2025",
-    "description": "Explore inter-local-authority migration networks across five age groups from 2012 to 2025. LAD colours show migration balance or flow intensity, while directed curves reveal the strongest origin–destination links and selected-area network relationships.",
-    "externalLink": "https://junyaohe001.github.io/EnglandAndWalesRelocationNetwork/",
-    "screenshot": "/research-notes/static/interactive-maps/england-wales-relocation-network.webp",
-    "imageAlt": "Interactive atlas of age-specific migration networks in England and Wales, with controls for year, age group, local-authority measures and directed migration flows.",
-    "displayOrder": 3,
     "showOnResearch": true
   },
   {
@@ -40,12 +20,22 @@
     "showOnResearch": true
   },
   {
-    "title": "Global Digital Nomad Mobility Network",
-    "subtitle": "City-to-city mobility networks · 2015–2025",
-    "description": "A deliberately lossy, visualisation-only public representation. It is not the analytical research dataset.",
-    "externalLink": "https://junyaohe001.github.io/digital-nomad-mobility-atlas/",
-    "screenshot": "/research-notes/static/interactive-maps/digital-nomad-network-screenshot.png",
-    "imageAlt": "A deliberately lossy, visualisation-only public representation. It is not the analytical research dataset.",
+    "title": "Migration Networks in England and Wales",
+    "subtitle": "England and Wales · 2012–2025",
+    "description": "Explore inter-local-authority migration networks across five age groups from 2012 to 2025. LAD colours show migration balance or flow intensity, while directed curves reveal the strongest origin–destination links and selected-area network relationships.",
+    "externalLink": "https://junyaohe001.github.io/EnglandAndWalesRelocationNetwork/",
+    "screenshot": "/research-notes/static/interactive-maps/england-wales-relocation-network.webp",
+    "imageAlt": "Interactive atlas of age-specific migration networks in England and Wales, with controls for year, age group, local-authority measures and directed migration flows.",
+    "displayOrder": 3,
+    "showOnResearch": true
+  },
+  {
+    "title": "Dutch Municipal Job–Home Networks",
+    "subtitle": "Netherlands · 2014–2024",
+    "description": "Explore annual home-to-work links between Dutch municipalities from 2014 to 2024. Municipality colours show net job-flow balance and other network measures. Directed lines trace the strongest links from municipalities of residence to municipalities of work. While the paper is under review, the public map includes the strongest 70% of positive intermunicipal links in each year.",
+    "externalLink": "https://junyaohe001.github.io/Netherlands-Job-Home-Network/",
+    "screenshot": "/research-notes/static/interactive-maps/nl-job-home-2-1.png",
+    "imageAlt": "Interactive map of Dutch municipal job–home networks, with year and network controls on the left and directed home-to-work links across Dutch municipalities.",
     "displayOrder": 4,
     "showOnResearch": true
   },
@@ -60,13 +50,23 @@
     "showOnResearch": true
   },
   {
+    "title": "Global Digital Nomad Mobility Network",
+    "subtitle": "City-to-city mobility networks · 2015–2025",
+    "description": "A deliberately lossy, visualisation-only public representation. It is not the analytical research dataset.",
+    "externalLink": "https://junyaohe001.github.io/digital-nomad-mobility-atlas/",
+    "screenshot": "/research-notes/static/interactive-maps/digital-nomad-network-screenshot.png",
+    "imageAlt": "A deliberately lossy, visualisation-only public representation. It is not the analytical research dataset.",
+    "displayOrder": 6,
+    "showOnResearch": true
+  },
+  {
     "title": "ABM of Regional Mobility in Central Macedonia",
     "subtitle": "MOBI-TWIN · Interactive agent-based modelling · Greece · 2025–2035",
     "description": "An interactive agent-based modelling demonstration of regional mobility and population change in a pilot region - Central Macedonia. The browser-based model uses a synthetic population to explore how alternative transition scenarios, remote work, relocation behaviour, congestion, and social influence shape regional outcomes over time.",
     "externalLink": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
     "screenshot": "/research-notes/static/interactive-maps/mobi-twin-abm-example-website.png",
     "imageAlt": "An interactive ABM example",
-    "displayOrder": 6,
+    "displayOrder": 7,
     "showOnResearch": true
   },
   {
@@ -76,7 +76,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-3-networks/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/3-power-networks.png",
     "imageAlt": "Interactive visualisation of an anonymised expert-initiated Weibo forwarding network, with filtering controls on the left and a community-coloured network graph on the right.",
-    "displayOrder": 7,
+    "displayOrder": 8,
     "showOnResearch": true
   },
   {
@@ -86,7 +86,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-enning-road-network/",
     "screenshot": "/research-notes/static/interactive-maps/enningroadwebsite.png",
     "imageAlt": "Interactive temporal Weibo network of the Mashi Street Protection Movement in Guangzhou, with timeline and network controls on the left.",
-    "displayOrder": 8,
+    "displayOrder": 9,
     "showOnResearch": true
   }
 ]
