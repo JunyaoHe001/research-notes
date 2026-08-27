@@ -6,7 +6,7 @@ authors:
   - "He, J."
   - "Quan, J."
   - "Li, D."
-year: 2021
+year-month: 2021-08
 publication-type: Journal article
 journal: New Architecture
 issue: "4"
