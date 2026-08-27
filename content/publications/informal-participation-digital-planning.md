@@ -5,7 +5,7 @@ authors:
   - "Lin, Y."
   - "Hooimeijer, P."
   - "Monstadt, J."
-year: 2024
+year-month: 2024-11
 publication-type: Journal article
 journal: Computers, Environment and Urban Systems
 volume: "114"
