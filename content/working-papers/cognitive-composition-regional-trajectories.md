@@ -6,7 +6,7 @@ authors:
   - He, J.
   - Ziogas, T.
   - Ballas, D.
-year-month: 2026-07
+year-month: 2026-06
 publication-type: Working paper
 status: Revise and Resubmit
 research-line: Green and digital transitions, regional development, and spatial trajectories
