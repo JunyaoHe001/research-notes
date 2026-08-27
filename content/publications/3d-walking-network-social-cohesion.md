@@ -11,7 +11,7 @@ authors:
   - "Ding, Y."
   - "Zhao, B."
   - "Zhang, J."
-year: 2026
+year-month: 2026-03
 publication-type: Journal article
 journal: Frontiers of Architectural Research
 doi: "10.1016/j.foar.2026.03.009"
