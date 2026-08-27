@@ -5,7 +5,7 @@ authors:
   - Lin, Y.
   - He, J.
   - Riemens, R.
-year: 2026
+year-month: 2026-06
 publication-type: Working paper
 status: In Preparation
 research-line: Digital planning, platform governance, and networked power
