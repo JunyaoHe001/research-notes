@@ -6,7 +6,7 @@ authors:
   - "Hooimeijer, P."
   - "Monstadt, J."
   - "He, J."
-year: 2025
+year-month: 2025-04
 publication-type: Journal article
 journal: Cities
 volume: "159"
