@@ -6,7 +6,7 @@ authors:
   - Wang, T.
   - Venhorst, V.
   - Ballas, D.
-year-month: 2026-08
+year-month: 2026-07
 publication-type: Working paper
 status: Under Review
 research-line: Hybrid work, job–home networks, and regional restructuring
@@ -18,6 +18,7 @@ tags:
   - job-home-networks
   - causal-inference
   - Netherlands
+show-in-tag-network: true
 ---
 ## Abstract
 
