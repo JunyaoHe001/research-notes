@@ -24,7 +24,7 @@
     "subtitle": "England and Wales · 2012–2025",
     "description": "Explore inter-local-authority migration networks across five age groups from 2012 to 2025. LAD colours show migration balance or flow intensity, while directed curves reveal the strongest origin–destination links and selected-area network relationships.",
     "externalLink": "https://junyaohe001.github.io/EnglandAndWalesRelocationNetwork/",
-    "screenshot": "/research-notes/static/interactive-maps/england-wales-relocation-network.webp",
+    "screenshot": "/research-notes/static/interactive-maps/uknetwork.png",
     "imageAlt": "Interactive atlas of age-specific migration networks in England and Wales, with controls for year, age group, local-authority measures and directed migration flows.",
     "displayOrder": 3,
     "showOnResearch": true
