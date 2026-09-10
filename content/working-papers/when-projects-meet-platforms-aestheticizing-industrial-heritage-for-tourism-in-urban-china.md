@@ -7,7 +7,7 @@ authors:
   - Liu, Z
 year-month: 2026-08
 publication-type: Working paper
-status: Submitted
+status: Under Review
 research-line: Digital planning, platform governance, and networked power
 description: The study examines how urban regeneration and social media
   platforms jointly aestheticize industrial heritage in Xiaohe Park, Hangzhou.
