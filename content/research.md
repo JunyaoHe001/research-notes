@@ -35,7 +35,7 @@ Mobility is relational. Cities and regions are shaped by the origins, destinatio
 
 **Representative work**
 
-- [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](./working-papers/dutch-migration-networks)
+- [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](./research-notes/publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
 - [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
 - [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
 
