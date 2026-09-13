@@ -16,7 +16,7 @@ Five interconnected research lines organise Junyao He's work. Complex networks a
 </section>
 
 
-## Hybrid work, job–home networks, and regional inequality
+## Remote work, job–home networks, and regional inequality
 
 Major active research line.
 
@@ -24,10 +24,11 @@ Remote and hybrid work change the spatial relationship between employment and re
 
 **Representative work**
 
+- [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
 - [Teleworkability and the Evolution of Job–Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
 - [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
 
-## Mobility, migration, and uneven spatial opportunity
+## Mobility, migration, and uneven spatial outcomes
 
 Major active research line.
 
@@ -35,7 +36,6 @@ Mobility is relational. Cities and regions are shaped by the origins, destinatio
 
 **Representative work**
 
-- [Different Strokes for Different Folks: Teleworkability, Heterogeneity, and the Restructuring of Dutch Internal Migration Networks](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
 - [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
 - [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
 
