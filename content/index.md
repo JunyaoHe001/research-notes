@@ -28,10 +28,9 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 
 <!-- AUTO-GENERATED:HOME-HIGHLIGHTS:START -->
 - Guest Co-Editor for the 2027 *Society Register* Special Issue, [*Participatory Urban Governance Beyond Western Democracies: Motivations, Expressions, and Outcomes*](./activities/participatory-urban-governance-beyond-western-democracies).
-<!-- AUTO-GENERATED:HOME-HIGHLIGHTS:END -->
-- Under review: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
 - Journal article (2026): [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
 - R&R (Major): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
+- Under review: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
 - Finalizing manuscript: [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
 - Ongoing manuscript (Abstract accepted): [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
 - Report (2026): [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
@@ -39,6 +38,7 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 - Journal article (2026): [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning).
 - Journal article (2024): [Informal participation in digital planning: How can third parties use social media to shift power relations in planning?](./publications/informal-participation-digital-planning).
 - Journal article (2024): [Measuring social network influence on power relations in collaborative planning: A case study of Beijing City, China](./publications/measuring-social-network-influence).
+<!-- AUTO-GENERATED:HOME-HIGHLIGHTS:END -->
 
 ## Contact
 
