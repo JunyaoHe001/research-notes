@@ -144,13 +144,30 @@ content:
         operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields: [title, year-month, publication-type, journal, publisher]
-          search: [title, authors, journal, publisher, research-line, tags]
+          fields: [title, year-month, authorship, publication-type, journal, publisher]
+          search: [title, authors, authorship, journal, publisher, research-line, tags]
           sort: [year-month, title]
           default: { sort: year-month, order: desc }
         fields:
           - { name: title, label: Title, type: string, required: true }
           - { name: authors, label: Authors, type: string, list: true, required: true }
+          - name: authorship
+            label: Authorship group
+            type: select
+            default: automatic
+            description: >-
+              Controls the overview section without changing the published author order.
+              Automatic uses the first author (He, J.). Select Lead-authored for a
+              corresponding-author or joint-first-author contribution you wish to list
+              in the lead group. Manual selections override automatic classification.
+            options:
+              values:
+                - name: automatic
+                  label: Automatic
+                - name: lead-authored
+                  label: Lead-authored
+                - name: co-authored
+                  label: Co-authored
           - name: year-month
             label: Year–Month (YYYY-MM)
             type: string
@@ -195,8 +212,8 @@ content:
         operations: { create: true, rename: false, delete: true }
         view:
           primary: title
-          fields: [title, year-month, status, research-line]
-          search: [title, authors, status, research-line, tags]
+          fields: [title, year-month, authorship, status, research-line]
+          search: [title, authors, authorship, status, research-line, tags]
           sort: [year-month, status, title]
           default: { sort: year-month, order: desc }
         fields:
@@ -206,6 +223,23 @@ content:
             required: true
             description: The file name is generated automatically from this title.
           - { name: authors, label: Authors, type: string, list: true, required: true }
+          - name: authorship
+            label: Authorship group
+            type: select
+            default: automatic
+            description: >-
+              Controls the overview section without changing the published author order.
+              Automatic uses the first author (He, J.). Select Lead-authored for a
+              corresponding-author or joint-first-author contribution you wish to list
+              in the lead group. Manual selections override automatic classification.
+            options:
+              values:
+                - name: automatic
+                  label: Automatic
+                - name: lead-authored
+                  label: Lead-authored
+                - name: co-authored
+                  label: Co-authored
           - name: year-month
             label: Year–Month (YYYY-MM)
             type: string
