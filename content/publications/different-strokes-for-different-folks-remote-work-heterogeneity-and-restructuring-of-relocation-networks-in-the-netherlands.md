@@ -2,7 +2,7 @@
 title: "Different Strokes for Different Folks: Remote Work, Heterogeneity, and
   Restructuring of Relocation Networks in the Netherlands"
 authors:
-  - He, J.*
+  - He, J.
   - Ballas, D.
   - Pan, X.
   - Yang, C.
