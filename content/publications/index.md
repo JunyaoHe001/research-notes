@@ -1,23 +1,31 @@
 ---
 title: Publications
-description: Peer-reviewed journal articles, book chapters, thesis, and research deliverables.
+description: Lead-authored and co-authored peer-reviewed journal articles, book chapters, thesis, and research deliverables.
 ---
 
 Peer-reviewed journal articles, book chapters, thesis, and research deliverables. Click any title for authors, publication details, DOI or full-text link, and an abstract or summary.
 
 <!-- AUTO-GENERATED:PUBLICATIONS:START -->
+## Lead-authored Publications
+
 | Year–Month | Title | Journal / Publisher |
 | --- | --- | --- |
+| 2026-09 | [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](../publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands) | Applied Geography |
 | 2026-05 | [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](../publications/social-media-framing-collaborative-planning) | Planning Practice & Research |
 | 2026-05 | [Gaining Discursive Power through Framing: Citizens' Strategic Use of Social Media in Collaborative Planning](../publications/gaining-discursive-power-framing) | Routledge |
-| 2026-04 | [MOBI-TWIN D3.1: Methodological Report Describing the MOBI-TWIN Model](../publications/mobi-twin-d3-1-model) | MOBI-TWIN |
-| 2026-03 | [3D Walking Network Shapes Social Cohesion of the Elderly in Aging Communities: Evidence from Nanjing, China](../publications/3d-walking-network-social-cohesion) | Frontiers of Architectural Research |
 | 2026-02 | [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](../publications/mobi-twin-d3-4-regional-inequality) | MOBI-TWIN |
 | 2026-01 | [Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China](../publications/network-power-social-media-thesis) | InPlanning |
-| 2025-04 | [The Communicative Turn in Planning? Examining Community Planner's Role as a Third Actor in Beijing, China](../publications/communicative-turn-community-planners) | Cities |
 | 2024-11 | [Informal Participation in Digital Planning: How Can Third Parties Use Social Media to Shift Power Relations in Planning?](../publications/informal-participation-digital-planning) | Computers, Environment and Urban Systems |
-| 2024-10 | [Using Social Media Data to Understand Citizen Perceptions of Urban Planning in a City Simulation Game](../publications/social-media-city-simulation-game) | Simulation & Gaming |
 | 2024-05 | [Measuring Social Network Influence on Power Relations in Collaborative Planning: A Case Study of Beijing City, China](../publications/measuring-social-network-influence) | Cities |
+
+## Co-authored Publications
+
+| Year–Month | Title | Journal / Publisher |
+| --- | --- | --- |
+| 2026-04 | [MOBI-TWIN D3.1: Methodological Report Describing the MOBI-TWIN Model](../publications/mobi-twin-d3-1-model) | MOBI-TWIN |
+| 2026-03 | [3D Walking Network Shapes Social Cohesion of the Elderly in Aging Communities: Evidence from Nanjing, China](../publications/3d-walking-network-social-cohesion) | Frontiers of Architectural Research |
+| 2025-04 | [The Communicative Turn in Planning? Examining Community Planner's Role as a Third Actor in Beijing, China](../publications/communicative-turn-community-planners) | Cities |
+| 2024-10 | [Using Social Media Data to Understand Citizen Perceptions of Urban Planning in a City Simulation Game](../publications/social-media-city-simulation-game) | Simulation & Gaming |
 | 2022-11 | [“Design” Towards Digital Transformation of Cities](../publications/design-digital-transformation-cities) | World Architecture |
 | 2021-08 | [Design Empowerment for Urban Micro-renewal Driven by New Technology: Shuangjing Micro-renewal Practice Based on Human and Evidence-based Participatory Design Methodology](../publications/design-empowerment-micro-renewal) | New Architecture |
 <!-- AUTO-GENERATED:PUBLICATIONS:END -->

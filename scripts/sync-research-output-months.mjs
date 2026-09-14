@@ -150,13 +150,28 @@ function isLeadAuthored(data) {
 }
 
 function renderPublicationTable(items) {
-  const lines = ["| Year–Month | Title | Journal / Publisher |", "| --- | --- | --- |"]
-  for (const item of items) {
-    lines.push(
-      `| ${escapeTableCell(item.yearMonth)} | [${escapeTableCell(item.title)}](${contentLink("publications", item.slug)}) | ${escapeTableCell(publicationVenue(item.data))} |`,
-    )
-  }
-  return lines.join("\n")
+  const sections = [
+    ["Lead-authored Publications", items.filter((item) => isLeadAuthored(item.data))],
+    ["Co-authored Publications", items.filter((item) => !isLeadAuthored(item.data))],
+  ]
+
+  return sections
+    .map(([title, entries]) => {
+      const lines = [
+        `## ${title}`,
+        "",
+        "| Year–Month | Title | Journal / Publisher |",
+        "| --- | --- | --- |",
+      ]
+      for (const item of entries) {
+        lines.push(
+          `| ${escapeTableCell(item.yearMonth)} | [${escapeTableCell(item.title)}](${contentLink("publications", item.slug)}) | ${escapeTableCell(publicationVenue(item.data))} |`,
+        )
+      }
+      if (entries.length === 0) lines.push("| None | No entries currently listed. | None |")
+      return lines.join("\n")
+    })
+    .join("\n\n")
 }
 
 function renderWorkingPaperSection(title, items) {
