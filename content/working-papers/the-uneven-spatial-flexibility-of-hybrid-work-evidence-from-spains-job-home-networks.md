@@ -4,7 +4,7 @@ title: Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s
 authors:
   - He, J.
   - Yang, C.
-year-month: 2026-07
+year-month: 2026-09
 publication-type: Working paper
 status: Revise and Resubmit
 research-line: Hybrid work, job–home networks, and regional policy
@@ -19,14 +19,14 @@ tags:
   - spain
 show-in-graph: true
 show-in-tag-network: true
+authorship: automatic
 ---
 ## Abstract
 
-Job home linkages connect residential locations with employment centres and form a relational structure within urban systems. Hybrid work changes how often these links require travel to a fixed workplace and may produce distinct spatial networks. Using district level mobility data for Spain from 2022 to 2024, the article develops a gradient network approach. It compares national structures, traces district level relational change, and examines variation by settlement urbanity and established network position.
-
-The results show that greater flexibility is associated with broader and less concentrated networks. The strongest geographic extension appears among the most flexible connections. Within districts, hybrid intensity is most strongly associated with a more balanced distribution of partners. The associations are larger for employment catchments than for residential employment fields. Urban districts experience stronger diversification, while districts with weaker established positions expand more rapidly and remain below established centres. Hybrid work broadens labour market matching while preserving established urban hierarchy.
+Job-home linkages connect residential locations to employment centers, forming a relational structure within urban systems. The emergence of hybrid work raises the question of whether different levels of hybrid work correspond to distinct spatial networks. Using district-level mobility data for Spain from 2022 to 2024, this study combines home-to-work flows with recurrent mobility and uses workplace-attendance frequency as a proxy for hybrid-work intensity in constructing layered networks. A graded and directed network approach compares national structures, examines within-district relationships, and traces variation across settlement urbanity and established network position. It also distinguishes districts as residential origins and employment destinations, allowing the residential and employment sides of spatial flexibility to be examined separately. The results show that greater inferred hybrid-work intensity corresponds to broader and less concentrated job-home networks, with the greatest geographic reach appearing at the most flexible end of the gradient. These associations remain directional and uneven across settlement contexts and network positions. The associations are stronger for employment catchments than for residents’ employment fields, while established centers retain their structural advantages. Higher hybrid-work intensity is therefore associated with a broader geography of labor-market matching alongside a persistent hierarchy of employment destinations. The findings suggest that the spatial flexibility associated with hybrid work can coexist with uneven network advantages across regions, with implications for regional inequality.
 
 ## Related pages
 
+-
 - [[../research#hybrid-work-jobhome-networks-and-regional-restructuring|Hybrid work, job home networks, and regional restructuring]]
 - [[../methods/complex-networks|Complex networks as a shared framework]]
