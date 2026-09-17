@@ -1,5 +1,15 @@
 [
   {
+    "title": "Belgian Job–Home Network Atlas",
+    "subtitle": "Municipal job–home networks and population heterogeneity, 2015–2024",
+    "description": "An interactive atlas of Belgian municipal job–home networks from 2015 to 2024. Explore directional home-to-work connections, municipal profiles, temporal change, and heterogeneity by age, sex, education, employment status, and industry.",
+    "externalLink": "https://junyaohe001.github.io/BE-job-home-network/atlas/",
+    "screenshot": "/research-notes/static/interactive-maps/screenweb.png",
+    "imageAlt": "Interactive map of Belgian municipal job–home networks, showing home-to-work connections across 565 municipalities with demographic and employment filters.",
+    "displayOrder": 0,
+    "showOnResearch": true
+  },
+  {
     "title": "Dutch Population Relocation Networks",
     "subtitle": "Netherlands · 2011–2024",
     "description": "Explore reconstructed municipality-level relocation flows by year range and demographic stratum. Municipality colours show net relocation balance, while directed curves show the strongest origin–destination flows.",
@@ -87,16 +97,6 @@
     "screenshot": "/research-notes/static/interactive-maps/enningroadwebsite.png",
     "imageAlt": "Interactive temporal Weibo network of the Mashi Street Protection Movement in Guangzhou, with timeline and network controls on the left.",
     "displayOrder": 9,
-    "showOnResearch": true
-  },
-  {
-    "title": "Belgian Job–Home Network Atlas",
-    "subtitle": "Municipal job–home networks and population heterogeneity, 2015–2024",
-    "description": "An interactive atlas of Belgian municipal job–home networks from 2015 to 2024. Explore directional home-to-work connections, municipal profiles, temporal change, and heterogeneity by age, sex, education, employment status, and industry.",
-    "externalLink": "https://junyaohe001.github.io/BE-job-home-network/atlas/",
-    "screenshot": "/research-notes/static/interactive-maps/screenweb.png",
-    "imageAlt": "Interactive map of Belgian municipal job–home networks, showing home-to-work connections across 565 municipalities with demographic and employment filters.",
-    "displayOrder": 10,
     "showOnResearch": true
   }
 ]
