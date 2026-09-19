@@ -7,9 +7,9 @@ description: Economic geographer and computational social scientist working on c
   <img src="./junyao-he.jpg" alt="Portrait of Junyao He" width="537" height="631" loading="eager" />
 </figure>
 
-Junyao He is an economic geographer and computational social scientist in the Department of Economic Geography at the University of Groningen. His research uses **complex networks, spatial economics and GeoAI** to study how remote work, digitalisation, and AI reshape urban systems, labour markets, migration, and human mobility. He is particularly interested in the inequalities, sustainability, and heterogeneity in this transitions.
+Junyao He is an urban researcher, computational social scientist, and economic geographer. His research uses **agent-based modeling、complex networks, spatial economics and GeoAI** to study how digitalisation and AI reshape human mobility, urban systems, labour markets, and migration. He is particularly interested in the inequalities, sustainability, and heterogeneity in these transitions.
 
-His work connects four empirical fields: urban studies; economic geography; mobility and migration; and computational social science. His methodological work combines complex network analysis, spatial econometrics, causal inference, agent-based modelling, interpretable machine learning, spatial microsimulation, and large-scale text analysis.
+His work connects four empirical fields: urban studies; mobility and migration; economic geography; and computational social science. His methodological work is mix-methods. He works with on-site evidence from interviews and workshops. He is also the expert in complex network analysis, spatial econometrics, causal inference, agent-based modelling, interpretable machine learning, and large-scale text analysis.
 
 Junyao He completed a PhD in Human Geography and Spatial Planning at Utrecht University. He holds an MSc in Urban Design and International Planning from the University of Manchester and a BSc in Human Geography and Urban and Rural Planning from Southwest University. Junyao has accumulated nearly four years of experience in the consulting industry and has led large-scale consulting projects for both the public and private sectors, primarily related to urban analytics and urban policy.
 
