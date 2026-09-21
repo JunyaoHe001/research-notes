@@ -7,7 +7,7 @@ description: Economic geographer and computational social scientist working on c
   <img src="./junyao-he.jpg" alt="Portrait of Junyao He" width="537" height="631" loading="eager" />
 </figure>
 
-Junyao He is an urban researcher, computational social scientist, and economic geographer. His research uses **agent-based modeling、complex networks, spatial economics and GeoAI** to study how digitalisation and AI reshape human mobility, urban systems, labour markets, and migration. He is particularly interested in the inequalities, sustainability, and heterogeneity in these transitions.
+Junyao He is an urban researcher, computational social scientist, and economic geographer. His research uses **complex networks, spatial economics, agent-based modeling, and GeoAI** to study how digitalisation and AI reshape human mobility, urban systems, labour markets, and migration. He is particularly interested in the inequalities, sustainability, and heterogeneity in these transitions.
 
 His work connects four empirical fields: urban studies; mobility and migration; economic geography; and computational social science. His methodological work is mix-methods. He works with on-site evidence from interviews and workshops. He is also the expert in complex network analysis, spatial econometrics, causal inference, agent-based modelling, interpretable machine learning, and large-scale text analysis.
 
