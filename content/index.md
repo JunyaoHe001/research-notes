@@ -28,6 +28,7 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 
 <!-- AUTO-GENERATED:HOME-HIGHLIGHTS:START -->
 - Guest Co-Editor for the 2027 *Society Register* Special Issue, [*Participatory Urban Governance Beyond Western Democracies: Motivations, Expressions, and Outcomes*](./activities/participatory-urban-governance-beyond-western-democracies).
+<!-- AUTO-GENERATED:HOME-HIGHLIGHTS:END -->
 
 - Journal article (2026): [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
 - R&R (Major): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
@@ -39,7 +40,6 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 - Journal article (2026): [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning).
 - Journal article (2024): [Informal participation in digital planning: How can third parties use social media to shift power relations in planning?](./publications/informal-participation-digital-planning).
 - Journal article (2024): [Measuring social network influence on power relations in collaborative planning: A case study of Beijing City, China](./publications/measuring-social-network-influence).
-<!-- AUTO-GENERATED:HOME-HIGHLIGHTS:END -->
 
 ## Contact
 
