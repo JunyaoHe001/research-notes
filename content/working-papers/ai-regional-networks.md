@@ -29,6 +29,6 @@ The research links computational text analysis with economic-geography debates o
 
 ## Related pages
 
-Explore the [interactive visualisation of Global AI Co-occurance Network Atlas](https://junyaohe001.github.io/global-ai-network-atlas/).
+- [Interactive visualisation: Global AI Co-occurrence Network from News](https://junyaohe001.github.io/global-ai-network-atlas/)
 - [[../research#ai-innovation-and-computational-economic-geography|AI and computational economic geography]]
 - [[../methods/complex-networks|Complex networks as a shared framework]]
