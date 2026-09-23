@@ -25,5 +25,7 @@ show-in-tag-network: true
 
 This deliverable examines how spatial mobility associated with Europe's digital and green transitions may affect regional inequality and sustainability across different EU regional typologies. It brings together regional classification, mobility dynamics, scenario-based assessment, and modelling to consider how transition pathways can redistribute opportunity and environmental outcomes. The report contributes to the MOBI-TWIN analytical framework and supports place-sensitive policy evaluation.
 
-Explore the [interactive visualisation of Agent-based Modeling of A Pilot Region](https://junyaohe001.github.io/mobi-twin-ABM-lite/).
-[Download the report](https://mobi-twin-project.eu/wp-content/uploads/2026/04/MOBI-TWIN_D3.4_27022026_Main_v1-4-FINAL-1-1.pdf)
+## Related pages
+
+- [Interactive visualisation: ABM of Regional Mobility in Central Macedonia](https://junyaohe001.github.io/mobi-twin-ABM-lite/)
+- [Download the report](https://mobi-twin-project.eu/wp-content/uploads/2026/04/MOBI-TWIN_D3.4_27022026_Main_v1-4-FINAL-1-1.pdf)
