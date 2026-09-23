@@ -15,4 +15,6 @@ description: This ongoing study explores how differences in remote-work exposure
 ---
 This working paper is accompanied by an interactive visualisation of Belgium’s inter-municipal job–home network, providing an exploratory view of spatial patterns, temporal change, and population heterogeneity.
 
-- Explore the [interactive visualisation of Belgium’s inter-municipal job–home network](https://junyaohe001.github.io/BE-job-home-network/).
+## Related pages
+
+- [Interactive visualisation: Belgian Job–Home Network Atlas](https://junyaohe001.github.io/BE-job-home-network/atlas/)
