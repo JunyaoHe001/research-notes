@@ -19,7 +19,7 @@ tags:
   - spain
 show-in-graph: true
 show-in-tag-network: true
-authorship: automatic
+authorship: lead-authored
 ---
 ## Abstract
 
