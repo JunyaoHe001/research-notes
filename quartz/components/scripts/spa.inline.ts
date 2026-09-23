@@ -11,9 +11,22 @@ const isElement = (target: EventTarget | null): target is Element =>
 const isLocalUrl = (href: string) => {
   try {
     const url = new URL(href)
-    if (window.location.origin === url.origin) {
-      return true
+    if (window.location.origin !== url.origin) return false
+
+    // On the deployed GitHub Pages site, other project sites share the same
+    // origin (junyaohe001.github.io) but live outside /research-notes/.
+    // Treat those URLs as external so the SPA router does not morph them into
+    // the Research Notes shell.
+    const siteBasePath = "/research-notes"
+    const currentPageIsUnderBase =
+      window.location.pathname === siteBasePath ||
+      window.location.pathname.startsWith(`${siteBasePath}/`)
+
+    if (currentPageIsUnderBase) {
+      return url.pathname === siteBasePath || url.pathname.startsWith(`${siteBasePath}/`)
     }
+
+    return true
   } catch (e) {}
   return false
 }
