@@ -19,6 +19,7 @@ tags:
   - causal-inference
   - Netherlands
 show-in-tag-network: true
+authorship: automatic
 ---
 ## Abstract
 
@@ -30,5 +31,6 @@ The paper contributes to debates on remote work by moving beyond individual comm
 
 ## Related pages
 
+- Explore the [interactive visualisation of Netherlands' inter-municipal job–home network](https://junyaohe001.github.io/Netherlands-Job-Home-Network/).
 - [[../research#hybrid-work-jobhome-networks-and-regional-restructuring|Research line]]
 - [[../projects/hybrid-work-networks|Hybrid Work and Job–Home Networks project]]
