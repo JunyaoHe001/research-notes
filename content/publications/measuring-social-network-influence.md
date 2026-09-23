@@ -25,3 +25,7 @@ tags:
 The article develops a mixed-method approach for measuring how social-media networks affect power relations in collaborative planning. Using Beijing's Bell and Drum Tower planning controversy, it combines web scraping, social network analysis, and interviews to evaluate network structure, symmetry, and tie strength. The findings show that experts and journalists can accumulate substantial networked power by managing information flows, while government retains decisive formal authority. The study translates the concept of network power into empirically measurable relational dimensions.
 
 [DOI](https://doi.org/10.1016/j.cities.2024.104866)
+
+## Related pages
+
+- [Interactive visualisation: Power Network on Social Media](https://junyaohe001.github.io/weibo-3-networks/atlas/)
