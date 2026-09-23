@@ -54,5 +54,6 @@ Remote work is relaxing conventional workplace-residence constraints, yet how it
 
 ## Related pages
 
+- Explore the [interactive visualisation of Netherlands’ inter-municipal relocation network](https://junyaohe001.github.io/Netherlands-Relocation-Network/atlas/).
 - [[../research#mobility-migration-and-uneven-spatial-opportunity|Mobility and migration research]]
 - [[../methods/index|Methods and analytical approaches]]
