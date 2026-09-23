@@ -27,6 +27,6 @@ Job-home linkages connect residential locations to employment centers, forming a
 
 ## Related pages
 
--Explore the [interactive visualisation of Spain's job–home network](https://junyaohe001.github.io/hybrid-work-job-home-networks-spain/atlas/).
+- [Interactive visualisation: Job-Home Networks in Spain](https://junyaohe001.github.io/hybrid-work-job-home-networks-spain/atlas/)
 - [[../research#hybrid-work-jobhome-networks-and-regional-restructuring|Hybrid work, job home networks, and regional restructuring]]
 - [[../methods/complex-networks|Complex networks as a shared framework]]
