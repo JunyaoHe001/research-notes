@@ -25,3 +25,7 @@ tags:
 This article investigates how third parties use social media to participate informally in planning and reshape power relations. Focusing on Guangzhou's Enning Road regeneration, it combines social-media scraping, network analysis, interviews, and field observation. The analysis shows how civil-society organisations and journalists gain networked influence by mobilising participants, forming communities, and connecting online debate with offline action. These processes can alter planning priorities, although unequal visibility and state authority remain consequential.
 
 [DOI](https://doi.org/10.1016/j.compenvurbsys.2024.102193)
+
+## Related pages
+
+- [Interactive visualisation: Network of Informal Participation](https://junyaohe001.github.io/weibo-enning-road-network/)
