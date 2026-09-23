@@ -27,5 +27,6 @@ The study connects digital-nomad research with urban and economic geography by t
 
 ## Related pages
 
+- [Interactive visualisation: Global Digital Nomad Mobility Network](https://junyaohe001.github.io/digital-nomad-mobility-atlas/)
 - [[../research#mobility-migration-and-uneven-spatial-opportunity|Mobility and migration research]]
 - [[../projects/digital-nomad-mobility|Digital Nomad Mobility project]]
