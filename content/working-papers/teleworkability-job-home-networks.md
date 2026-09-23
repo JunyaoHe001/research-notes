@@ -19,7 +19,7 @@ tags:
   - causal-inference
   - Netherlands
 show-in-tag-network: true
-authorship: automatic
+authorship: lead-authored
 ---
 ## Abstract
 
