@@ -1,12 +1,22 @@
 [
   {
+    "title": "Swedish Municipal Job-Home Networks",
+    "subtitle": "Sweden · 2004-2024",
+    "description": "Explore SCB residence-to-workplace networks across 290 Swedish municipalities from 2004 to 2024. Compare incoming and outgoing connections, municipal network measures, and trends by year and sex within separate RAMS and BAS statistical series.",
+    "externalLink": "https://junyaohe001.github.io/SWE_job_home_network/",
+    "screenshot": "/research-notes/static/interactive-maps/swedish-job-home-networks.jpg",
+    "imageAlt": "Interactive atlas of Swedish municipal job-home networks, showing year and sex filters, directed residence-to-workplace connections, and municipal network indicators.",
+    "displayOrder": 11,
+    "showOnResearch": true
+  },
+  {
     "title": "Belgian Job–Home Network Atlas",
     "subtitle": "Belgium · Municipal Job–Home Networks · 2015–2024",
     "description": "An interactive atlas of Belgian municipal job–home networks from 2015 to 2024. Explore directional home-to-work connections, municipal profiles, temporal change, and heterogeneity by age, sex, education, employment status, and industry.",
     "externalLink": "https://junyaohe001.github.io/BE-job-home-network/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/screenweb.png",
     "imageAlt": "Interactive map of Belgian municipal job–home networks, showing home-to-work connections across 565 municipalities with demographic and employment filters.",
-    "displayOrder": 11,
+    "displayOrder": 12,
     "showOnResearch": true
   },
   {
@@ -16,7 +26,7 @@
     "externalLink": "https://junyaohe001.github.io/hybrid-work-job-home-networks-spain/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/spainhybridworknetwork.png",
     "imageAlt": "Interactive atlas of hybrid-work and job–home networks in Spain, showing district-level measures and directed residential-to-employment flows across workplace-attendance recurrence layers.",
-    "displayOrder": 12,
+    "displayOrder": 13,
     "showOnResearch": true
   },
   {
@@ -26,7 +36,7 @@
     "externalLink": "https://junyaohe001.github.io/EnglandAndWalesRelocationNetwork/",
     "screenshot": "/research-notes/static/interactive-maps/uknetwork.png",
     "imageAlt": "Interactive atlas of age-specific migration networks in England and Wales, with controls for year, age group, local-authority measures and directed migration flows.",
-    "displayOrder": 13,
+    "displayOrder": 14,
     "showOnResearch": true
   },
   {
@@ -36,7 +46,7 @@
     "externalLink": "https://junyaohe001.github.io/Netherlands-Job-Home-Network/",
     "screenshot": "/research-notes/static/interactive-maps/nl-job-home-2-1.png",
     "imageAlt": "Interactive map of Dutch municipal job–home networks, with year and network controls on the left and directed home-to-work links across Dutch municipalities.",
-    "displayOrder": 14,
+    "displayOrder": 15,
     "showOnResearch": true
   },
   {
@@ -46,7 +56,7 @@
     "externalLink": "https://junyaohe001.github.io/Netherlands-Relocation-Network/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/dutch-population-relocation-networks.webp",
     "imageAlt": "The Dutch Population Relocation Networks atlas, showing demographic controls and a map of municipal net relocation flows in the Netherlands.",
-    "displayOrder": 15,
+    "displayOrder": 16,
     "showOnResearch": true
   },
   {
@@ -56,7 +66,7 @@
     "externalLink": "https://junyaohe001.github.io/global-ai-network-atlas/",
     "screenshot": "/research-notes/static/interactive-maps/global-ai-coopeeration-network.png",
     "imageAlt": "Interactive atlas of global AI co-occurrence network from news, aggregated into ADM1 spatial units.",
-    "displayOrder": 16,
+    "displayOrder": 17,
     "showOnResearch": true
   },
   {
@@ -66,7 +76,7 @@
     "externalLink": "https://junyaohe001.github.io/digital-nomad-mobility-atlas/",
     "screenshot": "/research-notes/static/interactive-maps/digital-nomad-network-1.png",
     "imageAlt": "A deliberately lossy, visualisation-only public representation. It is not the analytical research dataset.",
-    "displayOrder": 17,
+    "displayOrder": 18,
     "showOnResearch": true
   },
   {
@@ -76,7 +86,7 @@
     "externalLink": "https://junyaohe001.github.io/mobi-twin-ABM-lite/",
     "screenshot": "/research-notes/static/interactive-maps/mobi-twin-abm-example-website.png",
     "imageAlt": "An interactive ABM example",
-    "displayOrder": 18,
+    "displayOrder": 19,
     "showOnResearch": true
   },
   {
@@ -86,7 +96,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-3-networks/atlas/",
     "screenshot": "/research-notes/static/interactive-maps/3-power-networks.png",
     "imageAlt": "Interactive visualisation of an anonymised expert-initiated Weibo forwarding network, with filtering controls on the left and a community-coloured network graph on the right.",
-    "displayOrder": 19,
+    "displayOrder": 20,
     "showOnResearch": true
   },
   {
@@ -96,7 +106,7 @@
     "externalLink": "https://junyaohe001.github.io/weibo-enning-road-network/",
     "screenshot": "/research-notes/static/interactive-maps/enningroadwebsite.png",
     "imageAlt": "Interactive temporal Weibo network of the Mashi Street Protection Movement in Guangzhou, with timeline and network controls on the left.",
-    "displayOrder": 20,
+    "displayOrder": 21,
     "showOnResearch": true
   }
 ]
