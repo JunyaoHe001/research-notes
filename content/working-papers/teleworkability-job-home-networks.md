@@ -6,7 +6,7 @@ authors:
   - Wang, T.
   - Venhorst, V.
   - Ballas, D.
-year-month: 2026-09
+year-month: 2026-10
 publication-type: Working paper
 status: Revise and Resubmit
 research-line: Hybrid work, job–home networks, and regional restructuring
