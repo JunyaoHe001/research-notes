@@ -6,7 +6,7 @@ authors:
   - Yang, C.
 year-month: 2026-10
 publication-type: Working paper
-status: Accepted
+status: Accepted / Waiting for publishing
 research-line: Hybrid work, job–home networks, and regional policy
 description: The article examines how different degrees of hybrid work reshape
   job home networks across districts in Spain between 2022 and 2024.
