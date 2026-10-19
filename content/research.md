@@ -50,6 +50,7 @@ AI and digital transformation are reshaping regional economies. Patents, firms, 
 
 - [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
 - [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./working-papers/cognitive-composition-regional-trajectories)
+- [Urban greening and public safety across day and night: A street-view and AI-based assessment of spatial safety context](./publications/urban-greening-public-safety-day-night)
 - [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](./working-papers/discursive-algorithmic-opportunity-europe)
 
 ## Digital planning, platform governance, and networked power
@@ -86,3 +87,4 @@ See also [Methods and analytical approaches](./methods/) and [Complex networks a
 
 Junyao He welcomes collaboration on complex networks, spatial mobility, remote work, migration, economic geography, digital planning, and computational urban research. Enquiries concerning papers, data, or research collaboration can be sent to [j.he@rug.nl](mailto:J.HE@RUG.NL) or [junyaohe.utrecht@gmail.com
 ](mailto:junyaohe.utrecht@gmail.com).
+

@@ -30,6 +30,7 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 - Guest Co-Editor for the 2027 *Society Register* Special Issue, [*Participatory Urban Governance Beyond Western Democracies: Motivations, Expressions, and Outcomes*](./activities/participatory-urban-governance-beyond-western-democracies).
 <!-- AUTO-GENERATED:HOME-HIGHLIGHTS:END -->
 
+- Journal article (2026): [Urban greening and public safety across day and night: A street-view and AI-based assessment of spatial safety context](./publications/urban-greening-public-safety-day-night)
 - Journal article (2026): [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
 - R&R (Major): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
 - Under review: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
@@ -48,3 +49,4 @@ Email: [J.HE@RUG.NL](mailto:J.HE@RUG.NL)
 [Google Scholar](https://scholar.google.com/citations?user=ywo5IEcAAAAJ) · [ORCID](https://orcid.org/0000-0003-1674-2933) · [LinkedIn](https://www.linkedin.com/in/JunyaoHe)
 
 Junyao is also a passionate landscape and astrophotographer. His photography documents natural and urban landscapes, night skies, and the Milky Way. Selected work is available on [Instagram](https://www.instagram.com/junyaohe_jeo/) and [Xiaohongshu](https://www.xiaohongshu.com/user/profile/5a10d01c4eacab52b282f419).
+
