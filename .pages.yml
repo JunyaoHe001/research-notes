@@ -263,6 +263,7 @@ content:
                 - Under Review
                 - Revise and Resubmit
                 - Revising for Resubmission
+                - Revised and Resubmitted
                 - Accepted
           - { name: research-line, label: Research Line, type: string }
           - { name: description, label: Description, type: text }
