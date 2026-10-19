@@ -1,6 +1,6 @@
 ---
-title: "One Shock, Two Sides: Remote-Work Exposure and the Asymmetric Reshaping
-  of Inter-Municipal Job-Home Relations in Belgium"
+title: "All ways lead to home: Remote-Work and the Asymmetric Reshaping of
+  Inter-Municipal Job-Home Relations in Belgium"
 authors:
   - He, J.
 authorship: lead-authored
