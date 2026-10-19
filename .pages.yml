@@ -265,6 +265,7 @@ content:
                 - Revising for Resubmission
                 - Revised and Resubmitted
                 - Accepted
+                - Accepted / Waiting for publishing
           - { name: research-line, label: Research Line, type: string }
           - { name: description, label: Description, type: text }
           - { name: tags, label: Tags, type: string, list: true }
