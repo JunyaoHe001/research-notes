@@ -8,7 +8,7 @@ authors:
   - Ballas, D.
 year-month: 2026-06
 publication-type: Working paper
-status: Revise and Resubmit
+status: Revised and Resubmitted
 research-line: Green and digital transitions, regional development, and spatial trajectories
 description: The article investigates how regional cognitive composition shapes
   spatial development trajectories under the green and digital transitions,
