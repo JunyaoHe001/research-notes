@@ -1,5 +1,5 @@
 ---
-title: "All ways lead to home: Remote-Work and the Asymmetric Reshaping of
+title: "All Ways Lead to Home: Remote-Work and the Asymmetric Reshaping of
   Inter-Municipal Job-Home Relations in Belgium"
 authors:
   - He, J.
