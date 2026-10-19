@@ -1,6 +1,5 @@
 ---
-title: Institutionalizing Al in UrbanPlanning:Discursive Al Opportunity
-  Structures in China
+title: "Institutionalizing AI in Urban Planning: Discursive AI Opportunity Structures in China"
 year: 2026
 activity-section: Conferences and Presentations
 activity-type: Conference
