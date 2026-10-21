@@ -18,7 +18,7 @@ Junyao He completed a PhD in Human Geography and Spatial Planning at Utrecht Uni
 Junyao He's current research is organised around two connected programmes:
 
 - **Remote work and spatial reconfiguration:** Remote and hybrid work alter job home networks, residential relocation, labour market reach, housing pressures, and uneven regional development. See [Research](./research#remote-work-job-home-networks-and-regional-inequality), the [Netherlands job home network research](./working-papers/teleworkability-job-home-networks) and the [Spain hybrid-work network research](./publications/does-hybrid-work-decentralize-labor-markets-evidence-from-spains-job-home-networks).
-- **Mobility networks and regional inequality:** Migration, relocation, and digitally enabled mobility connect cities and regions while redistributing opportunity. This includes [digital nomad mobility](./projects/digital-nomad-mobility) and heterogeneous Dutch migration networks.
+- **Mobility networks and regional inequality:** Migration, relocation, and digitally enabled mobility connect cities and regions while redistributing opportunity. This includes [digital nomad mobility and individual trajectories](./working-papers/digital-nomad-mobility) and heterogeneous Dutch migration networks.
 
 An established research line examines **digital planning, platform governance, and networked power**, extending his doctoral work on social media participation and inequalities in collaborative planning. An emerging direction focuses **AI, innovation, and regional networks** through large scale news text and graph based methods.
 
@@ -34,7 +34,7 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 - Journal article (2026): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./publications/does-hybrid-work-decentralize-labor-markets-evidence-from-spains-job-home-networks)
 - Journal article (2026): [Urban greening and public safety across day and night: A street-view and AI-based assessment of spatial safety context](./publications/urban-greening-public-safety-day-night)
 - Revised & Resubmitted: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
-- Finalizing manuscript: [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
+- Finalizing manuscript: [Moving, Staying, Returning: Global Mobility Networks and Individual Trajectories of Digital Nomads](./working-papers/digital-nomad-mobility)
 - Finalizing manuscript (Abstract accepted): [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
 - Report (2026): [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
 - PhD thesis (2026): [Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China](./publications/network-power-social-media-thesis).

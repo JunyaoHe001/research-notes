@@ -31,4 +31,4 @@ Across these empirical fields, Junyao He combines network analysis, spatial econ
 
 - [[methods/complex-networks|Complex networks as a shared framework]]
 - [[projects/hybrid-work-networks|Hybrid work and job home networks]]
-- [[projects/digital-nomad-mobility|Digital nomad mobility]]
+- [[working-papers/digital-nomad-mobility|Digital nomad mobility and individual trajectories]]

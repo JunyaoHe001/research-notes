@@ -1,5 +1,5 @@
 ---
-title: "Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning"
+title: "Moving, Staying, Returning: Global Mobility Networks and Individual Trajectories of Digital Nomads"
 authors:
   - He, J.
   - Yang, C.
@@ -8,25 +8,27 @@ authors:
 year-month: 2026-08
 publication-type: Working paper
 status: Finalizing
-research-line: Mobility networks and uneven urban opportunity
-description: A global city-network analysis of digital-nomad mobility and the factors shaping city attractiveness and cross-city flows.
+research-line: Mobility, migration, and uneven spatial outcomes
+description: Constructs global city-to-city mobility networks from individual mobility
+  records. Combines complex network analysis with GeoAI to examine individual
+  trajectories, destination choice, patterns of staying and return, and uneven
+  urban connectivity.
 tags:
   - working-paper
   - digital-nomads
   - global-mobility
-  - interpretable-machine-learning
+  - network-analysis
+  - geoai
+  - individual-trajectories
+aliases:
+  - projects/digital-nomad-mobility
 ---
 
-## Abstract
+## Summary
 
-This article examines digital-nomad mobility as an emerging form of digitally enabled urban mobility. It reconstructs global city-to-city movement networks and asks how destinations differ in their attractiveness, brokerage position, reach, and dependence on particular origin markets.
-
-Network analysis is combined with interpretable machine learning to explain city attractiveness and cross-city flows. The explanatory framework considers urban amenities, costs, institutional conditions, connectivity, labour-market characteristics, and the broader geography of remote work.
-
-The study connects digital-nomad research with urban and economic geography by treating mobility as a relational system and by examining how digitally mobile professionals may reinforce or redirect uneven urban development.
+This study constructs global city-to-city mobility networks from individual mobility records. It combines complex network analysis with GeoAI to examine individual trajectories, destination choice, patterns of staying and return, and uneven urban connectivity.
 
 ## Related pages
 
 - [Interactive visualisation: Global Digital Nomad Mobility Network](https://junyaohe001.github.io/digital-nomad-mobility-atlas/)
 - [[../research#mobility-migration-and-uneven-spatial-outcomes|Mobility and migration research]]
-- [[../projects/digital-nomad-mobility|Digital Nomad Mobility project]]

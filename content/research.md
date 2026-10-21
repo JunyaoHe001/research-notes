@@ -16,6 +16,22 @@ Five interconnected research lines organise Junyao He's work. Complex networks a
 </section>
 
 
+## Mobility, migration, and uneven spatial outcomes
+
+Major active research line.
+
+Mobility is relational. Cities and regions are shaped by the origins, destinations, volumes, and composition of the flows connecting them. Junyao He uses network approaches to study residential relocation, interregional migration, digital nomad mobility, and changing access to employment and urban opportunity. A central question concerns the uneven distribution of opportunity under new mobility regimes. Remote workers, digitally mobile professionals, and different demographic groups may respond differently to the same spatial conditions. Layered mobility networks make these heterogeneous responses visible. His digital-nomad research connects city-to-city mobility networks with individual trajectories, destination choice, and patterns of staying and return.
+
+Related work in MOBI-TWIN examines the effects of spatial mobility on regional inequality and sustainability. It also studies how regional cognitive composition relates to development trajectories under the green and digital transitions.
+
+**Representative work**
+
+- [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands) (*Applied Geography*, 2026)
+- [Moving, Staying, Returning: Global Mobility Networks and Individual Trajectories of Digital Nomads](./working-papers/digital-nomad-mobility) (Finalizing)
+- [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality) (Research report, 2026)
+- [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./working-papers/cognitive-composition-regional-trajectories) (Revised and Resubmitted)
+
+
 ## Remote work, job-home networks, and regional inequality
 
 Major active research line.
@@ -27,22 +43,6 @@ Remote and hybrid work change the spatial relationship between employment and re
 - [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./publications/does-hybrid-work-decentralize-labor-markets-evidence-from-spains-job-home-networks) (*Applied Spatial Analysis and Policy*, 2026)
 - [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks) (Revised and Resubmitted)
 - [All Ways Lead to Home: Remote-Work and the Asymmetric Reshaping of Inter-Municipal Job-Home Relations in Belgium](./working-papers/one-shock-two-sides-remote-work-exposure-and-the-asymmetric-reshaping-of-inter-municipal-job-home-relations-in-belgium) (In Preparation)
-
-## Mobility, migration, and uneven spatial outcomes
-
-Major active research line.
-
-Mobility is relational. Cities and regions are shaped by the origins, destinations, volumes, and composition of the flows connecting them. Junyao He uses network approaches to study residential relocation, interregional migration, digital nomad mobility, and changing access to employment and urban opportunity. A central question concerns the uneven distribution of opportunity under new mobility regimes. Remote workers, digitally mobile professionals, and different demographic groups may respond differently to the same spatial conditions. Layered mobility networks make these heterogeneous responses visible.
-
-Related work in MOBI-TWIN examines the effects of spatial mobility on regional inequality and sustainability. It also studies how regional cognitive composition relates to development trajectories under the green and digital transitions.
-
-**Representative work**
-
-- [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands) (*Applied Geography*, 2026)
-- [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility) (Finalizing)
-- [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality) (Research report, 2026)
-- [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](./working-papers/cognitive-composition-regional-trajectories) (Revised and Resubmitted)
-
 
 ## AI, innovation, and computational economic geography
 

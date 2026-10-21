@@ -29,4 +29,4 @@ Network analysis can be combined with spatial econometrics, causal inference, ag
 
 - [[research-agenda|Research agenda]]
 - [[projects/hybrid-work-networks|Hybrid work and job home networks]]
-- [[projects/digital-nomad-mobility|Digital nomad mobility]]
+- [[../working-papers/digital-nomad-mobility|Digital nomad mobility and individual trajectories]]
