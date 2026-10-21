@@ -32,5 +32,5 @@ The paper contributes to debates on remote work by moving beyond individual comm
 ## Related pages
 
 - [Interactive visualisation: Dutch Municipal Job–Home Networks](https://junyaohe001.github.io/Netherlands-Job-Home-Network/)
-- [[../research#hybrid-work-jobhome-networks-and-regional-restructuring|Research line]]
+- [[../research#remote-work-job-home-networks-and-regional-inequality|Research line]]
 - [[../projects/hybrid-work-networks|Hybrid Work and Job–Home Networks project]]

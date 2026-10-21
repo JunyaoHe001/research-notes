@@ -28,4 +28,4 @@ The article investigates how regional cognitive composition shapes spatial devel
 ## Related pages
 
 - [[../research#ai-innovation-and-computational-economic-geography|AI, innovation, and computational economic geography]]
-- [[../research#mobility-migration-and-uneven-spatial-opportunity|Mobility, migration, and uneven spatial opportunity]]
+- [[../research#mobility-migration-and-uneven-spatial-outcomes|Mobility, migration, and uneven spatial opportunity]]
