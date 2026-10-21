@@ -10,22 +10,20 @@ Current manuscripts and research in progress. Click any title for research tags 
 
 | Year–Month | Title | Status |
 | --- | --- | --- |
-| 2026-08 | [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](../working-papers/teleworkability-job-home-networks) | Under Review |
+| 2026-10 | [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](../working-papers/teleworkability-job-home-networks) | Revised and Resubmitted |
+| 2026-10 | [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](../working-papers/ai-regional-networks) | Finalizing |
+| 2026-10 | [All Ways Lead to Home: Remote-Work and the Asymmetric Reshaping of Inter-Municipal Job-Home Relations in Belgium](../working-papers/one-shock-two-sides-remote-work-exposure-and-the-asymmetric-reshaping-of-inter-municipal-job-home-relations-in-belgium) | In Preparation |
 | 2026-08 | [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](../working-papers/digital-nomad-mobility) | Finalizing |
-| 2026-08 | [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](../working-papers/dutch-migration-networks) | Under Review |
-| 2026-08 | [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](../working-papers/ai-regional-networks) | Finalizing |
-| 2026-08 | [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](../working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks) | Revise and Resubmit |
-| 2026-07 | [From Interaction Networks to Interpretive Samples: Networked Discourse Analysis for Digital Social Research](../working-papers/networked-discourse-analysis) | Under Review |
+| 2026-06 | [From Interaction Networks to Interpretive Samples: Networked Discourse Analysis for Digital Social Research](../working-papers/networked-discourse-analysis) | Under Review |
 | 2026-06 | [Social Media Influence on Citizen Power in Online Planning Controversies: An Edge-based Social Network Analysis of Network Power](../working-papers/edge-based-network-power) | Under Review |
 
 ## Co-authored Working Papers
 
 | Year–Month | Title | Status |
 | --- | --- | --- |
-| 2026-08 | [Institutionalizing AI in Urban Planning: Discursive AI Opportunity Structures in China](../working-papers/institutionalizing-ai-urban-planning) | Revise and Resubmit |
-| 2026-08 | [Exploring day–night heterogeneity in links between street green space features and crime incidents via visual Large Language Model](../working-papers/street-green-space-crime-vllm) | Submitted |
-| 2026-08 | [When Projects Meet Platforms: Aestheticizing Industrial Heritage for Tourism in Urban China](../working-papers/when-projects-meet-platforms-aestheticizing-industrial-heritage-for-tourism-in-urban-china) | Submitted |
-| 2026-07 | [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](../working-papers/cognitive-composition-regional-trajectories) | Revise and Resubmit |
+| 2026-08 | [When Projects Meet Platforms: Aestheticizing Industrial Heritage for Tourism in Urban China](../working-papers/when-projects-meet-platforms-aestheticizing-industrial-heritage-for-tourism-in-urban-china) | Under Review |
+| 2026-07 | [Institutionalizing AI in Urban Planning: Discursive AI Opportunity Structures in China](../working-papers/institutionalizing-ai-urban-planning) | Revised and Resubmitted |
+| 2026-06 | [Beyond structural explanations: Cognitive composition and regional trajectories under the green and digital transitions](../working-papers/cognitive-composition-regional-trajectories) | Revised and Resubmitted |
 | 2026-06 | [Toward a Discursive Algorithmic Opportunity Structure Framework: Governing Urban AI in Europe](../working-papers/discursive-algorithmic-opportunity-europe) | In Preparation |
 <!-- AUTO-GENERATED:WORKING-PAPERS:END -->
 

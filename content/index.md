@@ -17,7 +17,7 @@ Junyao He completed a PhD in Human Geography and Spatial Planning at Utrecht Uni
 
 Junyao He's current research is organised around two connected programmes:
 
-- **Remote work and spatial reconfiguration:** Remote and hybrid work alter job home networks, residential relocation, labour market reach, housing pressures, and uneven regional development. See [Research](./research#hybrid-work-jobhome-networks-and-regional-restructuring), the [Netherlands job home network research](./working-papers/teleworkability-job-home-networks) and the [Spain hybrid-work network research](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks).
+- **Remote work and spatial reconfiguration:** Remote and hybrid work alter job home networks, residential relocation, labour market reach, housing pressures, and uneven regional development. See [Research](./research#hybrid-work-jobhome-networks-and-regional-restructuring), the [Netherlands job home network research](./working-papers/teleworkability-job-home-networks) and the [Spain hybrid-work network research](./publications/does-hybrid-work-decentralize-labor-markets-evidence-from-spains-job-home-networks).
 - **Mobility networks and regional inequality:** Migration, relocation, and digitally enabled mobility connect cities and regions while redistributing opportunity. This includes [digital nomad mobility](./projects/digital-nomad-mobility) and heterogeneous Dutch migration networks.
 
 An established research line examines **digital planning, platform governance, and networked power**, extending his doctoral work on social media participation and inequalities in collaborative planning. An emerging direction focuses **AI, innovation, and regional networks** through large scale news text and graph based methods.
@@ -31,7 +31,7 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 <!-- AUTO-GENERATED:HOME-HIGHLIGHTS:END -->
 
 - Journal article (2026): [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
-- Journal article (2026): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./working-papers/the-uneven-spatial-flexibility-of-hybrid-work-evidence-from-spains-job-home-networks)
+- Journal article (2026): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./publications/does-hybrid-work-decentralize-labor-markets-evidence-from-spains-job-home-networks)
 - Journal article (2026): [Urban greening and public safety across day and night: A street-view and AI-based assessment of spatial safety context](./publications/urban-greening-public-safety-day-night)
 - R&R (Major): [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
 - Finalizing manuscript: [Revealing the Global Mobility and Driving Forces of Digital Nomads through Network Analysis and Interpretable Machine Learning](./working-papers/digital-nomad-mobility)
