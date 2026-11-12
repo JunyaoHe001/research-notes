@@ -3,6 +3,10 @@ title: "The Other Side of the Donut: How Remote Work Reshapes Belgium’s Job-Ho
   Network"
 authors:
   - He, J.
+  - Ballas, D.
+  - Venhorst, V.
+  - Pan, X.
+  - Yang, C.
 authorship: lead-authored
 year-month: 2026-10
 publication-type: Working paper
@@ -18,14 +22,13 @@ tags:
   - network
   - donut-effect
   - job-home relation
+  - causal inference
 ---
 **Status:** Finalizing
 
 ## Abstract
 
-Remote work allows greater separation between home and workplace, raising expectations that employment opportunities will spread to suburbs and rural areas. How this transition reallocates labor supply and reshapes employment links matters for the spatial division of labor in urban and regional systems. This study examines Belgium’s job-home network from 2016 to 2024, distinguishing two roles of each municipality: where its residents work and where its workers reside. Continuous difference-in-differences and event studies assess how pre-pandemic teleworkability shaped changes in employment links among cities, towns and suburbs, and rural areas following the pandemic shock.
-
-Greater workplace teleworkability reduces the share of nonlocal workers who reside in cities and increases the share who reside in towns and suburbs, with no statistically significant change in the rural share. Greater residential teleworkability reduces the number of residents who work in rural areas outside their own municipality. Changes in where workers reside appear within several education, sex, age, industry, and employment-status groups. On the residential side, the share who work in towns and suburbs falls among workers aged 15-24 and rises among those aged 55-64.
+Remote work allows greater separation between home and workplace, raising expectations that employment opportunities will spread to suburbs and rural areas. How this transition reallocates labor supply and reshapes employment links matters for the spatial division of labor in urban and regional systems. This study examines Belgium’s job-home network from 2016 to 2024, distinguishing two roles of each municipality: where its residents work and where its workers reside. Continuous difference-in-differences and event studies assess how pre-pandemic teleworkability shaped changes in employment links among cities, towns and suburbs, and rural areas following the pandemic shock. Greater workplace teleworkability reduces the share of nonlocal workers residing in cities and increases the share residing in towns and suburbs, with no statistically significant change in the share residing in rural areas. Greater residential teleworkability reduces the number of residents who work in rural areas outside their own municipality. Changes in where workers reside appear within several education, sex, age, industry, and employment-status groups. On the residential side, the share who work in towns and suburbs falls among workers aged 15-24 and rises among those aged 55-64.
 
 These findings connect the donut effect to the reorganization of functional relationships between places. Shifts in workforce composition coexist with a contraction of some employment links and age-specific changes in where residents work. Remote work therefore reshapes residential and workplace connections asymmetrically, with implications for spatial and social inequality.
 
