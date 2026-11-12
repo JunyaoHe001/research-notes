@@ -5,7 +5,7 @@ authors:
   - He, J.
   - Wang, T.
   - Li, Z.
-year-month: 2026-10
+year-month: 2026-11
 publication-type: Working paper
 status: Finalizing
 research-line: AI, innovation, and computational economic geography
