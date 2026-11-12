@@ -42,7 +42,7 @@ Remote and hybrid work change the spatial relationship between employment and re
 
 - [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./publications/does-hybrid-work-decentralize-labor-markets-evidence-from-spains-job-home-networks) (*Applied Spatial Analysis and Policy*, 2026)
 - [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks) (Revised and Resubmitted)
-- [All Ways Lead to Home: Remote-Work and the Asymmetric Reshaping of Inter-Municipal Job-Home Relations in Belgium](./working-papers/one-shock-two-sides-remote-work-exposure-and-the-asymmetric-reshaping-of-inter-municipal-job-home-relations-in-belgium) (In Preparation)
+- [The Other Side of the Donut: How Remote Work Reshapes Belgium’s Job-Home Network](./working-papers/one-shock-two-sides-remote-work-exposure-and-the-asymmetric-reshaping-of-inter-municipal-job-home-relations-in-belgium) (Finalizing)
 
 ## AI, innovation, and computational economic geography
 

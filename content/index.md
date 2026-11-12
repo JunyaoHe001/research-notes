@@ -32,8 +32,8 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 
 - Journal article (2026): [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
 - Journal article (2026): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./publications/does-hybrid-work-decentralize-labor-markets-evidence-from-spains-job-home-networks)
-- Journal article (2026): [Urban greening and public safety across day and night: A street-view and AI-based assessment of spatial safety context](./publications/urban-greening-public-safety-day-night)
 - Revised & Resubmitted: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
+- Finalizing manuscript: [The Other Side of the Donut: How Remote Work Reshapes Belgium’s Job-Home Network](./working-papers/one-shock-two-sides-remote-work-exposure-and-the-asymmetric-reshaping-of-inter-municipal-job-home-relations-in-belgium)
 - Finalizing manuscript: [Moving, Staying, Returning: Global Mobility Networks and Individual Trajectories of Digital Nomads](./working-papers/digital-nomad-mobility)
 - Finalizing manuscript (Abstract accepted): [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
 - Report (2026): [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
