@@ -8,7 +8,7 @@ authors:
   - Pan, X.
   - Yang, C.
 authorship: lead-authored
-year-month: 2026-10
+year-month: 2026-11
 publication-type: Working paper
 status: Finalizing
 research-line: Hybrid work, job–home networks, and regional restructuring
