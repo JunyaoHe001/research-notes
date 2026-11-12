@@ -1,16 +1,22 @@
 ---
-title: "The Other Side of the Donut: How Remote Work Reshapes Belgium’s Job-Home Network"
+title: "The Other Side of the Donut: How Remote Work Reshapes Belgium’s Job-Home
+  Network"
 authors:
   - He, J.
 authorship: lead-authored
 year-month: 2026-10
 publication-type: Working paper
 status: Finalizing
-research-line: Hybrid work, job–home networks, and regional policy
+research-line: Hybrid work, job–home networks, and regional restructuring
 show-in-tag-network: true
-description: How remote work reshapes where residents work and where workers live
-  across Belgium’s cities, towns and suburbs, and rural areas, with asymmetric
-  changes in job-home connections and implications for spatial and social inequality.
+description: How remote work reshapes where residents work and where workers
+  live across Belgium’s cities, towns and suburbs, and rural areas, with
+  asymmetric changes in job-home connections and implications for spatial and
+  social inequality.
+tags:
+  - remote-work
+  - network
+  - donut-effect
 ---
 **Status:** Finalizing
 
