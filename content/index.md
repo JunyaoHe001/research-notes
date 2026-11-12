@@ -30,17 +30,17 @@ See the [Research page](./research) for fuller descriptions, [Projects](./projec
 - Guest Co-Editor for the 2027 *Society Register* Special Issue, [*Participatory Urban Governance Beyond Western Democracies: Motivations, Expressions, and Outcomes*](./activities/participatory-urban-governance-beyond-western-democracies).
 <!-- AUTO-GENERATED:HOME-HIGHLIGHTS:END -->
 
-- Journal article (2026): [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
-- Journal article (2026): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./publications/does-hybrid-work-decentralize-labor-markets-evidence-from-spains-job-home-networks)
+- Journal article (2026, *Applied Geography*): [Different Strokes for Different Folks: Remote Work, Heterogeneity, and Restructuring of Relocation Networks in the Netherlands](./publications/different-strokes-for-different-folks-remote-work-heterogeneity-and-restructuring-of-relocation-networks-in-the-netherlands)
+- Journal article (2026, *Applied Spatial Analysis and Policy*): [Does Hybrid Work Decentralize Labor Markets? Evidence from Spain’s Job-Home Networks](./publications/does-hybrid-work-decentralize-labor-markets-evidence-from-spains-job-home-networks)
 - Revised & Resubmitted: [Teleworkability and the Evolution of Job-Home Networks after the COVID-19 Shock: Causal Evidence from the Netherlands](./working-papers/teleworkability-job-home-networks)
 - Finalizing manuscript: [The Other Side of the Donut: How Remote Work Reshapes Belgium’s Job-Home Network](./working-papers/one-shock-two-sides-remote-work-exposure-and-the-asymmetric-reshaping-of-inter-municipal-job-home-relations-in-belgium)
 - Finalizing manuscript: [Moving, Staying, Returning: Global Mobility Networks and Individual Trajectories of Digital Nomads](./working-papers/digital-nomad-mobility)
 - Finalizing manuscript (Abstract accepted): [Measuring Global AI Cooperation, Competition and Innovation through News Text: A Graph-based Approach](./working-papers/ai-regional-networks)
 - Report (2026): [MOBI-TWIN D3.4: The Effects of Spatial Mobility during Twin Transition on Regional Inequality and Sustainability in the Identified EU Regional Typologies](./publications/mobi-twin-d3-4-regional-inequality)
 - PhD thesis (2026): [Network Power and Social Media: Reshaping Power Dynamics in Collaborative Planning in China](./publications/network-power-social-media-thesis).
-- Journal article (2026): [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning).
-- Journal article (2024): [Informal participation in digital planning: How can third parties use social media to shift power relations in planning?](./publications/informal-participation-digital-planning).
-- Journal article (2024): [Measuring social network influence on power relations in collaborative planning: A case study of Beijing City, China](./publications/measuring-social-network-influence).
+- Journal article (2026, *Planning Practice & Research*): [Social Media Influence on Collaborative Planning: Framing Strategies in Online Public Participation](./publications/social-media-framing-collaborative-planning).
+- Journal article (2024, *Computers, Environment and Urban Systems*): [Informal participation in digital planning: How can third parties use social media to shift power relations in planning?](./publications/informal-participation-digital-planning).
+- Journal article (2024, *Cities*): [Measuring social network influence on power relations in collaborative planning: A case study of Beijing City, China](./publications/measuring-social-network-influence).
 
 ## Contact
 
