@@ -17,6 +17,7 @@ tags:
   - remote-work
   - network
   - donut-effect
+  - job-home relation
 ---
 **Status:** Finalizing
 
